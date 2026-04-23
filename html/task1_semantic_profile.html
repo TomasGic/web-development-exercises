@@ -114,6 +114,7 @@
 
             <!--Timeline section-->
             <section id="timeline">
+                <h3>Learning timeline</h3>
                 <ol>
                 <li><time datetime="2026-01-01">1 January 2026</time>: Introduction to version control and git, created my first github repo and made my first git commit</li>
                 <li><time datetime="2026-01-07">7 January 2026</time>: Introduction to Ruby programming, wrote my first Ruby script</li>
@@ -128,12 +129,76 @@
                 <h3>Inspiration</h3>
                 <figure>
                     <blockquote cite="https://www.brainyquote.com/quotes/nelson_mandela_378967">
-                        <p>It always seems impossible until it's done</p>
+                        <p>It always seems impossible until it's done.</p>
                     </blockquote>
                     <figcaption>
                         &mdash; Nelson Mandela, via <cite>BrainyQuote</cite>
                     </figcaption>
                 </figure>
+            </section>
+        </article>
+
+        <!--Frequently asked questions-->
+        <article id="faq">
+            <h2>Frequnetly Asked Questions</h2>
+
+            <!--Questions about AI in software development-->
+            <section>
+                <h3>About learning</h3>
+                <dl>
+                    <dt>Do you ever get discouraged in your journey to become a software developer when AI is constantly getting better at writing code?</dt>
+                    <dd>It's hard to predict what will happen in the long-term but in the near to mid-term I do not see AI as a direct competitor to human software developers. Currently AI cannot think and reason autonomously about complex real-world problems, which means that there are still human software developers needed. AI is simply a tool that software developers can use to increase their productivity.</dd>
+
+                    <dt>Is Ruby a difficult programming language to learn?</dt>
+                    <dd>Compared to other programming languages, especially those that are statically typed, such as <mark>C or Java</mark>, Ruby is relatively easy to learn because of its elegant syntax which reads almost like English language. Consider this piece of code which iterates through an array and capitalizes the string element.
+                    <pre>
+                    <code>
+                        orgs = ["imf", "who", "ing"]
+                        orgs.each { |org| org.capitalize }
+                    </code>
+                    </pre>
+                    If we wanted to write the same script in C, it would look like this: 
+                    <pre>
+                    <code>
+                        #include &lt;stdio.h&gt;
+                        #include &lt;ctype.h&gt;
+
+                        int main() {    
+                            char *orgs[] = {"imf", "who", "ing"};
+                            int length = 3;
+
+                            for (int i = 0; i < length; i++) {
+                                orgs[i][0] = toupper(orgs[i][0]);
+                            }
+                            return 0;
+                        }
+                    </code>
+                    </pre>
+                    If you are interested to learn more about Ruby, the best place to start is the official <a href="https://www.ruby-lang.org/en/documentation/" target="_blank" rel="noopener noreferrer">documentation page</a>.
+                    </dd>
+
+                    <dt>Do you prefer to learn from online resources or books?</dt>
+                    <dd>I like to learn from both. Online resources have the advantage of being more likely up to date, whereas the material in books might often be outdated as the tech is constantly evolving at a fast pace. On the other hand, I find it easier to read and focus on paper than on the screen.</dd>
+                </dl>
+            </section>
+
+            <!--Questions about this page-->
+            <section>
+                <h3>About this page</h3>
+                <dt>Why does this page look like it was made in 1999?</dt>
+                <dd>This page looks like it was made in 1999 because it is made purely with <abbr title="Hypertext Markup Language">HTML</abbr>. It is just an exercise project as part of my web development mentorship.</dd>
+
+                <dt>Are you going to add some styles and interactive functionality to it at some point?</dt>
+                <dd>Yes, in the coming weeks I will: <ol>
+                    <li>add css stylesheet to the webpage to make it more modern,</li>
+                    <li>add javascript functionality, such as modal and popup windows, smooth scrolling and animations,</li>
+                    <li>make the webpage mobile friendly,</li>
+                    <li>add a real database with some interesting learning content.</li>
+                </ol>
+                </dd>
+
+                <dt>Did you have fun while making this page?</dt>
+                <dd>Yes, I had a blast!</dd>
             </section>
         </article>
 

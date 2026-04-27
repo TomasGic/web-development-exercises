@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-page Form Simulation</title>
+</head>
+<body>
+    <header>
+        <h1>Course Application</h1>
+        <nav>
+            <ol>
+            <li><a href="task2_multi_form.html"></a>Step 1: Personal Information</li>
+            <li><a href="task2_multi_form_step2.html">Step 2: Preferences</a></li>
+            <li><a href="task2_multi_form_step3.html" arria-label="current"><strong>Step 3: Review and submit</strong></a></li>
+            </ol>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Application summary</h2>
+        <p>Review your details before submitting</p>
+
+        <section id="summary-personal">
+            <h3>Personal Information</h3>
+
+            <dl>
+                <dt>Full name</dt>
+                <dd>Tomas Gic</dd>
+
+                <dt>Email address</dt>
+                <dd>tomas@example.com</dd>
+
+                <dt>Phone number</dt>
+                <dd>+31555777888</dd>
+
+                <dt>Date of birth</dt>
+                <dd>14//09/1991</dd>
+
+                <dt>National ID/Passport Number</dt>
+                <dd>BF5598445</dd>
+
+                <dt>Address</dt>
+                <dd>Carnapstraat 45, Amsterdam PT01234, Netherlands</dd>
+
+            </dl>
+        </section>
+
+        <section id="summary-preferences">
+            <h3>Learning preferences & Background</h3>
+            <dl>
+                <dt>Preferred schedule</dt>
+                <dd>Evening</dd>
+
+                <dt>Topics of interest</dt>
+                <dd>Full-stack web development, Game development</dd>
+
+                <dt>Experience level</dt>
+                <dd>Intermediate</dd>
+
+                <dt>Weekly availability</dt>
+                <dd>25 hours</dd>
+
+                <dt>Years of professional experience</dt>
+                <dd>10</dd>
+
+                <dt>Portfolio or LinkedIn URL</dt>
+                <dd><a href="www.linkedin.com/in/tomas-gic-ba0b9874">www.linkedin.com/in/tomas-gic-ba0b9874</a></dd>
+
+                <dt>Previous education or relevant experience</dt>
+                <dd>Text to follow.</dd>
+
+                <dt>Why do you want to take this course?</dt>
+                <dd>Text to follow.</dd>
+            </dl>
+        </section>
+
+        <form action="submission_success.html" method="POST">
+            <p>
+                <input type="checkbox" id="confirm-info" name="confirm_info" value="confirmed" required>
+                <label for="confirm-info">I hereby confirm that the information provided in this application form is truthful and accurate.</label>
+            </p>
+
+            <p>
+                <input type="checkbox" id="confirm-terms" name="confirm_terms" value="accepted" required>
+                <label for="confirm-terms">I agree to the <a href="#terms-text">terms and conditions</a>.</label>
+            </p>
+
+            <details id="terms-text">
+                <summary>View Terms and Conditions</summary>
+                <h3>Application Policy</h3>
+                <p>By submitting this form, you agree to provide truthful information. False statements may lead to disqualification from the course.</p>
+                <p>Your data will be processed in accordance with our privacy policy. We do not sell your personal information to third parties.</p>
+            </details>
+
+            <nav aria-label="Form navigation">
+                <a href="task2_multi_form_step2.html">&larr; Back: Edit Preferences</a>
+                <br><br>
+                <button type="submit">Submit Application</button>
+                <button type="reset">Clear Form</button>
+            </nav>
+        </form>
+    </main>
+
+</body>
+</html>

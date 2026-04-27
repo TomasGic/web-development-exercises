@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-page Form Simulation</title>
+</head>
+<body>
+    <header>
+        <h1>Course Application</h1>
+        <nav>
+            <ol>
+            <li><a href="task2_multi_form.html"></a>Step 1: Personal Info</li>
+            <li><a href="task2_multi_form_step2.html" arria-label="current"><strong>Step 2: Preferences</strong></a></li>
+            <li><a href="task2_multi_form_step3.html">Step 3: Review</a></li>
+            </ol>
+        </nav>
+    </header>
+
+    <main>
+        <form action="task2_multi_form_step3.html" method="GET">
+            <fieldset>
+                <legend>Learning preferences</legend>
+                <p>Preferred schedule:</p>
+                <input type="radio" id="morning" name="schedule" value="morning" required>
+                <label for="morning">Morning</label><br>
+
+                <input type="radio" id="afternoon" name="schedule" value="afternoon">
+                <label for="afternoon">Afternoon</label><br>
+
+                <input type="radio" id="evening" name="schedule" value="evening">
+                <label for="evening">Evening</label><br>
+
+                <input type="radio" id="weekends" name="schedule" value="weekends">
+                <label for="weekends">Weekends</label><br>
+
+                <p>Topics of interest</p>
+                <input type="checkbox" id="front-end" name="topics" value="front-end">
+                <label for="front-end">Front-end web development</label><br>
+
+                <input type="checkbox" id="back-end" name="topics" value="back-end">
+                <label for="back-end">Back-end web development</label><br>
+
+                <input type="checkbox" id="full-stack" name="topics" value="full-stack">
+                <label for="full-stack">Full-stack web development</label><br>
+
+                <input type="checkbox" id="data-analysis" name="topics" value="data-analysis">
+                <label for="data-analysis">Data Analysis</label><br>
+
+                <input type="checkbox" id="data-science" name="topics" value="data-science">
+                <label for="data-science">Data science</label><br>
+
+                <input type="checkbox" id="game-dev" name="topics" value="game-dev">
+                <label for="game-dev">Game development</label><br>
+
+                <p>
+                    <label for="level">Experience level:</label>
+                    <select name="level" id="level" required>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="availability">Weekly Availability (in hours)</label>
+                    <input type="range" id="availability" name="availability" min="1" max="40" value="20" oninput="this.nextElementSibling.value = this.value">
+                    <output>20</output>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Background</legend>
+
+                <p>
+                    <label for="exp-years">Years of professional experience</label>
+                    <input type="number" id="exp-years" name="exp-years" min="0" max="50" step="1" value="0">
+                </p>
+
+                <p>
+                    <label for="portfolio">Portfolio or LinkedIn URL:</label>
+                    <input type="url" id="portfolio" name="portfolio" placeholder="https://example.com">
+                </p>
+
+                <p>
+                    <label for="background-info">Previous education or relevant experience (Min 50 chars):</label><br>
+                    <textarea id="background-info" name="background-info" required minlength="50" maxlength="500" rows="6" cols="50"></textarea>
+                </p>
+
+                <p>
+                    <label for="motivation">Why do you want to take this course? (Min 100 chars):</label><br>
+                    <textarea id="motivation" name="motivation" required minlength="100" maxlength="1000" rows="6" cols="50"></textarea>
+                </p>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Accessibility needs</legend>
+                <input type="checkbox" id="screenreader" name="acc-needs" value="screenreader">
+                <label for="screenreader">I need screenreader compatibility</label><br>
+
+                <input type="checkbox" id="captions" name="acc-needs" value="captions">
+                <label for="captions">I need captions/transcripts</label><br>
+
+                <input type="checkbox" id="extra_time" name="acc-needs" value="extra_time">
+                <label for="extra_time">I need extra time for assignments</label><br><br>
+
+                <label for="acc-other">Other accessibility needs (optional):</label><br>
+                <textarea name="acc-other-text" id="acc-other" rows="4" cols="50"></textarea>
+                
+            </fieldset>
+
+            <nav aria-label="Form navigation">
+                <a href="task2_multi_form.html">← Back: Personal Info</a>
+                <button type="submit">Next: Review →</button>
+            </nav>
+</form>
+        </form>
+    </main>
+    
+</body>
+</html>

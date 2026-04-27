@@ -23,27 +23,27 @@
                 <legend>Personal Details</legend>
                 
                 <p>
-                    <label for="full_name">Full Name</label>
+                    <label for="full_name">Full Name (required)</label>
                     <input type="text" id="full_name" name="full_name" required minlength="2" maxlength="100">
                 </p>
 
                 <p>
-                    <label for="email">Email address</label>
+                    <label for="email">Email address (required)</label>
                     <input type="email" id="email" name="email" required>
                 </p>
 
                 <p>
-                    <label for="phone">Phone Number</label>
+                    <label for="phone">Phone Number (required)</label>
                     <input type="tel" id="phone" name="phone" required pattern="(\+|00)?[0-9\-\(\)]{7,20}">
                 </p>
 
                 <p>
-                    <label for="dob">Date of birth</label>
+                    <label for="dob">Date of birth (required)</label>
                     <input type="date" id="dob" name="dob" required>
                 </p>
 
                 <p>
-                    <label for="id-number">National ID or Passport Number</label>
+                    <label for="id-number">National ID or Passport Number (required)</label>
                     <input type="text" id="id-number" name="id-number" required pattern="[a-zA-Z0-9]{6,12}">
                 </p>
 
@@ -53,22 +53,22 @@
                 <legend>Address</legend>
 
                 <p>
-                    <label for="street">Street name</label>
+                    <label for="street">Street name (required)</label>
                     <input type="text" id="street" name="street" required>
                 </p>
 
                 <p>
-                    <label for="city">City</label>
+                    <label for="city">City (required)</label>
                     <input type="text" id="city" required>
                 </p>
 
                 <p>
-                    <label for="zip">Potal Code</label>
+                    <label for="zip">Potal Code (required)</label>
                     <input type="text" id="zip" name="postal-code" required pattern="[0-9]{5}">
                 </p>
 
                 <p>
-                    <label for="country">Country</label>
+                    <label for="country">Country (required)</label>
                     <select name="country" id="country" required>
                         <option value="">Please choose a country</option>
                         <option value="us">United States</option>
@@ -87,8 +87,8 @@
 
                 <p>
                     <label for="state">State/Province</label>
-                    <input type="text" id="state" name="state" required>
-                    <datalist id="state">
+                    <input type="text" id="state" name="state" list="states-list">
+                    <datalist id="states-list">
                         <option value="California">
                         <option value="New York">
                         <option value="Texas">

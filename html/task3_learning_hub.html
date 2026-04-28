@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal learning hub</title>
+</head>
+<body>
+    <a href="#main">Skip to main content</a>
+    
+    <header>
+        <h1>My Web Development Learning Hub</h1>
+        <p>A personal dashboard tracking my journey from Ruby to full-stack development.</p>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="skills">Skills</a></li>
+                <li><a href="schedule">Weekly schedule</a></li>
+                <li><a href="resources">Resources</a></li>
+                <li><a href="reflections">Reflections</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <article>
+            <!-- ==================== Section 1: About ==================== -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>My programming journey began in <time datetime="2020-04">April 2020</time>when the whole world shut down due to the covid-19 pandemic. I started working from home and had suddenly a lot more time on my hands, so I wanted to use it in a productive manner. In my professional role as a content editor, I was exposed to many repetitive, tedious tasks that I wanted to automate, but I didn't have the skillset to do it. I started learning Python and soon stumbled upon <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> and Javascript. I started to apply my new knowledge of these tools in my job and gradually I became the technical automation expert in our content department.</p>
+
+                <p>By <time datetime="2022-06">June 2021</time>I fully or partially automated more than 30 workflows that were previously carried out manually and saved our content department more than 1000 hours of work per year.</p>
+
+                <p>In <time datetime="2025-11">November 2025</time>my company announced a round of layoffs and offered my team an opportunity to leave voluntarily. I thought this was a good opporunity to fully transition into software development. In <time datetime="2026-01">Januar 2026</time>I started a mentoring program with a goal to become a full-stack software developer specialising in Ruby and Ruby on Rails. I decided to make this website as a learning project but also to document my mentoring journey. You can find more of my projects on my <a href="https://github.com/TomasGic" target="_blank" rel="noopener noreferrer">Github page</a>.</p>
+            </section>
+
+            <!-- ==================== Section : Goals ==================== -->
+            <section id="goals">
+                <h2>Learning goals</h2>
+                <h3>Short-term goals (next 3 months)</h3>
+                <dl>
+                    <dt>Master the web fundamentals (HTML, CSS, Javascript)</dt>
+                    <dd>
+                        <p>Deadline: <time datetime="2026-05-30">May 30, 2026</time></p>
+                        <p>Status: In progress</p>
+                        <p>Metric: Build and deploy 3 responsive websites from scratch using HTML, CSS and JS.</p>
+                        <p>Progress: <meter min="0" max="100" value="35">35%</meter></p>
+                    </dd>
+
+                    <dt>Master Ruby on Rails fundamentals</dt>
+                    <dd>
+                        <p>Deadline: <time datetime="2026-07-31">July 31, 2026</time></p>
+                        <p>Status: Not started</p>
+                        <p>Metric: Build and deploy a basic journalling CRUD app."></abbr></p>
+                        <p>Progress: <meter min="0" max="100" value="0">0%</meter></p>
+                    </dd>
+
+                    <dt>Master design patterns in Ruby</dt>
+                    <dd>
+                        <p>Deadline: <time datetime="2026-05-08">May 08, 2026</time></p>
+                        <p>Status: In progress</p>
+                        <p>Metric: Complete all week 6 tasks related to design patterns."></abbr></p>
+                        <p>Progress: <meter min="0" max="100" value="67">67%</meter></p>
+                    </dd>
+
+                    <dt>Master Data Structures and Algorithms</dt>
+                    <dd>
+                        <p>Deadline: <time datetime="2026-08-31">August 31, 2026</time></p>
+                        <p>Status: In progress</p>
+                        <p>Metric: Complete all exercises from the book <cite>A Common-Sense Guide to Data Structures and Algorithms</cite> by Jay Wengrow.></p>
+                        <p>Progress: <meter min="0" max="100" value="10">10%</meter></p>
+                    </dd>
+                </dl>
+
+                <h3>Long-term goals (1 year)</h3>
+                <dl>
+                    <dt>Developer portfolio completion</dt>
+                    <dd>Build 3 solid full-stack projects and upload them on github.
+                    <label for="progress-portfolio">Progress</label>
+                    <progress id="progress-portfolio" max="100" value="10"></progress>
+                    </dd>
+                    
+                    <dt>Master data structures and algorithms</dt>
+                    <dd>Complete all exercises from the book <cite>A Common-Sense Guide to Data Structures and Algorithms</cite> by Jay Wengrow.
+                    <label for="progress-algorithms">Progress</label>
+                    <progress id="progress-algorithms" value="10" max="100">10%</progress>
+                    </dd>
+                    
+                    <dt>Contribute to open-source projects</dt>
+                    <dd>Have at least 3 merged pull-requests in ruby-related gems.
+                    <label for="progress-open-source">Progress</label>
+                    <progress id="progress-open-source" value="0" max="100">0%</progress>
+                    </dd>
+
+                </dl>
+
+                
+            </section>
+        </article>
+    </main>
+    
+</body>
+</html>

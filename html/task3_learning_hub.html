@@ -371,6 +371,152 @@
                     </tbody>
                 </table>
             </section>
+
+            <!-- ==================== Section 7: Reflections ==================== -->
+             <section id="reflections">
+                <h2>Reflections & Notes</h2>
+
+                <article>
+                    <h3>What I've learned so far</h3>
+                    <p>When I started the mentorhsip I already had some knowledge of programming but I wasn't programming consistently. The most important benefit of the mentorship was the move from occasionaly writing automation scripts to writing OOP programs that simulated real domain systems almost <em>every day</em>. With consistency my progress has skyrocketed.</p>
+                    <p>I have become more confident in writing code from scratch without the need to reference documentation or AI models. I have learnt to apply the correct design patterns and I understood how Ruby modules and classes interact with each other.</p>
+                </article>
+
+                <article>
+                    <h3>Biggest Challenges</h3>
+                    <ol>
+                        <li>
+                            <dl>
+                                <dt>Eye fatique from spending more time in front of the screen than previously</dt>
+                                <dd>I overcame this challenge by taking more frequent breaks and taking supplements for eye health.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>Back and neck pain from prolonged sitting and typing</dt>
+                                <dd>I overcame this challenge by making my desk setup more ergonomic (getting a smaller keyboard, remapping frequently used keys on the keyboard to better suit hand placement, buying a standing desk to alternate between sitting and standing).</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><strong>Occasionally having thoughts of self-doubt</strong></dt>
+                                <dd>It is natural to occasionally doubt one's abilities, but it's important for these thoughts to just be short-lived and not lower your overal self-confidence. When I get a thought like this I remind myself that I'm still only at the beginning of the journey and that it takes time to become really good at something.</dd>
+                            </dl>
+                        </li>
+                    </ol>
+                </article>
+
+                <figure>
+                    <p>The following is one of my favourite quotes whenever I feel stuck or want to give up.</p>
+                    <blockquote cite="https://www.brainyquote.com/quotes/nelson_mandela_378967">
+                        <p>It always seems impossible until it's done.</p>
+                    </blockquote>
+                    <figcaption>
+                        &mdash; Nelson Mandela, via <cite>BrainyQuote</cite>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <figcaption>A code snippet that I'm proud of</figcaption>
+                    <pre>
+                        <code>Code to be inserted</code>
+                    </pre>
+                </figure>
+            </section>
+
+             <!-- ==================== Section 8: Contact Form ==================== -->
+            <section id="contact">
+                <h2>Get in touch</h2>
+                <form action="#contact" method="POST">
+                    <fieldset>
+                        <legend>Your Information</legend>
+                        
+                        <p>
+                            <label for="name">Full name (required)</label>
+                            <input type="text" id="name" name="name" minlength="2" required>
+                        </p>
+
+                        <p>
+                            <label for="email">Email (required)</label>
+                            <input type="email" id="email" name="email" required>
+                        </p>
+
+                        <p>
+                            <label for="website">Website (optional)</label>
+                            <input type="url" id="website" name="website">
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Your Message</legend>
+                        <p>
+                            <label for="subject">Subject</label>
+                            <select name="subject" id="subject" required>
+                                <option value="mentoring">Mentoring</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="question">Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </p>
+
+                        <p>Priority:</p>
+                        <input type="radio" id="low" name="priority" value="low" required>
+                        <label for="low">Low</label>
+
+                        <input type="radio" id="normal" name="priority" value="normal">
+                        <label for="normal">Normal</label>
+
+                        <input type="radio" id="high" name="priority" value="high">
+                        <label for="high">High</label>
+
+                    
+                        <p>
+                            <label for="message">Your message:</label><br>
+                            <textarea name="message" id="message" minlength="20" maxlength="2000" rows="6" cols="50" required></textarea>
+                        </p>
+                        
+
+                        <p>
+                            <label for="reference-file">Attach reference:</label>
+                            <input type="file" id="reference-file" name="reference_file" accept=".pdf,.doc,.docx,.txt">
+                        </p>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferences</legend>
+                        <p>Response format</p>
+                        
+                        <input type="radio" id="email" name="response-format" value="email">
+                        <label for="email">Email</label>
+                        
+
+                        
+                        <input type="radio" id="videocall" name="response-format" value="videocall">
+                        <label for="videocall">Videocall</label>
+                        
+
+                        
+                        <input type="radio" id="either" name="response-format" value="either">
+                        <label for="either">Either</label>
+                        
+
+                        <p>
+                            <input type="checkbox" id="updates" name="subscribe" value="yes">
+                            <label for="updates">I'd like to receive your weekly learning updates</label>
+                        </p>
+
+                        <p>
+                            <input type="checkbox" id="privacy-policy" name="privacy_policy" value="accepted" required>
+                            <label for="privacy-policy">I agree to the privacy policy</label>
+                        </p>
+                    </fieldset>
+
+                    <button type="submit">Send Message</button>
+                    <button type="reset">Clear Form</button>
+                </form>
+            </section>
         </article>
     </main>
     

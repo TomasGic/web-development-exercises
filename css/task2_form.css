@@ -1,0 +1,127 @@
+/* ===== RESET ===== */
+*, *::before, *::after {
+    box-sizing: border-box
+}
+
+:root {
+    --primary-color: #1a5ea7;
+    --text-main: #1a1a1a;
+    --bg-page: #fafafa;
+    --bg-form: #d8dfe5;
+    --border-color: #cbd5e1;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-page);
+    
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+ul {
+    list-style: none
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    counter-reset: step-counter
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+}
+
+.nav-menu a::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    background: #e2e8f0;
+    color: var(--text-main);
+    font-weight: bold;
+    display: block;
+}
+
+.nav-menu a[aria-current="page"] {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.nav-menu a[aria-current="page"]::before {
+    background: var(--primary-color);
+    color: #fafafa;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 800px
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    background-color: #d8dfe5; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 8px;
+    gap: 2rem
+    
+}
+
+legend {
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 1rem
+}
+
+form p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+label {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+@media (min-width: 1024px) {
+    fieldset {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem
+    }
+}

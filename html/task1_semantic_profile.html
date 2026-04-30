@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/task1_profile.css">
 </head>
 <body>
-    <a href="#main">Skip to main content</a>
+    <a href="#main" class="skip-link">Skip to main content</a>
 
     <header>
         <div class="brand">
@@ -48,83 +48,85 @@
             </section>
 
             <!--Skills section-->
-            <section id="skills"></section>
+            <section id="skills">
             <h3>Skills & Technologies</h3>
-            <dl>
-                <dt><abbr title="Hypertext Markup Language">HTML</abbr></dt>
-                <dd>Standard markup language for creating web pages. It is the structural foundation of the web. Expertise level: intermediate</dd>
+                <dl class="skills-list">
+                    <dt><abbr title="Hypertext Markup Language">HTML</abbr></dt>
+                    <dd>Standard markup language for creating web pages. It is the structural foundation of the web. Expertise level: intermediate</dd>
 
-                <dt><abbr title="Cascading Style Sheets"></abbr>CSS</dt>
-                <dd>Stylesheet language used to describe how <abbr title="Hypertext Markup Language">HTML</abbr>elements are to be displayed on the web page. Expertise level:
-                intermediate</dd>
+                    <dt><abbr title="Cascading Style Sheets"></abbr>CSS</dt>
+                    <dd>Stylesheet language used to describe how <abbr title="Hypertext Markup Language">HTML</abbr>elements are to be displayed on the web page. Expertise level:
+                    intermediate</dd>
 
-                <dt>Javascript</dt>
-                <dd>Dynamic programming language that is used to add interactive features to the web pages. Expertise level: Intermediate</dd>
+                    <dt>Javascript</dt>
+                    <dd>Dynamic programming language that is used to add interactive features to the web pages. Expertise level: Intermediate</dd>
 
-                <dt>Python</dt>
-                <dd>Object-oriented general-purpose programming language that emphasizes code readibility, simplicity and ease-of-writing with the use of indentation. Expertise level: advanced</dd>
+                    <dt>Python</dt>
+                    <dd>Object-oriented general-purpose programming language that emphasizes code readibility, simplicity and ease-of-writing with the use of indentation. Expertise level: advanced</dd>
 
-                <dt>Ruby</dt>
-                <dd>Objected-oriented dynamic programming language with a focus on simplicity and productivity, featuring an elegant syntax that is natural to read and easy to write. Expertise level: Intermediate</dd>
-            </dl>
-
+                    <dt>Ruby</dt>
+                    <dd>Objected-oriented dynamic programming language with a focus on simplicity and productivity, featuring an elegant syntax that is natural to read and easy to write. Expertise level: Intermediate</dd>
+                </dl>
+            </section>
             <!--Education section-->
             <section id="education">
                 <h3>Education & Certifications</h3>
-                <table border="1">
-                    <caption>Summary of formal education and professional certifications</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Institution</th>
-                            <th scope="col">Program</th>
-                            <th scope="col">Period</th>
-                            <th scope="col">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Mentorcruise</th>
-                            <td>Full-stack software development mentorship</td>
-                            <td><time datetime="2026-01">Mar 2026</time> &ndash; <time datetime="2026">present</time></td>
-                            <td>Ongoing</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Udemy</th>
-                            <td>Testing Ruby with Rspec</td>
-                            <td><time datetime="2026-03">Mar 2026</time> &ndash; <time datetime="2026-04">Apr 2026</time></td>
-                            <td>Certified</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Nielsen</th>
-                            <td>Lean Six Sixma Green Belt</td>
-                            <td><time datetime="2020-03">Mar 2020</time> &ndash; <time datetime="2020-08">Aug 2020</time></td>
-                            <td>Certified</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Nottingham Trent University</th>
-                            <td>B.A.Hons International Business Administration</td>
-                            <td><time datetime="2010-09">Sep 2010</time> &ndash; <time datetime="2013-06"> Jun 2013</time></td>
-                            <td>Completed</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="4">Total of 3 completed credentials and 1 ongoing specialization.</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                <div class="table-container">
+                    <table>
+                        <caption>Summary of formal education and professional certifications</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Institution</th>
+                                <th scope="col">Program</th>
+                                <th scope="col">Period</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Mentorcruise</th>
+                                <td>Full-stack software development mentorship</td>
+                                <td><time datetime="2026-01">Mar 2026</time> &ndash; <time datetime="2026">present</time></td>
+                                <td>Ongoing</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Udemy</th>
+                                <td>Testing Ruby with Rspec</td>
+                                <td><time datetime="2026-03">Mar 2026</time> &ndash; <time datetime="2026-04">Apr 2026</time></td>
+                                <td>Certified</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Nielsen</th>
+                                <td>Lean Six Sixma Green Belt</td>
+                                <td><time datetime="2020-03">Mar 2020</time> &ndash; <time datetime="2020-08">Aug 2020</time></td>
+                                <td>Certified</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Nottingham Trent University</th>
+                                <td>B.A.Hons International Business Administration</td>
+                                <td><time datetime="2010-09">Sep 2010</time> &ndash; <time datetime="2013-06"> Jun 2013</time></td>
+                                <td>Completed</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4">Total of 3 completed credentials and 1 ongoing specialization.</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </section>
 
             <!--Timeline section-->
             <section id="timeline">
                 <h3>Learning timeline</h3>
                 <ol>
-                <li><time datetime="2026-01-01">1 January 2026</time>: Introduction to version control and git, created my first github repo and made my first git commit</li>
-                <li><time datetime="2026-01-07">7 January 2026</time>: Introduction to Ruby programming, wrote my first Ruby script</li>
-                <li><time datetime="2026-01-14">14 January 2026</time>: Introduction to Big O Notation, for the first time I analyzed my code in terms of its time complexity</li>
-                <li><time datetime="2026-01-21">21 January 2026</time>: Introduction to Object Oriented Programming and Test-Driven Development, created my first <abbr title="Object Oriented Programming">OOP</abbr>program in Ruby and wrote my first test in Minitest.</li>
-                <li><time datetime="2026-02-02">2 February 2026</time>: Introduction to Design Patterns,wrote my first program whilst consciously applying common design patterns</li>
-                <li><time datetime="2026-23-03">23 March 2026</time>: Introduction to HTML, created my first web page only using HTML semantic elements</li>
+                <li><time datetime="2026-01-01">1 January 2026</time> Introduction to version control and git, created my first github repo and made my first git commit</li>
+                <li><time datetime="2026-01-07">7 January 2026</time> Introduction to Ruby programming, wrote my first Ruby script</li>
+                <li><time datetime="2026-01-14">14 January 2026</time> Introduction to Big O Notation, for the first time I analyzed my code in terms of its time complexity</li>
+                <li><time datetime="2026-01-21">21 January 2026</time> Introduction to Object Oriented Programming and Test-Driven Development, created my first <abbr title="Object Oriented Programming">OOP</abbr>program in Ruby and wrote my first test in Minitest.</li>
+                <li><time datetime="2026-02-02">2 February 2026</time> Introduction to Design Patterns,wrote my first program whilst consciously applying common design patterns</li>
+                <li><time datetime="2026-23-03">23 March 2026</time> Introduction to HTML, created my first web page only using HTML semantic elements</li>
             </ol>
             </section>
 
@@ -223,7 +225,7 @@
         </address>    
         
         <nav aria-label="Footer navigation">
-            <ul>
+            <ul class="footer-menu">
                 <li><a href="https://github.com/TomasGic" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 <li><a href="https://linkedin.com/in/tomas-gic-ba0b9874" target="_blank">LinkedIn</a></li>
                 <li><a href="mailto:tomas@example.com">Email Me</a></li>

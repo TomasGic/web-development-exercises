@@ -44,6 +44,34 @@ header {
     gap: 1rem
 }
 
+section {
+    margin-top: 4rem
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 2rem 1.5rem
+}
+
+footer address {
+    font-style: normal
+}
+
+footer nav a, footer address a {
+    color: #38bdf8;
+    text-decoration: none
+}
+
+.footer-menu {
+    display: flex;
+    gap: 1.5rem
+}
+
 @media (min-width: 1024px) {
     header {
         flex-direction: row;
@@ -61,7 +89,105 @@ header {
         max-width: 60%
     }
 
+    body {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 0 auto
+    }
+
+    header {
+        grid-column: 1 / -1;
+    }
+
+    .skills-list {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        row-gap: 1.5rem
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: space-between;
+        grid-column: 1/-1
+    }
+
 }
+
+@media (min-width: 768px) {
+    footer {
+        flex-direction: row;
+    }
+}
+
+main, aside {
+    padding: 1.5rem
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto
+}
+
+#timeline ol {
+    list-style: none;
+    margin-left: 1.5rem;
+    border-left: 2px solid #1e293b;
+}
+
+#timeline li {
+    margin-bottom: 1.5rem
+}
+
+#timeline time {
+    display: block;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+}
+
+#quote figure {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background-color: #c7daec;
+    border-left: 6px solid #007bff;
+    border-radius: 0 8px 8px 0
+}
+
+#faq {
+    margin-top: 4.5rem
+}
+
+
+#faq dt {
+    font-weight: 700;
+    margin-top: 2.75rem
+}
+
+#faq dd {
+    margin-top: 0.75rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #9dbad6
+}
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 0.5rem 1rem;
+    background: #1a1a1a;
+    color: #fff;
+    z-index: 100;
+    text-decoration: none
+}
+
+.skip-link:focus {
+    top: 0
+}
+
+
+
+
 
 
 

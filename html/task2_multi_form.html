@@ -23,52 +23,52 @@
             <fieldset>
                 <legend>Personal Details</legend>
                 
-                <p>
+                <div class="field-wrapper">
                     <label for="full_name">Full Name (required)</label>
                     <input type="text" id="full_name" name="full_name" required minlength="2" maxlength="100">
-                </p>
+                </div>
 
-                <p>
+                <div class="field-wrapper">
                     <label for="email">Email address (required)</label>
                     <input type="email" id="email" name="email" required>
-                </p>
+                </div>
 
-                <p>
+                <div class="field-wrapper">
                     <label for="phone">Phone Number (required)</label>
                     <input type="tel" id="phone" name="phone" required pattern="(\+|00)?[0-9\-\(\)]{7,20}">
-                </p>
+                </div>
 
-                <p>
+                <div class="field-wrapper">
                     <label for="dob">Date of birth (required)</label>
                     <input type="date" id="dob" name="dob" required>
-                </p>
+                </div>
 
-                <p>
+                <div class="field-wrapper">
                     <label for="id-number">National ID or Passport Number (required)</label>
                     <input type="text" id="id-number" name="id-number" required pattern="[a-zA-Z0-9]{6,12}">
-                </p>
+                </div>
 
             </fieldset>
 
             <fieldset>
                 <legend>Address</legend>
 
-                <p>
+                <div class="field-wrapper">
                     <label for="street">Street name (required)</label>
                     <input type="text" id="street" name="street" required>
-                </p>
+                </div>
 
-                <p>
+                <div class="field-wrapper">
                     <label for="city">City (required)</label>
                     <input type="text" id="city" required>
-                </p>
+                </div>
 
-                <p>
+                <div class="field-wrapper">
                     <label for="zip">Potal Code (required)</label>
                     <input type="text" id="zip" name="postal-code" required pattern="[0-9]{5}">
-                </p>
+                </div>
 
-                <p>
+                <div class="field-wrapper">
                     <label for="country">Country (required)</label>
                     <select name="country" id="country" required>
                         <option value="">Please choose a country</option>
@@ -84,9 +84,9 @@
                         <option value="pl">Poland</option>
                         <option value="sk">Slovakia</option>
                     </select>
-                </p>
+                </div>
 
-                <p>
+                <div class="field-wrapper">
                     <label for="state">State/Province</label>
                     <input type="text" id="state" name="state" list="states-list">
                     <datalist id="states-list">
@@ -98,11 +98,13 @@
                         <option value="Bavaria">
                         <option value="London">
                     </datalist>
-                </p>
+                </div>
             </fieldset>
 
-            <button type="submit">Next: Preferences →</button>
-            <button type="reset">Clear Form</button>
+            <div class="btn-container">
+                <button type="submit">Next: Preferences →</button>
+                <button type="reset">Clear Form</button>
+            </div>
         </form>
     </main>
     

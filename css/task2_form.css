@@ -28,6 +28,11 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
+}    
+
+h1 {
+    margin-bottom: 3.6rem;
+    text-align: center
 }
 
 ul {
@@ -35,7 +40,7 @@ ul {
 }
 
 header {
-    padding: 0.5rem 2rem
+    padding: 1.5rem 2rem
 }
 
 .nav-menu {
@@ -50,7 +55,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center
+    text-align: center;
+    gap: 0.8rem
 }
 
 .nav-menu a::before {
@@ -78,6 +84,7 @@ header {
 
 form {
     margin: 0 auto;
+    padding: 1.5rem 1.2rem;
     max-width: 800px
 }
 
@@ -88,29 +95,43 @@ fieldset {
     background-color: #d8dfe5; 
     border: 1px solid #e2e8f0; 
     border-radius: 8px;
-    gap: 2rem
+    gap: 2rem;
+    margin: 2rem 1rem
     
 }
 
 legend {
     font-weight: bold;
     color: var(--text-main);
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    font-size: 1.2rem
 }
 
-form p {
+.field-wrapper {
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    margin-bottom: 1.5rem
 }
+
+/* form div p {
+    display: flex;
+    flex-direction: row;
+} */
 
 label {
     font-weight: 400;
     font-size: 0.9rem;
 }
 
-input, select, textarea {
+input[type="text"], 
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="url"],
+select, textarea {
     padding: 12px;
     border: 1px solid var(--border-color);
     border-radius: 6px;
@@ -121,6 +142,29 @@ input, select, textarea {
 textarea {
     min-height: 120px;
     resize: vertical;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+button, nav[aria-label="Form navigation"] a {
+    padding: 0.8rem 2.4rem;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--bg-page)
+}
+
+button[type="reset"], nav[aria-label="Form navigation"] a {
+    background-color: #f3f4f6; 
+    border: 1px solid #d1d5db;
 }
 
 @media (min-width: 1024px) {

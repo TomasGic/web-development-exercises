@@ -9,40 +9,54 @@
 <body>
     <header>
         <h1>Course Application</h1>
-        <nav>
-            <ol>
-            <li><a href="task2_multi_form.html"></a>Step 1: Personal Information</li>
+        <nav aria-label="Form steps">
+            <ol class="nav-menu">
+            <li><a href="task2_multi_form.html">Step 1: Personal Information</a></li>
             <li><a href="task2_multi_form_step2.html">Step 2: Preferences</a></li>
-            <li><a href="task2_multi_form_step3.html" arria-label="current"><strong>Step 3: Review and submit</strong></a></li>
+            <li><a href="task2_multi_form_step3.html" aria-current="page"><strong>Step 3: Review and submit</strong></a></li>
             </ol>
         </nav>
     </header>
 
     <main>
-        <h2>Application summary</h2>
-        <p>Review your details before submitting</p>
+        <div class="heading-centered">
+            <h2>Application summary</h2>
+            <p>Review your details before submitting</p>
+        </div>
 
         <section id="summary-personal">
             <h3>Personal Information</h3>
 
             <dl>
-                <dt>Full name</dt>
-                <dd>Tomas Gic</dd>
+                <div class="field-wrapper">
+                    <dt>Full name</dt>
+                    <dd>Tomas Gic</dd>
+                </div>
 
-                <dt>Email address</dt>
-                <dd>tomas@example.com</dd>
+                <div class="field-wrapper">
+                    <dt>Email address</dt>
+                    <dd>tomas@example.com</dd>
+                </div>
 
-                <dt>Phone number</dt>
-                <dd>+31555777888</dd>
+                <div class="field-wrapper">
+                    <dt>Phone number</dt>
+                    <dd>+31555777888</dd>
+                </div>
 
-                <dt>Date of birth</dt>
-                <dd>14//09/1991</dd>
+                <div class="field-wrapper">
+                    <dt>Date of birth</dt>
+                    <dd>14//09/1991</dd>
+                </div>
 
-                <dt>National ID/Passport Number</dt>
-                <dd>BF5598445</dd>
+                <div class="field-wrapper">
+                    <dt>National ID/Passport Number</dt>
+                    <dd>BF5598445</dd>
+                </div>
 
-                <dt>Address</dt>
-                <dd>Carnapstraat 45, Amsterdam PT01234, Netherlands</dd>
+                <div class="field-wrapper">
+                    <dt>Address</dt>
+                    <dd>Carnapstraat 45, Amsterdam PT01234, Netherlands</dd>
+                </div>
 
             </dl>
         </section>
@@ -50,29 +64,45 @@
         <section id="summary-preferences">
             <h3>Learning preferences & Background</h3>
             <dl>
-                <dt>Preferred schedule</dt>
-                <dd>Evening</dd>
+                <div class="field-wrapper">
+                    <dt>Preferred schedule</dt>
+                    <dd>Evening</dd>
+                </div>
 
-                <dt>Topics of interest</dt>
-                <dd>Full-stack web development, Game development</dd>
+                <div class="field-wrapper">
+                    <dt>Topics of interest</dt>
+                    <dd>Full-stack web development, Game development</dd>
+                </div>
 
-                <dt>Experience level</dt>
-                <dd>Intermediate</dd>
+                <div class="field-wrapper">
+                    <dt>Experience level</dt>
+                    <dd>Intermediate</dd>
+                </div>
 
-                <dt>Weekly availability</dt>
-                <dd>25 hours</dd>
+                <div class="field-wrapper">
+                    <dt>Weekly availability</dt>
+                    <dd>25 hours</dd>
+                </div>
 
-                <dt>Years of professional experience</dt>
-                <dd>10</dd>
+                <div class="field-wrapper">
+                    <dt>Years of professional experience</dt>
+                    <dd>10</dd>
+                </div>
 
-                <dt>Portfolio or LinkedIn URL</dt>
-                <dd><a href="www.linkedin.com/in/tomas-gic-ba0b9874">www.linkedin.com/in/tomas-gic-ba0b9874</a></dd>
+                <div class="field-wrapper">
+                    <dt>Portfolio or LinkedIn URL</dt>
+                    <dd><a href="www.linkedin.com/in/tomas-gic-ba0b9874">www.linkedin.com/in/tomas-gic-ba0b9874</a></dd>
+                </div>
 
-                <dt>Previous education or relevant experience</dt>
-                <dd>Text to follow.</dd>
+                <div class="field-wrapper">
+                    <dt>Previous education or relevant experience</dt>
+                    <dd>Text to follow.</dd>
+                </div>
 
-                <dt>Why do you want to take this course?</dt>
-                <dd>Text to follow.</dd>
+                <div class="field-wrapper">
+                    <dt>Why do you want to take this course?</dt>
+                    <dd>Text to follow.</dd>
+                </div>
             </dl>
         </section>
 
@@ -84,7 +114,7 @@
 
             <p>
                 <input type="checkbox" id="confirm-terms" name="confirm_terms" value="accepted" required>
-                <label for="confirm-terms">I agree to the <a href="#terms-text">terms and conditions</a>.</label>
+                <label for="confirm-terms">I agree to the <a href="#terms-text">Terms and conditions</a>.</label>
             </p>
 
             <details id="terms-text">
@@ -95,10 +125,12 @@
             </details>
 
             <nav aria-label="Form navigation">
-                <a href="task2_multi_form_step2.html">&larr; Back: Edit Preferences</a>
-                <br><br>
-                <button type="submit">Submit Application</button>
-                <button type="reset">Clear Form</button>
+                <div class="btn-container">
+                    <a href="task2_multi_form_step2.html">&larr; Back: Edit Preferences</a>
+                    <button type="submit">Submit Application</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+                
             </nav>
         </form>
     </main>

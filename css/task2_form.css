@@ -95,8 +95,7 @@ fieldset {
     background-color: #d8dfe5; 
     border: 1px solid #e2e8f0; 
     border-radius: 8px;
-    gap: 2rem;
-    margin: 2rem 1rem
+    margin-bottom: 2rem
     
 }
 
@@ -108,7 +107,6 @@ legend {
 }
 
 .field-wrapper {
-    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -132,30 +130,35 @@ input[type="date"],
 input[type="number"],
 input[type="url"],
 select, textarea {
-    padding: 12px;
+    padding: 0.8rem;
     border: 1px solid var(--border-color);
     border-radius: 6px;
-    font-size: 1rem;
     width: 100%;
 }
 
 textarea {
-    min-height: 120px;
+    min-height: 150px;
     resize: vertical;
 }
 
 .btn-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 2rem;
 }
 
-button, nav[aria-label="Form navigation"] a {
+button, nav[aria-label="Form navigation"] a{
     padding: 0.8rem 2.4rem;
     cursor: pointer;
     border-radius: 4px;
     border: none;
+    font-size: inherit;
+    text-decoration: none;
+    text-align: center
 }
+
+
 
 button[type="submit"] {
     background-color: var(--primary-color);
@@ -164,7 +167,69 @@ button[type="submit"] {
 
 button[type="reset"], nav[aria-label="Form navigation"] a {
     background-color: #f3f4f6; 
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--primary-color)
+}
+
+.heading-centered {
+    text-align: center;
+    margin: 2rem 0
+}
+
+section {
+    margin: 3rem auto;
+    padding: 1.5rem 1.2rem;
+    max-width: 900px;
+    background-color: var(--bg-form);
+    border-radius: 8px
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0
+}
+
+details {
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    margin: 3rem 0 4rem 0
+}
+
+summary {
+    padding: 0.8rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--bg-form)
+}
+
+details[open] summary {
+    border-bottom: 1px solid var(--border-color);
+}
+
+details h3 {
+    padding: 0 0.8rem
+}
+
+details p {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px
+}
+
+input:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid {
+    border: 2px solid red;
 }
 
 @media (min-width: 1024px) {
@@ -172,4 +237,18 @@ button[type="reset"], nav[aria-label="Form navigation"] a {
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem
     }
+
+    dl {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 
+    }
+
+    .full-width {
+        grid-column: span 2
+    }
+
+    .btn-container {
+        flex-direction: row;
+    }
+
 }

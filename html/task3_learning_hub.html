@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="../css/task3_learning_hub.css">
 </head>
 <body>
-    <a href="#main">Skip to main content</a>
+    <!-- <a href="#main">Skip to main content</a> -->
     
     <header>
-        <h1>My Web Development Learning Hub</h1>
-        <p>A personal dashboard tracking my journey from Ruby to full-stack development.</p>
+        <div class="main-heading">
+            <h1>My Web Development Learning Hub</h1>
+            <p>A personal dashboard tracking my journey from Ruby to full-stack development.</p>
+        </div>
+        
         <nav aria-label="Main navigation">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#goals">Goals</a></li>
@@ -24,6 +29,8 @@
                 <li><a href="contact">Contact</a></li>
             </ul>
         </nav>
+
+        
     </header>
 
     <main id="main">
@@ -31,11 +38,11 @@
             <!-- ==================== Section 1: About ==================== -->
             <section id="about">
                 <h2>About Me</h2>
-                <p>My programming journey began in <time datetime="2020-04">April 2020</time>when the whole world shut down due to the covid-19 pandemic. I started working from home and had suddenly a lot more time on my hands, so I wanted to use it in a productive manner. In my professional role as a content editor, I was exposed to many repetitive, tedious tasks that I wanted to automate, but I didn't have the skillset to do it. I started learning Python and soon stumbled upon <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> and Javascript. I started to apply my new knowledge of these tools in my job and gradually I became the technical automation expert in our content department.</p>
+                <p>My programming journey began in <time datetime="2020-04">April 2020</time> when the whole world shut down due to the covid-19 pandemic. I started working from home and had suddenly a lot more time on my hands, so I wanted to use it in a productive manner. In my professional role as a content editor, I was exposed to many repetitive, tedious tasks that I wanted to automate, but I didn't have the skillset to do it. I started learning Python and soon stumbled upon <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> and Javascript. I started to apply my new knowledge of these tools in my job and gradually I became the technical automation expert in our content department.</p>
 
-                <p>By <time datetime="2022-06">June 2021</time>I fully or partially automated more than 30 workflows that were previously carried out manually and saved our content department more than 1000 hours of work per year.</p>
+                <p>By <time datetime="2022-06">June 2021</time> I fully or partially automated more than 30 workflows that were previously carried out manually and saved our content department more than 1000 hours of work per year.</p>
 
-                <p>In <time datetime="2025-11">November 2025</time>my company announced a round of layoffs and offered my team an opportunity to leave voluntarily. I thought this was a good opporunity to fully transition into software development. In <time datetime="2026-01">Januar 2026</time>I started a mentoring program with a goal to become a full-stack software developer specialising in Ruby and Ruby on Rails. I decided to make this website as a learning project but also to document my mentoring journey. You can find more of my projects on my <a href="https://github.com/TomasGic" target="_blank" rel="noopener noreferrer">Github page</a>.</p>
+                <p>In <time datetime="2025-11">November 2025</time> my company announced a round of layoffs and offered my team an opportunity to leave voluntarily. I thought this was a good opporunity to fully transition into software development. In <time datetime="2026-01">January 2026</time> I started a mentoring program with a goal to become a full-stack software developer specialising in Ruby and Ruby on Rails. I decided to make this website as a learning project but also to document my mentoring journey. You can find more of my projects on my <a href="https://github.com/TomasGic" target="_blank" rel="noopener noreferrer">Github page</a>.</p>
             </section>
 
             <!-- ==================== Section : Goals ==================== -->
@@ -48,7 +55,7 @@
                         <p>Deadline: <time datetime="2026-05-30">May 30, 2026</time></p>
                         <p>Status: In progress</p>
                         <p>Metric: Build and deploy 3 responsive websites from scratch using HTML, CSS and JS.</p>
-                        <p>Progress: <meter min="0" max="100" value="35">35%</meter></p>
+                        <p>Progress <meter min="0" max="100" value="35">35%</meter></p>
                     </dd>
 
                     <dt>Master Ruby on Rails fundamentals</dt>
@@ -56,7 +63,7 @@
                         <p>Deadline: <time datetime="2026-07-31">July 31, 2026</time></p>
                         <p>Status: Not started</p>
                         <p>Metric: Build and deploy a basic journalling CRUD app."></abbr></p>
-                        <p>Progress: <meter min="0" max="100" value="0">0%</meter></p>
+                        <p>Progress <meter min="0" max="100" value="0">0%</meter></p>
                     </dd>
 
                     <dt>Master design patterns in Ruby</dt>
@@ -64,7 +71,7 @@
                         <p>Deadline: <time datetime="2026-05-08">May 08, 2026</time></p>
                         <p>Status: In progress</p>
                         <p>Metric: Complete all week 6 tasks related to design patterns."></abbr></p>
-                        <p>Progress: <meter min="0" max="100" value="67">67%</meter></p>
+                        <p>Progress <meter min="0" max="100" value="67">67%</meter></p>
                     </dd>
 
                     <dt>Master Data Structures and Algorithms</dt>
@@ -72,7 +79,7 @@
                         <p>Deadline: <time datetime="2026-08-31">August 31, 2026</time></p>
                         <p>Status: In progress</p>
                         <p>Metric: Complete all exercises from the book <cite>A Common-Sense Guide to Data Structures and Algorithms</cite> by Jay Wengrow.></p>
-                        <p>Progress: <meter min="0" max="100" value="10">10%</meter></p>
+                        <p>Progress <meter min="0" max="100" value="10">10%</meter></p>
                     </dd>
                 </dl>
 
@@ -80,20 +87,26 @@
                 <dl>
                     <dt>Developer portfolio completion</dt>
                     <dd>Build 3 solid full-stack projects and upload them on github.
-                    <label for="progress-portfolio">Progress</label>
-                    <progress id="progress-portfolio" max="100" value="10"></progress>
+                    <div class="progress">
+                        <label for="progress-portfolio">Progress</label>
+                        <progress id="progress-portfolio" max="100" value="10"></progress>
+                    </div>
                     </dd>
                     
                     <dt>Master data structures and algorithms</dt>
                     <dd>Complete all exercises from the book <cite>A Common-Sense Guide to Data Structures and Algorithms</cite> by Jay Wengrow.
-                    <label for="progress-algorithms">Progress</label>
-                    <progress id="progress-algorithms" value="10" max="100">10%</progress>
+                    <div class="progress">
+                        <label for="progress-algorithms">Progress</label>
+                        <progress id="progress-algorithms" value="10" max="100">10%</progress>
+                    </div>
                     </dd>
                     
                     <dt>Contribute to open-source projects</dt>
                     <dd>Have at least 3 merged pull-requests in ruby-related gems.
-                    <label for="progress-open-source">Progress</label>
-                    <progress id="progress-open-source" value="0" max="100">0%</progress>
+                    <div class="progress">
+                        <label for="progress-open-source">Progress</label>
+                        <progress id="progress-open-source" value="0" max="100">0%</progress>
+                    </div>
                     </dd>
 
                 </dl>
@@ -105,27 +118,27 @@
                 <ol reversed>
                     <li>
                         <time datetime="2026-01-05">January 5th, 2026</time>:
-                        <strong>Ruby basics</strong> - Wrote my first Ruby script.
+                        <strong>Ruby basics</strong>Wrote my first Ruby script.
                     </li>
                     <li>
                         <time datetime="2026-01-12">January 12th, 2026</time>
-                        <strong>Ruby <abbr title="Test Driven Development">TDD</abbr></strong> - Wrote my first Ruby program using TDD principles.
+                        <strong>Ruby <abbr title="Test Driven Development">TDD</abbr></strong>Wrote my first Ruby program using TDD principles.
                     </li>
                     <li>
                         <time datetime="01-19-2026">19th January, 2026</time>
-                        <strong>Git and version control</strong> - Incorporated git and version control into my coding workflow.
+                        <strong>Git and version control</strong>Incorporated git and version control into my coding workflow.
                     </li>
                     <li>
                         <time datetime="2026-01-27">Janaury 27th, 2026</time>
-                        <strong>Time complexity of algorithms</strong> - For the first time I analyzed my Ruby program in terms of its time complexity using Big O Notation.
+                        <strong>Time complexity of algorithms</strong>For the first time I analyzed my Ruby program in terms of its time complexity using Big O Notation.
                     </li>
                     <li>
                         <time datetime="2026-02-02">February 2nd, 2026</time>
-                        <strong>Design patterns in Ruby</strong> - Wrote my first program in Ruby while consciously applying design patterns.
+                        <strong>Design patterns in Ruby</strong>Wrote my first program in Ruby while consciously applying design patterns.
                     </li>
                     <li>
                         <time datetime="2026-04-23">April 23rd, 2026</time>
-                        <strong>Writing code by heart</strong> - Wrote my first Ruby program without referencing documentation or the help of AI. 
+                        <strong>Writing code by heart</strong>Wrote my first Ruby program without referencing documentation or the help of AI. 
                     </li>
                 </ol>
             </section>
@@ -133,94 +146,96 @@
             <!-- ==================== Section 4: Skills Matrix =================== -->
              <section id="skills">
                 <h2>Skills & Technologies</h2>
-                <table>
-                    <caption>Current technology proficiency matrix</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Technology</th>
-                            <th scope="col">Category</th>
-                            <th scope="col">Level</th>
-                            <th scope="col">Started</th>
-                            <th scope="col">Weekly Hours</th>
-                            <th scope="col">Goal by <time datetime="2026-12-31">December 31, 2026</time></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Ruby</th>
-                            <td>Language</td>
-                            <td><meter min="0" max="5" value="3">3</meter></td>
-                            <td><time datetime="01-05-2026">January 5th, 2026</time></td>
-                            <td>15</td>
-                            <td>Expert level (5)</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Python</th>
-                            <td>Language</td>
-                            <td><meter min="0" max="5" value="4">4</meter></td>
-                            <td><time datetime="2020-06">June 2020</time></td>
-                            <td>5</td>
-                            <td>Expert level (5)</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Javascript</th>
-                            <td>Language</td>
-                            <td><meter min="0" max="5" value="2">2</meter></td>
-                            <td><time datetime="2020-08">August 2020</time></td>
-                            <td>5</td>
-                            <td>Expert level (5)</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">HTML</th>
-                            <td>Language</td>
-                            <td><meter min="0" max=5 value="3">3</meter></td>
-                            <td><time datetime="2020-06">June 2020</time></td>
-                            <td>5</td>
-                            <td>Expert level (5)</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">CSS</th>
-                            <td>Language</td>
-                            <td><meter min="0" max=5 value="3">3</meter></td>
-                            <td><time datetime="2020-06">June 2020</time></td>
-                            <td>5</td>
-                            <td>Expert level (5)</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">RSpec</th>
-                            <td>Framework</td>
-                            <td><meter min="0" max="5" value="3">3</meter></td>
-                            <td><time datetime="2026-01-27">January 27, 2026</time></td>
-                            <td>10</td>
-                            <td>Expert level (5)</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Git</th>
-                            <td>Tools/Version control</td>
-                            <td><meter min="0" max="5" value="3">3</meter></td>
-                            <td><time datetime="2026-01-05">January 5, 2026</time></td>
-                            <td>1</td>
-                            <td>Expert level (5)</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">AWS</th>
-                            <td>Platform/Infrastructure</td>
-                            <td><meter min="0" max="5" value="1">1</meter></td>
-                            <td><time datetime="2022-03">March 2022</time></td>
-                            <td>1</td>
-                            <td>Advanced (4)</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th scope="row" colspan="2">Averages/Totals</th>
-                            <td>Avg: 2.6/5</td>
-                            <td>—</td>
-                            <td>Total: 47h</td>
-                            <td>—</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                <div>
+                    <table class="table-container">
+                        <caption>Current technology proficiency matrix</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Technology</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">Started</th>
+                                <th scope="col">Weekly Hours</th>
+                                <th scope="col">Goal by <time datetime="2026-12-31">December 31, 2026</time></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Ruby</th>
+                                <td>Language</td>
+                                <td><meter min="0" max="5" value="3">3</meter></td>
+                                <td><time datetime="01-05-2026">January 5th, 2026</time></td>
+                                <td>15</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Python</th>
+                                <td>Language</td>
+                                <td><meter min="0" max="5" value="4">4</meter></td>
+                                <td><time datetime="2020-06">June 2020</time></td>
+                                <td>5</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Javascript</th>
+                                <td>Language</td>
+                                <td><meter min="0" max="5" value="2">2</meter></td>
+                                <td><time datetime="2020-08">August 2020</time></td>
+                                <td>5</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">HTML</th>
+                                <td>Language</td>
+                                <td><meter min="0" max=5 value="3">3</meter></td>
+                                <td><time datetime="2020-06">June 2020</time></td>
+                                <td>5</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CSS</th>
+                                <td>Language</td>
+                                <td><meter min="0" max=5 value="3">3</meter></td>
+                                <td><time datetime="2020-06">June 2020</time></td>
+                                <td>5</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">RSpec</th>
+                                <td>Framework</td>
+                                <td><meter min="0" max="5" value="3">3</meter></td>
+                                <td><time datetime="2026-01-27">January 27, 2026</time></td>
+                                <td>10</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Git</th>
+                                <td>Tools/Version control</td>
+                                <td><meter min="0" max="5" value="3">3</meter></td>
+                                <td><time datetime="2026-01-05">January 5, 2026</time></td>
+                                <td>1</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">AWS</th>
+                                <td>Platform/Infrastructure</td>
+                                <td><meter min="0" max="5" value="1">1</meter></td>
+                                <td><time datetime="2022-03">March 2022</time></td>
+                                <td>1</td>
+                                <td>Advanced (4)</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row" colspan="2">Averages/Totals</th>
+                                <td>Avg: 2.6/5</td>
+                                <td>—</td>
+                                <td>Total: 47h</td>
+                                <td>—</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
 
                 <h3>Skill categories</h3>
                 <dl>
@@ -310,7 +325,7 @@
                 <ul>
                     <li><cite>Design Patterns in Ruby</cite> by Russ Olsen (2007) - So far the best book on design patterns in general that I have found, comprehensive with easy explanations and practical real-world code examples.</li>
 
-                    <li><cite>A Common-Sense Guide to Data Structures and Algorithms</cite> by Jay Wengrow (2020)</li> - One of the best books on data structures and algorithms out there. Contains easy, no-nonsense explanations to complex concepts, every chapter has a handful of exercises along with their solutions.
+                    <li><cite>A Common-Sense Guide to Data Structures and Algorithms</cite> by Jay Wengrow (2020) - One of the best books on data structures and algorithms out there. Contains easy, no-nonsense explanations to complex concepts, every chapter has a handful of exercises along with their solutions.</li>
 
                     <li><cite>Clean Code: A Handbook of Agile Software Craftsmanship</cite> by Robert C. Martin (2009) - This book is a classic in the field of software engineering. Even though it contains code examples in Java, the concepts are applicable to any programming language. I believe it is a must-read for any software developer who is serious about writing clean, professional code.</li>
                 </ul>
@@ -323,7 +338,7 @@
                     <dt><a href="https://www.udemy.com/course/testing-ruby-with-rspec/" target="_blank" rel="noopener noreferrer">Testing Ruby with RSpec</a></dt>
                     <dd>A solid Udemy course on test-driven development using RSpec. Some of the code examples were a bit unrealistic, but overall it is a well-structured course worth the price. Rating: 4.4/5</dd>
 
-                    <dt><a href="https://www.udemy.com/course/python-oop-object-oriented-programming-from-beginner-to-pro" target="blank" rel="noopener noreferrer">OOP Programming in Python</a></dt>
+                    <dt><a href="https://www.udemy.com/course/python-oop-object-oriented-programming-from-beginner-to-pro" target="_blank" rel="noopener noreferrer">OOP Programming in Python</a></dt>
                     <dd>This course focuses on OOP in Python, but it is suitable for anyone who wants to learn the best OOP practices regardles of what programming language they use. One of the reasons why this course stands out for me is the extremely pleasant-sounding voice of the instructor, which makes it easier to stay engaged. Rating: 4.7/5 </dd>
                 </dl>
 
@@ -412,13 +427,13 @@
                     <blockquote cite="https://www.brainyquote.com/quotes/nelson_mandela_378967">
                         <p>It always seems impossible until it's done.</p>
                     </blockquote>
-                    <figcaption>
+                    <figcaption class="quote-caption">
                         &mdash; Nelson Mandela, via <cite>BrainyQuote</cite>
                     </figcaption>
                 </figure>
 
                 <figure>
-                    <figcaption>A code snippet that I'm proud of</figcaption>
+                    <figcaption class="code-caption">A code snippet that I'm proud of</figcaption>
                     <pre>
                         <code>Code to be inserted</code>
                     </pre>
@@ -432,25 +447,25 @@
                     <fieldset>
                         <legend>Your Information</legend>
                         
-                        <p>
+                        <div class="input-wrapper">
                             <label for="name">Full name (required)</label>
                             <input type="text" id="name" name="name" minlength="2" required>
-                        </p>
+                        </div>
 
-                        <p>
+                        <div class="input-wrapper">
                             <label for="email">Email (required)</label>
                             <input type="email" id="email" name="email" required>
-                        </p>
+                        </div>
 
-                        <p>
+                        <div class="input-wrapper">
                             <label for="website">Website (optional)</label>
                             <input type="url" id="website" name="website">
-                        </p>
+                        </div>
                     </fieldset>
 
                     <fieldset>
                         <legend>Your Message</legend>
-                        <p>
+                        <div>
                             <label for="subject">Subject</label>
                             <select name="subject" id="subject" required>
                                 <option value="mentoring">Mentoring</option>
@@ -459,23 +474,29 @@
                                 <option value="question">Question</option>
                                 <option value="other">Other</option>
                             </select>
-                        </p>
+                        </div>
 
-                        <p>Priority:</p>
-                        <input type="radio" id="low" name="priority" value="low" required>
-                        <label for="low">Low</label>
-
-                        <input type="radio" id="normal" name="priority" value="normal">
-                        <label for="normal">Normal</label>
-
-                        <input type="radio" id="high" name="priority" value="high">
-                        <label for="high">High</label>
+                        <div>
+                            <p>Priority:</p>
+                            <p>
+                                <input type="radio" id="low" name="priority" value="low" required>
+                                <label for="low">Low</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="normal" name="priority" value="normal">
+                                <label for="normal">Normal</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="high" name="priority" value="high">
+                                <label for="high">High</label>
+                            </p>
+                        </div>
 
                     
-                        <p>
+                        <div class="full-width">
                             <label for="message">Your message:</label><br>
                             <textarea name="message" id="message" minlength="20" maxlength="2000" rows="6" cols="50" required></textarea>
-                        </p>
+                        </div>
                         
 
                         <p>
@@ -487,35 +508,44 @@
 
                     <fieldset>
                         <legend>Preferences</legend>
-                        <p>Response format</p>
-                        
-                        <input type="radio" id="email" name="response-format" value="email">
-                        <label for="email">Email</label>
-                        
+                        <div>
+                            <p>Response format:</p>
+                            
+                            <p>
+                                <input type="radio" id="email" name="response-format" value="email">
+                                <label for="email">Email</label>
+                            </p>
+                            
+                            
+                            <p>
+                                <input type="radio" id="videocall" name="response-format" value="videocall">
+                                <label for="videocall">Videocall</label>
+                            </p>
+                            
+                            
+                            <p>
+                                <input type="radio" id="either" name="response-format" value="either">
+                                <label for="either">Either</label>
+                            </p>
+                            
+                        </div>
 
-                        
-                        <input type="radio" id="videocall" name="response-format" value="videocall">
-                        <label for="videocall">Videocall</label>
-                        
-
-                        
-                        <input type="radio" id="either" name="response-format" value="either">
-                        <label for="either">Either</label>
-                        
-
-                        <p>
-                            <input type="checkbox" id="updates" name="subscribe" value="yes">
-                            <label for="updates">I'd like to receive your weekly learning updates</label>
-                        </p>
-
-                        <p>
-                            <input type="checkbox" id="privacy-policy" name="privacy_policy" value="accepted" required>
-                            <label for="privacy-policy">I agree to the privacy policy</label>
-                        </p>
+                        <div class="subscribe-policy-wrapper">
+                            <p>
+                                <input type="checkbox" id="updates" name="subscribe" value="yes">
+                                <label for="updates">I'd like to receive your weekly learning updates</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="privacy-policy" name="privacy_policy" value="accepted" required>
+                                <label for="privacy-policy">I agree to the privacy policy</label>
+                            </p>
+                        </div>
                     </fieldset>
 
-                    <button type="submit">Send Message</button>
-                    <button type="reset">Clear Form</button>
+                    <div class="btn-container">
+                        <button type="submit">Send Message</button>
+                        <button type="reset">Clear Form</button>
+                    </div>
                 </form>
             </section>
         </article>
@@ -542,7 +572,7 @@
         <nav aria-label="Footer navigation">
             <ul>
                 <li><a href="https://github.com/TomasGic" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/tomas-gic-ba0b9874" target="_blank">LinkedIn</a></li>
+                <li><a href="https://linkedin.com/in/tomas-gic-ba0b9874" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                 <li><a href="mailto:tomas@example.com">Email Me</a></li>
             </ul>
         </nav>

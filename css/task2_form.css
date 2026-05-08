@@ -4,19 +4,19 @@
 }
 
 :root {
-    --primary-color: #1a5ea7;
-    --text-main: #1a1a1a;
-    --bg-page: #fafafa;
-    --bg-form: #d8dfe5;
-    --border-color: #cbd5e1;
+    --color-accent: #1a5ea7;
+    --color-text: #1a1a1a;
+    --color-bg-page: #fafafa;
+    --color-bg-form: #d8dfe5;
+    --color-border: #cbd5e1;
 }
 
 body {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: var(--text-main);
-    background-color: var(--bg-page);
+    color: var(--color-text);
+    background-color: var(--color-bg-page);
     
 }
 
@@ -52,6 +52,7 @@ header {
 
 .nav-menu li a {
     text-decoration: none;
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,18 +68,18 @@ header {
     line-height: 2rem;
     border-radius: 50%;
     background: #e2e8f0;
-    color: var(--text-main);
-    font-weight: bold;
+    color: var(--color-text);
+    font-weight: 700;
     display: block;
 }
 
 .nav-menu a[aria-current="page"] {
-    color: var(--primary-color);
-    font-weight: bold;
+    color: var(--color-accent);
+    font-weight: 700;
 }
 
 .nav-menu a[aria-current="page"]::before {
-    background: var(--primary-color);
+    background: var(--color-accent);
     color: #fafafa;
 }
 
@@ -92,7 +93,7 @@ fieldset {
     display: grid;
     grid-template-columns: 1fr;
     padding: 1.5rem;
-    background-color: #d8dfe5; 
+    background-color: var(--color-bg-form); 
     border: 1px solid #e2e8f0; 
     border-radius: 8px;
     margin-bottom: 2rem
@@ -100,10 +101,14 @@ fieldset {
 }
 
 legend {
-    font-weight: bold;
-    color: var(--text-main);
+    font-weight: 700;
+    color: var(--color-text);
     margin-bottom: 1rem;
     font-size: 1.2rem
+}
+
+.subheading {
+    font-weight: 500
 }
 
 .field-wrapper {
@@ -161,13 +166,13 @@ button, nav[aria-label="Form navigation"] a{
 
 
 button[type="submit"] {
-    background-color: var(--primary-color);
-    color: var(--bg-page)
+    background-color: var(--color-accent);
+    color: var(--color-bg-page)
 }
 
 button[type="reset"], nav[aria-label="Form navigation"] a {
     background-color: #f3f4f6; 
-    border: 1px solid var(--primary-color)
+    border: 1px solid var(--color-accent)
 }
 
 .heading-centered {
@@ -179,12 +184,12 @@ section {
     margin: 3rem auto;
     padding: 1.5rem 1.2rem;
     max-width: 900px;
-    background-color: var(--bg-form);
+    background-color: var(--color-bg-form);
     border-radius: 8px
 }
 
 dt {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 dd {
@@ -201,7 +206,7 @@ summary {
     padding: 0.8rem;
     cursor: pointer;
     font-weight: bold;
-    background-color: var(--bg-form)
+    background-color: var(--color-bg-form)
 }
 
 details[open] summary {
@@ -223,13 +228,13 @@ select:focus-visible,
 textarea:focus-visible,
 button:focus-visible,
 a:focus-visible {
-    outline: 2px solid var(--primary-color);
+    outline: 2px solid var(--color-accent);
     outline-offset: 2px
 }
 
-input:not(:placeholder-shown):invalid,
-textarea:not(:placeholder-shown):invalid {
-    border: 2px solid red;
+input:user-invalid, 
+textarea:user-invalid {
+    border: 2px solid red
 }
 
 @media (min-width: 1024px) {

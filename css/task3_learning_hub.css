@@ -112,7 +112,8 @@ dd {
 }
 
 p {
-    margin: 0.5rem
+    margin-bottom: 1.5rem;
+    line-height: 1.6
 }
 
 /* dl label {

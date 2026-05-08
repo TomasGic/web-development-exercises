@@ -72,48 +72,50 @@
             <section id="education">
                 <h3>Education & Certifications</h3>
                 <div class="table-container">
-                    <table>
-                        <caption>Summary of formal education and professional certifications</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Institution</th>
-                                <th scope="col">Program</th>
-                                <th scope="col">Period</th>
-                                <th scope="col">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Mentorcruise</th>
-                                <td>Full-stack software development mentorship</td>
-                                <td><time datetime="2026-01">Mar 2026</time> &ndash; <time datetime="2026">present</time></td>
-                                <td>Ongoing</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Udemy</th>
-                                <td>Testing Ruby with Rspec</td>
-                                <td><time datetime="2026-03">Mar 2026</time> &ndash; <time datetime="2026-04">Apr 2026</time></td>
-                                <td>Certified</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Nielsen</th>
-                                <td>Lean Six Sixma Green Belt</td>
-                                <td><time datetime="2020-03">Mar 2020</time> &ndash; <time datetime="2020-08">Aug 2020</time></td>
-                                <td>Certified</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Nottingham Trent University</th>
-                                <td>B.A.Hons International Business Administration</td>
-                                <td><time datetime="2010-09">Sep 2010</time> &ndash; <time datetime="2013-06"> Jun 2013</time></td>
-                                <td>Completed</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="4">Total of 3 completed credentials and 1 ongoing specialization.</td>
-                            </tr>
-                        </tfoot>
-                    </table>
+                    <div class="table-container">
+                        <table>
+                            <caption>Summary of formal education and professional certifications</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Institution</th>
+                                    <th scope="col">Program</th>
+                                    <th scope="col">Period</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Mentorcruise</th>
+                                    <td>Full-stack software development mentorship</td>
+                                    <td><time datetime="2026-01">Mar 2026</time> &ndash; <time datetime="2026">present</time></td>
+                                    <td>Ongoing</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Udemy</th>
+                                    <td>Testing Ruby with Rspec</td>
+                                    <td><time datetime="2026-03">Mar 2026</time> &ndash; <time datetime="2026-04">Apr 2026</time></td>
+                                    <td>Certified</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Nielsen</th>
+                                    <td>Lean Six Sixma Green Belt</td>
+                                    <td><time datetime="2020-03">Mar 2020</time> &ndash; <time datetime="2020-08">Aug 2020</time></td>
+                                    <td>Certified</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Nottingham Trent University</th>
+                                    <td>B.A.Hons International Business Administration</td>
+                                    <td><time datetime="2010-09">Sep 2010</time> &ndash; <time datetime="2013-06"> Jun 2013</time></td>
+                                    <td>Completed</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4">Total of 3 completed credentials and 1 ongoing specialization.</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
                 </div>
             </section>
 
@@ -156,29 +158,22 @@
 
                     <dt>Is Ruby a difficult programming language to learn?</dt>
                     <dd>Compared to other programming languages, especially those that are statically typed, such as <mark>C or Java</mark>, Ruby is relatively easy to learn because of its elegant syntax, which reads almost like English language. Consider this piece of code which iterates through an array of strings and capitalizes each string element.
-                    <pre>
-                    <code>
-                        orgs = ["imf", "who", "ing"]
-                        orgs.each { |org| org.capitalize }
-                    </code>
-                    </pre>
+<pre><code>orgs = ["imf", "who", "ing"]
+orgs.each { |org| org.capitalize }
+</code></pre>
                     If we wanted to write the same script in C, it would look like this: 
-                    <pre>
-                    <code>
-                        #include &lt;stdio.h&gt;
-                        #include &lt;ctype.h&gt;
+<pre><code>#include &lt;stdio.h&gt; 
+#include &lt;ctype.h&gt;
 
-                        int main() {    
-                            char *orgs[] = {"imf", "who", "ing"};
-                            int length = 3;
+int main() {    
+    char *orgs[] = {"imf", "who", "ing"};
+    int length = 3;
 
-                            for (int i = 0; i < length; i++) {
-                                orgs[i][0] = toupper(orgs[i][0]);
-                            }
-                            return 0;
-                        }
-                    </code>
-                    </pre>
+    for (int i = 0; i &lt; length; i++) {
+    orgs[i][0] = toupper(orgs[i][0]);
+    }
+    return 0;
+}</code></pre>
                     It's pretty obvious which code is more elegant and easier to read.
                     If you are interested to learn more about Ruby, the best place to start is the official <a href="https://www.ruby-lang.org/en/documentation/" target="_blank" rel="noopener noreferrer">documentation page</a>.
                     </dd>

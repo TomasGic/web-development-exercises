@@ -551,22 +551,32 @@
         </article>
     </main>
 
-    <aside>
-        <h2>Quick Stats</h2>
-        <dl>
-            <dt>Weeks learning:</dt>
-            <dd><time datetime="P8W">8 weeks</time></dd>
-
-            <dt>Technologies explored</dt>
-            <dd>Ruby, RSpec, HTML, CSS, Javascript</dd>
-
-            <dt>Projects completed</dt>
-            <dd>8</dd>
-
-            <dt>Current Focus</dt>
-            <dd>HTML and Semantic Structure</dd>
-        </dl>
-    </aside>
+    <div class="side-content">
+        <aside id="quick-stats">
+            <h2>Quick Stats</h2>
+            <dl>
+                <dt>Weeks learning:</dt>
+                <dd><time datetime="P8W">8 weeks</time></dd>
+                <dt>Technologies explored</dt>
+                <dd>Ruby, RSpec, HTML, CSS, Javascript</dd>
+                <dt>Projects completed</dt>
+                <dd>8</dd>
+                <dt>Current Focus</dt>
+                <dd>HTML and Semantic Structure</dd>
+            </dl>
+        </aside>
+        <aside id="currently-reading">
+            <h2>Currently Reading</h2>
+            <figure>
+                <img src="../images/clean_architecture.jpg" alt="Cover of the book Clean Architecture by Robert C. Martin" width="150">
+                <figcaption>
+                    <strong>Clean Architecture</strong><br>
+                    by Robert C. Martin
+                    <p>Practical Software Architecture Solutions from the Legendary Robert C. Martin (“Uncle Bob”).</p>
+                </figcaption>
+            </figure>
+        </aside>
+    </div>
 
     <footer>
         <nav aria-label="Footer navigation">

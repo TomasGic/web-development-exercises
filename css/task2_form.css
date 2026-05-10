@@ -114,7 +114,7 @@ legend {
 .field-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    row-gap: 0.25rem;
     margin-bottom: 1.5rem
 }
 
@@ -240,12 +240,13 @@ textarea:user-invalid {
 @media (min-width: 1024px) {
     fieldset {
         grid-template-columns: 1fr 1fr;
-        gap: 1.5rem
+        gap: 1.5rem;
     }
 
     dl {
         display: grid; 
-        grid-template-columns: 1fr 1fr 
+        grid-template-columns: 1fr 1fr;
+        gap: 0.25rem 1.75rem
     }
 
     .full-width {

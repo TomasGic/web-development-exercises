@@ -405,6 +405,14 @@ footer small {
   display: block;
 }
 
+.side-content{ 
+    padding: 1.5rem 2.5rem
+}
+
+.side-content img {
+    margin-bottom: 0.5rem
+}
+
 @media(min-width: 1024px) {
 
     body {
@@ -434,8 +442,22 @@ footer small {
     }
 
     aside {
-        border-left: 1px solid var(--color-border-dark); 
+        
         padding: 0 1rem
+    }
+
+    .side-content {
+        border-left: 1px solid var(--color-border-dark);
+    }
+
+    #currently-reading {
+        grid-column: 2/-1;
+        grid-row: 2/3
+    }
+
+    #quick-stats {
+        grid-column: 2/-1;
+        grid-row: 2/3
     }
 
     dl {

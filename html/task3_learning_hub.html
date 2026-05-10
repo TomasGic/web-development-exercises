@@ -33,7 +33,7 @@
         
     </header>
 
-    <main id="main">
+    <main id="main" tabindex="-1">
         <article>
             <!-- ==================== Section 1: About ==================== -->
             <section id="about">
@@ -493,15 +493,19 @@
                         </div>
 
                     
-                        <div class="full-width">
-                            <label for="message">Your message:</label><br>
-                            <textarea name="message" id="message" minlength="20" maxlength="2000" rows="6" cols="50" required></textarea>
+                        <div class="full-width input-wrapper">
+                            <label for="message">Your message:</label>
+                            <textarea name="message" id="message" minlength="20" maxlength="2000" rows="6" cols="50" area-describedby="message-limit" required></textarea>
+                            <small id="message-limit">Your message must be between 20 and 2000 characters.</small>
                         </div>
                         
 
                         <p>
                             <label for="reference-file">Attach reference:</label>
                             <input type="file" id="reference-file" name="reference_file" accept=".pdf,.doc,.docx,.txt">
+                            <small id="file-help" style="color: #666;">
+                                Accepted formats: PDF, DOC, TXT. Max file size: 2MB.
+                            </small>
                         </p>
 
                     </fieldset>

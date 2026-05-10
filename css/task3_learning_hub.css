@@ -342,6 +342,15 @@ textarea {
     font-size: 1rem;
 }
 
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+small {
+    color: #666
+}
+
 #contact h2 {
     text-align: center
 }

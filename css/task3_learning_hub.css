@@ -38,6 +38,20 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-heading)
 }
 
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 0.5rem 1rem;
+    background: var(--color-bg-deep);
+    color: var(--color-text );
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0
+}
+
 header {
     background-color: var(--color-bg-deep);
     color: var(--color-text-main);

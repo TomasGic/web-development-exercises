@@ -22,15 +22,13 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#goals">Goals</a></li>
                 <li><a href="#timeline">Timeline</a></li>
-                <li><a href="skills">Skills</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="schedule">Weekly schedule</a></li>
-                <li><a href="resources">Resources</a></li>
-                <li><a href="reflections">Reflections</a></li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#reflections">Reflections</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-
-        
     </header>
 
     <main id="main" tabindex="-1">
@@ -55,7 +53,10 @@
                         <p>Deadline: <time datetime="2026-05-30">May 30, 2026</time></p>
                         <p>Status: In progress</p>
                         <p>Metric: Build and deploy 3 responsive websites from scratch using HTML, CSS and JS.</p>
-                        <p>Progress <meter min="0" max="100" value="35">35%</meter></p>
+                        <p>
+                            <label for="web-fundamentals-meter">Progress:</label>
+                            <meter id="web-fundamentals-meter" min="0" max="100" value="35">35%</meter>
+                        </p>
                     </dd>
 
                     <dt>Master Ruby on Rails fundamentals</dt>
@@ -63,7 +64,10 @@
                         <p>Deadline: <time datetime="2026-07-31">July 31, 2026</time></p>
                         <p>Status: Not started</p>
                         <p>Metric: Build and deploy a basic journalling <abbr title="Create Read Update Delete">CRUD</abbr>app.</p>
-                        <p>Progress <meter min="0" max="100" value="0">0%</meter></p>
+                        <p>
+                            <label for="rails-fundamentals-meter">Progress:</label>
+                            <meter id="rails-fundamentals-meter" min="0" max="100" value="0">0%</meter>
+                        </p>
                     </dd>
 
                     <dt>Master design patterns in Ruby</dt>
@@ -71,7 +75,10 @@
                         <p>Deadline: <time datetime="2026-05-08">May 08, 2026</time></p>
                         <p>Status: In progress</p>
                         <p>Metric: Complete all week 6 tasks related to design patterns."></p>
-                        <p>Progress <meter min="0" max="100" value="67">67%</meter></p>
+                        <p>
+                            <label for="design-patterns-meter">Progress:</label>
+                            <meter id="design-patterns-meter" min="0" max="100" value="67">67%</meter>
+                        </p>
                     </dd>
 
                     <dt>Master Data Structures and Algorithms</dt>
@@ -79,7 +86,10 @@
                         <p>Deadline: <time datetime="2026-08-31">August 31, 2026</time></p>
                         <p>Status: In progress</p>
                         <p>Metric: Complete all exercises from the book <cite>A Common-Sense Guide to Data Structures and Algorithms</cite> by Jay Wengrow.></p>
-                        <p>Progress <meter min="0" max="100" value="10">10%</meter></p>
+                        <p>
+                            <label for="dsa-meter">Progress:</label>
+                            <meter id="dsa-meter" min="0" max="100" value="10">10%</meter>
+                        </p>
                     </dd>
                 </dl>
 
@@ -163,7 +173,7 @@
                             <tr>
                                 <th scope="row">Ruby</th>
                                 <td>Language</td>
-                                <td><meter min="0" max="5" value="3">3</meter></td>
+                                <td><meter min="0" max="5" value="3" aria-label="Level: 3 out of 5">3</meter></td>
                                 <td><time datetime="2026-01-05">January 5th, 2026</time></td>
                                 <td>15</td>
                                 <td>Expert level (5)</td>
@@ -171,7 +181,7 @@
                             <tr>
                                 <th scope="row">Python</th>
                                 <td>Language</td>
-                                <td><meter min="0" max="5" value="4">4</meter></td>
+                                <td><meter min="0" max="5" value="4" aria-label="Level: 4 out of 5">4</meter></td>
                                 <td><time datetime="2020-06">June 2020</time></td>
                                 <td>5</td>
                                 <td>Expert level (5)</td>
@@ -179,7 +189,7 @@
                             <tr>
                                 <th scope="row">Javascript</th>
                                 <td>Language</td>
-                                <td><meter min="0" max="5" value="2">2</meter></td>
+                                <td><meter min="0" max="5" value="2" aria-label="Level: 2 out of 5">2</meter></td>
                                 <td><time datetime="2020-08">August 2020</time></td>
                                 <td>5</td>
                                 <td>Expert level (5)</td>
@@ -187,7 +197,7 @@
                             <tr>
                                 <th scope="row">HTML</th>
                                 <td>Language</td>
-                                <td><meter min="0" max=5 value="3">3</meter></td>
+                                <td><meter min="0" max=5 value="3" aria-label="Level: 3 out of 5">3</meter></td>
                                 <td><time datetime="2020-06">June 2020</time></td>
                                 <td>5</td>
                                 <td>Expert level (5)</td>
@@ -195,7 +205,7 @@
                             <tr>
                                 <th scope="row">CSS</th>
                                 <td>Language</td>
-                                <td><meter min="0" max=5 value="3">3</meter></td>
+                                <td><meter min="0" max=5 value="3" aria-label="Level: 3 out of 5">3</meter></td>
                                 <td><time datetime="2020-06">June 2020</time></td>
                                 <td>5</td>
                                 <td>Expert level (5)</td>
@@ -203,7 +213,7 @@
                             <tr>
                                 <th scope="row">RSpec</th>
                                 <td>Framework</td>
-                                <td><meter min="0" max="5" value="3">3</meter></td>
+                                <td><meter min="0" max="5" value="3" aria-label="Level: 3 out of 5">3</meter></td>
                                 <td><time datetime="2026-01-27">January 27, 2026</time></td>
                                 <td>10</td>
                                 <td>Expert level (5)</td>
@@ -211,7 +221,7 @@
                             <tr>
                                 <th scope="row">Git</th>
                                 <td>Tools/Version control</td>
-                                <td><meter min="0" max="5" value="3">3</meter></td>
+                                <td><meter min="0" max="5" value="3" aria-label="Level: 3 out of 5">3</meter></td>
                                 <td><time datetime="2026-01-05">January 5, 2026</time></td>
                                 <td>1</td>
                                 <td>Expert level (5)</td>
@@ -219,7 +229,7 @@
                             <tr>
                                 <th scope="row">AWS</th>
                                 <td>Platform/Infrastructure</td>
-                                <td><meter min="0" max="5" value="1">1</meter></td>
+                                <td><meter min="0" max="5" value="1" aria-label="Level: 1 out of 5">1</meter></td>
                                 <td><time datetime="2022-03">March 2022</time></td>
                                 <td>1</td>
                                 <td>Advanced (4)</td>
@@ -304,7 +314,7 @@
                     <tfoot>
                         <tr>
                             <th scope="row" colspan="3">Total Weekly Hours</th>
-                            <td>18 hours</td>
+                            <td>24 hours</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -338,8 +348,8 @@
                     <dt><a href="https://www.udemy.com/course/testing-ruby-with-rspec/" target="_blank" rel="noopener noreferrer">Testing Ruby with RSpec</a></dt>
                     <dd>A solid Udemy course on test-driven development using RSpec. Some of the code examples were a bit unrealistic, but overall it is a well-structured course worth the price. Rating: 4.4/5</dd>
 
-                    <dt><a href="https://www.udemy.com/course/python-oop-object-oriented-programming-from-beginner-to-pro" target="_blank" rel="noopener noreferrer">OOP Programming in Python</a></dt>
-                    <dd>This course focuses on OOP in Python, but it is suitable for anyone who wants to learn the best OOP practices regardles of what programming language they use. One of the reasons why this course stands out for me is the extremely pleasant-sounding voice of the instructor, which makes it easier to stay engaged. Rating: 4.7/5 </dd>
+                    <dt><a href="https://www.udemy.com/course/python-oop-object-oriented-programming-from-beginner-to-pro" target="_blank" rel="noopener noreferrer">OOP in Python</a></dt>
+                    <dd>This course focuses on <abbr title="Object Oriented Programming">OOP</abbr> in Python, but it is suitable for anyone who wants to learn the best OOP practices regardles of what programming language they use. One of the reasons why this course stands out for me is the extremely pleasant-sounding voice of the instructor, which makes it easier to stay engaged. Rating: 4.7/5 </dd>
                 </dl>
 
                 <h3>Tools</h3>
@@ -358,31 +368,31 @@
                             <th scope="row">VS Code</th>
                             <td>Code editor</td>
                             <td>Free</td>
-                            <td><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">https://code.visualstudio.com/</a></td>
+                            <td><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Link to official VS Code website</a></td>
                         </tr>
                         <tr>
                             <th scope="row">Asdf</th>
                             <td>Command line tool for managing multiple programming language runtime versions</td>
                             <td>Free</td>
-                            <td><a href="https://asdf-vm.com/" target="_blank" rel="noopener noreferrer">https://asdf-vm.com/</a></td>
+                            <td><a href="https://asdf-vm.com/" target="_blank" rel="noopener noreferrer">Link to official asdf website</a></td>
                         </tr>
                         <tr>
                             <th scope="row">Chrome DevTools</th>
                             <td>Debugging, analyzing network activity, inspecting the DOM</td>
                             <td>Free</td>
-                            <td><a href="https://developer.chrome.com/docs/devtools?hl=uk" target="_blank" rel="noopener noreferrer">https://developer.chrome.com/docs/devtools?hl=uk</a></td>
+                            <td><a href="https://developer.chrome.com/docs/devtools?hl=uk" target="_blank" rel="noopener noreferrer">Link to developer tools website</a></td>
                         </tr>
                         <tr>
                             <th scope="row">Figma</th>
                             <td>Website design</td>
                             <td>Free</td>
-                            <td><a href="https://figma.com/" target="_blank" rel="noopener noreferrer">https://figma.com/</a></td>
+                            <td><a href="https://figma.com/" target="_blank" rel="noopener noreferrer">Link to official Figma website</a></td>
                         </tr>
                         <tr>
                             <th scope="row">Ubuntu</th>
                             <td>Operating system for Linux</td>
                             <td>Free</td>
-                            <td><a href="https://ubuntu.com/" target="_blank" rel="noopener noreferrer">https://ubuntu.com/</a></td>
+                            <td><a href="https://ubuntu.com/" target="_blank" rel="noopener noreferrer">Link to official Ubuntu website</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -537,7 +547,7 @@ end
 
                         <p>
                             <label for="reference-file">Attach reference:</label>
-                            <input type="file" id="reference-file" name="reference_file" accept=".pdf,.doc,.docx,.txt">
+                            <input type="file" id="reference-file" name="reference_file" accept=".pdf,.doc,.docx,.txt" aria-describedby="file-help">
                             <small id="file-help" style="color: #666;">
                                 Accepted formats: PDF, DOC, TXT. Max file size: 2MB.
                             </small>
@@ -607,7 +617,7 @@ end
         <aside id="currently-reading">
             <h2>Currently Reading</h2>
             <figure>
-                <img src="../images/clean_architecture.jpg" alt="Cover of the book Clean Architecture by Robert C. Martin" width="150">
+                <img src="../images/clean_architecture.jpg" alt="Front cover of the book Clean Architecture by Robert C. Martin" width="150">
                 <figcaption>
                     <strong>Clean Architecture</strong><br>
                     by Robert C. Martin

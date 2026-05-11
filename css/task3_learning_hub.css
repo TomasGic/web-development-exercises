@@ -97,7 +97,7 @@ header a:hover {
 }
 
 main {
-    padding: 1.5rem 2.5rem
+    padding: 1.5rem 2.5rem;
 }  
 
 section {
@@ -126,8 +126,9 @@ dd {
 }
 
 p {
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     line-height: 1.6
+
 }
 
 /* dl label {
@@ -293,6 +294,7 @@ pre {
     border: 1px solid var(--color-border-dark);
     overflow-x: auto;
     padding: 2rem 1.5rem 1.5rem;
+    max-width: 600px
 }
 
 code {
@@ -434,6 +436,16 @@ footer small {
 
 .side-content img {
     margin-bottom: 0.5rem
+}
+
+#currently-reading figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#currently-reading figure figcaption {
+    text-align: center
 }
 
 @media(min-width: 1024px) {

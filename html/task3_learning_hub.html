@@ -117,7 +117,7 @@
                 <h2>Progress Timeline</h2>
                 <ol reversed>
                     <li>
-                        <time datetime="2026-01-05">January 5th, 2026</time>:
+                        <time datetime="2026-01-05">January 5th, 2026</time>
                         <strong>Ruby basics</strong>Wrote my first Ruby script.
                     </li>
                     <li>
@@ -433,10 +433,44 @@
                 </figure>
 
                 <figure>
-                    <figcaption class="code-caption">A code snippet that I'm proud of</figcaption>
+                    <figcaption class="code-caption">A code snippet that I'm proud of:</figcaption>
                     <pre>
-                        <code>Code to be inserted</code>
+                        <code>
+parser = OptionParser.new do |opts|
+    opts.banner = "Usage: random_people [options]"
+    
+    opts.on("--count N", Integer, "Number of users to fetch") do |n|
+        if n <= 0
+        raise OptionParser::InvalidArgument, "Count must be a positive number!"
+        elsif n > MAX_NUM_USERS
+        raise OptionParser::InvalidArgument, "Can only fetch max #{MAX_NUM_USERS} users."
+        else
+        options[:count] = n
+        end
+    end
+
+    opts.on("--format F", "Output format (table, json)") do |f|
+        options[:format] = f.downcase
+    end
+
+    opts.on("--sort S", "Field to sort by (name, age)") do |s|
+        options[:sort] = s.downcase
+    end
+
+    opts.on("--country C", "Filter by country name") do |c|
+        options[:country] = c.upcase
+    end
+    end
+    parser.parse!(args)
+    
+    if args.any?
+    raise OptionParser::InvalidArgument, "Unrecognized arguments: #{args.join(", ")}. Did you forget --?"
+    end
+    options
+end    
+                        </code>
                     </pre>
+                    <p>The reason why I particularly like this block of code is because of how elegantly it handles the parsing of command line arguments entered by the user when running the program. For example, if user types "ruby random_people --count 5" in the terminal (random_people is the name of the program), Ruby stores '--count' and '5' in a global array ARGV. The parser object then iterates through the array and tries to match each element with the argument stored in its registry(the argument that should be parsed are defined by the developer). As soon as it finds the match, it removes the element from the array, meaning that any elements left in the array are arguments not recognised by our program. </p>
                 </figure>
             </section>
 

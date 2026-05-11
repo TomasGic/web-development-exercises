@@ -62,7 +62,7 @@
                     <dd>
                         <p>Deadline: <time datetime="2026-07-31">July 31, 2026</time></p>
                         <p>Status: Not started</p>
-                        <p>Metric: Build and deploy a basic journalling CRUD app."></abbr></p>
+                        <p>Metric: Build and deploy a basic journalling <abbr title="Create Read Update Delete">CRUD</abbr>app.</p>
                         <p>Progress <meter min="0" max="100" value="0">0%</meter></p>
                     </dd>
 
@@ -70,7 +70,7 @@
                     <dd>
                         <p>Deadline: <time datetime="2026-05-08">May 08, 2026</time></p>
                         <p>Status: In progress</p>
-                        <p>Metric: Complete all week 6 tasks related to design patterns."></abbr></p>
+                        <p>Metric: Complete all week 6 tasks related to design patterns."></p>
                         <p>Progress <meter min="0" max="100" value="67">67%</meter></p>
                     </dd>
 
@@ -125,7 +125,7 @@
                         <strong>Ruby <abbr title="Test Driven Development">TDD</abbr></strong>Wrote my first Ruby program using TDD principles.
                     </li>
                     <li>
-                        <time datetime="01-19-2026">19th January, 2026</time>
+                        <time datetime="2026-01-19">19th January, 2026</time>
                         <strong>Git and version control</strong>Incorporated git and version control into my coding workflow.
                     </li>
                     <li>
@@ -164,7 +164,7 @@
                                 <th scope="row">Ruby</th>
                                 <td>Language</td>
                                 <td><meter min="0" max="5" value="3">3</meter></td>
-                                <td><time datetime="01-05-2026">January 5th, 2026</time></td>
+                                <td><time datetime="2026-01-05">January 5th, 2026</time></td>
                                 <td>15</td>
                                 <td>Expert level (5)</td>
                             </tr>
@@ -315,7 +315,7 @@
                 <h2>Recommended resources</h2>
                 <h3>Documentation</h3>
                 <ul>
-                    <li><a href="https://ruby-doc.org/" target="_blank" rel="noopener no referrer">Ruby-Doc</a>: The official API documentation for the Ruby language.</li>
+                    <li><a href="https://ruby-doc.org/" target="_blank" rel="noopener noreferrer">Ruby-Doc</a>: The official API documentation for the Ruby language.</li>
                     <li><a href="https://rspec.info/documentation/" target="_blank" rel="noopener noreferrer">Rspec-Doc</a>: Comprehensive guides for the popular Ruby testing framework.</li>
                     <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>: Essential for HTML, CSS, and JS reference.</li>
                     <li><a href="https://refactoring.guru/design-patterns/ruby" target="_blank" rel="noopener noreferrer">Design Patterns in Ruby</a>: Comprehensive guide to design patterns in Ruby.</li>
@@ -440,7 +440,7 @@ parser = OptionParser.new do |opts|
     opts.banner = "Usage: random_people [options]"
     
     opts.on("--count N", Integer, "Number of users to fetch") do |n|
-        if n <= 0
+        if n &lt= 0
         raise OptionParser::InvalidArgument, "Count must be a positive number!"
         elsif n > MAX_NUM_USERS
         raise OptionParser::InvalidArgument, "Can only fetch max #{MAX_NUM_USERS} users."
@@ -502,6 +502,7 @@ end
                         <div>
                             <label for="subject">Subject</label>
                             <select name="subject" id="subject" required>
+                                <option value="" selected disabled>Select a subject...</option>
                                 <option value="mentoring">Mentoring</option>
                                 <option value="collaboration">Collaboration</option>
                                 <option value="feedback">Feedback</option>
@@ -529,7 +530,7 @@ end
                     
                         <div class="full-width input-wrapper">
                             <label for="message">Your message:</label>
-                            <textarea name="message" id="message" minlength="20" maxlength="2000" rows="6" cols="50" area-describedby="message-limit" required></textarea>
+                            <textarea name="message" id="message" minlength="20" maxlength="2000" rows="6" cols="50" aria-describedby="message-limit" required></textarea>
                             <small id="message-limit">Your message must be between 20 and 2000 characters.</small>
                         </div>
                         
@@ -550,8 +551,8 @@ end
                             <p>Response format:</p>
                             
                             <p>
-                                <input type="radio" id="email" name="response-format" value="email">
-                                <label for="email">Email</label>
+                                <input type="radio" id="response-email" name="response-format" value="email">
+                                <label for="response-email">Email</label>
                             </p>
                             
                             
@@ -594,7 +595,7 @@ end
             <h2>Quick Stats</h2>
             <dl>
                 <dt>Weeks learning:</dt>
-                <dd><time datetime="P8W">8 weeks</time></dd>
+                <dd><time datetime="P56D">8 weeks</time></dd>
                 <dt>Technologies explored</dt>
                 <dd>Ruby, RSpec, HTML, CSS, Javascript</dd>
                 <dt>Projects completed</dt>
@@ -625,7 +626,6 @@ end
             </ul>
         </nav>
         <small>&copy; <time datetime="2026">2026</time> Tomas Gic. All rights reserved.</small>
-        </nav>
     </footer>
     
 </body>

@@ -143,7 +143,27 @@ p {
 }
 
 meter, progress {
-    width: 100%
+    width: 100%;
+}
+
+meter::-webkit-meter-optimum-value {
+    background-color: var(--color-accent);
+}
+
+progress {
+    appearance: none;
+    height: 8px;    
+    border-radius: 10px
+}
+
+progress::-webkit-progress-value { 
+    background: var(--color-accent); 
+    border-radius: 10px
+}
+
+progress::-webkit-progress-bar { 
+    background-color: #eee;
+    border-radius: 10px
 }
 
 table {
@@ -215,14 +235,14 @@ th, td {
     color: var(--color-text-subheading);
 }
 
-#resources a {
+#resources a, #about a {
     text-decoration: none;
     color: var(--color-accent);
     transition: all 0.3s ease;
     font-weight: 500;
 }
 
-#resources a:hover {
+#resources a:hover, #about a:hover {
     text-decoration: underline;
     color: #7dd3fc
 }

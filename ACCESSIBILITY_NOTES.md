@@ -6,7 +6,7 @@ This document outlines the 10 fundamental accessibility principles and how they 
 The page contains semantic HTML5 elements, including `<header>`, `<nav>`, `<main>`, `<article>` and `<aside>`. `<div>` elements are used only to wrap semantic elements in a container for styling and layout purposes. For example, in order to display our `<header>` element as flexbox with the main `<h1>` heading and the `<p>` paragraph on the left and the `<nav>` on the right, we wrap the heading and the paragraph in a div and give it a class of brand. 
 
 * Rule 2 - Set `<lang>` on `<html>`
-In the page the language is set to English by adding an attribute to the root html element. `<html lang="en">` This is crucial for the screen reading technology to choose the correct voice profile for reading the page content. 
+In the page the language is set to English by adding an attribute to the root html element: `<html lang="en">` This is crucial for the screen reading technology to choose the correct voice profile for reading the page content. 
 
 * Rule 3 - One `<h1>` per page, correct hierarchy
 In our html page, the only `<h1>` element is inside the header. The subsequent headings follow a clear hierarchy.  
@@ -70,14 +70,20 @@ All `<button>` and `<a>` elements on this page can be triggered using keyboard o
 When user incorrectly fills out an input field, the border of the input element turns red, which indicates invalid field. While this might be sufficient for most users, users who are colour blind for instance, might not understand what's going on. Therefore I added some extra css that will show a warning icon in the invalid input field.
 
 * Rule 9 - Use table only for tabular data
-The page does not use any `<table>` elements.
+The page does not contain any `<table>` elements.
 
 * Rule 10 - Provide skip navigation link
 The page does not contain a skip navigation link since the navigation bar only contains the 3 form steps, and if the user is navigating the page with a screen reader, it might actually be beneficial to hear the step they are currently on. 
 
 ## Task 3 - Learning Hub
 * Rule 1 - Use semantic elements:
-The page contains semantic HTML5 elements, including `<header>`, `<nav>`, `<main>`, `<article>` and `<aside>`. `<div>` elements are used only to wrap semantic elements in a container for styling and layout purposes. For example, in order to make the `<table>` element horizontally scrollable, we wrap the table in `<div class="table-container">` and in the css file we give the table container the property of overflow and set it to x.  
+The page contains semantic HTML5 elements, including `<header>`, `<nav>`, `<main>`, `<article>` and `<aside>`. `<div>` elements are used only to wrap semantic elements in a container for styling and layout purposes. For example, in order to make the `<table>` element horizontally scrollable, we wrap the table in `<div class="table-container">` and in the css file we set the overflow-x property to auto: 
+```css
+.table-container {
+    width: 100%;
+    overflow-x: auto
+}  
+```
 
 * Rule 2 - Set `<lang>` on `<html>`
 In the page the language is set to English by adding an attribute to the root html element. `<html lang="en">` This is crucial for the screen reading technology to choose the correct voice profile for reading the page content. 
@@ -107,7 +113,7 @@ All `<button>` and `<a>` elements on this page are accessible and can be trigger
 When user incorrectly fills out an input field, the border of the input element turns red, which indicates invalid field. While this might be sufficient for most users, users who are colour blind for instance, might not understand what's going on. Therefore I added some extra css that will show a warning icon in the invalid input field.
 
 * Rule 9 - Use table only for tabular data
-The page contains three `<table>` elements to display tabular data ("Skills % Technologies", "Weekly Study Schedule" and "Development tools I use". Each table has a `<caption>` element to provide a context for the user and each `<th>` element has a scope attribute that specifies whether the element is a row header or a column header. If we didn't provide this attribute, the screen reader would just read out the data in the cell and the user wouldn't know which header the data belongs to. 
+The page contains three `<table>` elements to display tabular data ("Skills % Technologies", "Weekly Study Schedule" and "Development tools I use"). Each table has a `<caption>` element to provide a context for the user and each `<th>` element has a scope attribute that specifies whether the element is a row header or a column header. If we didn't provide this attribute, the screen reader would just read out the data in the cell and the user wouldn't know which header the data belongs to. 
 
 * Rule 10 - Provide skip navigation link
 The page contains a link which allows users to skip to the main content.

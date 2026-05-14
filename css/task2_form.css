@@ -51,7 +51,7 @@ header {
     counter-reset: step-counter
 }
 
-.nav-menu li a {
+.nav-menu a {
     text-decoration: none;
     color: var(--color-text);
     display: flex;
@@ -119,13 +119,7 @@ legend {
     margin-bottom: 1.5rem
 }
 
-/* form div p {
-    display: flex;
-    flex-direction: row;
-} */
-
 label {
-    font-weight: 400;
     font-size: 0.9rem;
 }
 
@@ -144,7 +138,7 @@ select, textarea {
 
 textarea {
     min-height: 150px;
-    /* resize: vertical; */
+    resize: vertical;
 }
 
 .btn-container {

@@ -45,7 +45,8 @@ header {
 
 .nav-menu {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 2.5rem;
     list-style: none;
     counter-reset: step-counter
 }
@@ -237,6 +238,17 @@ textarea:user-invalid {
     border: 2px solid red
 }
 
+@media (min-width: 768px) {
+    .nav-menu {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .btn-container {
+        flex-direction: row;
+    }
+}
+
 @media (min-width: 1024px) {
     fieldset {
         grid-template-columns: 1fr 1fr;
@@ -256,5 +268,4 @@ textarea:user-invalid {
     .btn-container {
         flex-direction: row;
     }
-
 }

@@ -498,11 +498,13 @@ end
                         <div class="input-wrapper">
                             <label for="name">Full name (required)</label>
                             <input type="text" id="name" name="name" minlength="2" required>
+                            <span class="error-msg">This field is required</span>
                         </div>
 
                         <div class="input-wrapper">
                             <label for="email">Email (required)</label>
                             <input type="email" id="email" name="email" required>
+                            <span class="error-msg">This field is required</span>
                         </div>
 
                         <div class="input-wrapper">
@@ -543,8 +545,9 @@ end
 
                     
                         <div class="full-width input-wrapper">
-                            <label for="message">Your message:</label>
+                            <label for="message">Your message (required):</label>
                             <textarea name="message" id="message" minlength="20" maxlength="2000" rows="6" aria-describedby="message-limit" required></textarea>
+                            <span class="error-msg">This field is required</span>
                             <small id="message-limit">Your message must be between 20 and 2000 characters.</small>
                         </div>
                         

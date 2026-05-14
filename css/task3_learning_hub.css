@@ -374,6 +374,26 @@ small {
     color: #666
 }
 
+input:user-invalid, 
+textarea:user-invalid {
+    border: 2px solid #F38BA8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23f38ba8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.5rem;
+}
+
+.error-msg {
+  display: none;
+  color: #F38BA8;
+  font-size: 0.8rem;
+}
+
+input:user-invalid + .error-msg,
+textarea:user-invalid + .error-msg {
+  display: block;
+}
+
 #contact h2 {
     text-align: center
 }

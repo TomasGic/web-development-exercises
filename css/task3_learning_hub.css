@@ -338,10 +338,6 @@ fieldset {
     min-width: 0
 }
 
-#contact * {
-    outline: 1px solid red !important;
-}
-
 legend {
     font-weight: 500;
     color: var(--color-text-heading);

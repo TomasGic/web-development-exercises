@@ -26,26 +26,31 @@
                 <div class="field-wrapper">
                     <label for="full_name">Full Name (required)</label>
                     <input type="text" id="full_name" name="full_name" required minlength="2" maxlength="100">
+                    <span class="error-msg">This field is required</span>
                 </div>
 
                 <div class="field-wrapper">
                     <label for="email">Email address (required)</label>
                     <input type="email" id="email" name="email" required>
+                    <span class="error-msg">This field is required</span>
                 </div>
 
                 <div class="field-wrapper">
                     <label for="phone">Phone Number (required)</label>
                     <input type="tel" id="phone" name="phone" required pattern="(\+|00)?[0-9\-\(\)]{7,20}">
+                    <span class="error-msg">This field is required</span>
                 </div>
 
                 <div class="field-wrapper">
                     <label for="dob">Date of birth (required)</label>
                     <input type="date" id="dob" name="dob" required>
+                    <span class="error-msg">This field is required</span>
                 </div>
 
                 <div class="field-wrapper">
                     <label for="id-number">National ID or Passport Number (required)</label>
                     <input type="text" id="id-number" name="id-number" required pattern="[a-zA-Z0-9]{6,12}">
+                    <span class="error-msg">This field is required</span>
                 </div>
 
             </fieldset>
@@ -56,16 +61,19 @@
                 <div class="field-wrapper">
                     <label for="street">Street name (required)</label>
                     <input type="text" id="street" name="street" required>
+                    <span class="error-msg">This field is required</span>
                 </div>
 
                 <div class="field-wrapper">
                     <label for="city">City (required)</label>
                     <input type="text" id="city" name="city" required>
+                    <span class="error-msg">This field is required</span>
                 </div>
 
                 <div class="field-wrapper">
                     <label for="zip">Potal Code (required)</label>
                     <input type="text" id="zip" name="postal-code" required pattern="^(\d{5}|\d{4}[A-Z]{2})$">
+                    <span class="error-msg">This field is required</span>
                 </div>
 
                 <div class="field-wrapper">

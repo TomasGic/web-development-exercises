@@ -15,7 +15,7 @@ On large screens the body uses a grid display:
     }
 ```
 
-This causes the main element to take up two thirds (2fr) of the body container and the aside element to take up the remaining one third (1fr). Since we want the header and footer to take up the full width of the body we specify a grid-column property:
+This causes the main element to take up two thirds (2 fraction unites) of the body container and the aside element to take up the remaining one third (1 fraction unit). Since we want the header and footer to take up the full width of the body we specify a grid-column property:
 
 ```css
 header, footer {
@@ -178,7 +178,7 @@ button, nav[aria-label="Form navigation"] a{
 
 ## Task3 - Learning Hub
 1. ### Flexbox and CSS grid layout
-The page uses a combination of flexbox and grid layout. On mobile screens the content elements inside the body are simply stacked on top of each other, while on larger screens (min-width: 1024px), the body has `display: grid` with `grid-template-columns: 2fr 1fr`. This means that the main element takes up two thirds of the body container's width and the aside takes up the remaining one third. Since the page actually has two aside elements, we wrap them in a div with a class of side content so they both remain in the same grid column. 
+The page uses a combination of flexbox and grid layout. On mobile screens the content elements inside the body are simply stacked on top of each other, while on larger screens (min-width: 1024px), the body has `display: grid` with `grid-template-columns: 2fr 1fr`. This means that the main element takes up two thirds of the body container's width (2 fraction unites) and the aside takes up the remaining one third (1 fraction unit). Since the page actually has two aside elements, we wrap them in a div with a class of side content so they both remain in the same grid column. 
 
 2. ### Additional component styling
 * The timeline section has a reversed ordered list (`<ol>`) with a left border to represent the vertical timeline. I replaced the ugly default bullet points with a custom circular marks before each `<li>` element. For this I used the `::before` pseudo-element and styled it in the css file as follows: 
@@ -245,3 +245,27 @@ a:focus-visible {
 Furthermore, the input and textarea elements also have `:user-invalid` pseudo-class which add an additional red border and a warning icon if the user input is invalid. It's important to note that this only happens after the user has already interacted with the field. We could have also used `:invalid` pseudo-class, but this would be a much worse UX experience for the user, because all the required input fields would turn red upon page reload. 
 
 4. ### Issues encountred during development
+* One thing that caused issues for me was the behaviour of css grid items inside the fieldset elements. The page has a contact form which contains three fieldsets. Some of the input elements (more specifically `<select>` and `<textarea>`) were overflowing the viewport horizontally and I could not figure out why. The issue only ocurred on a mobile size screen where the grid-template-columns was set to 1fr. To force these elements to shrink I had to change the property to minmax(0, 1fr).
+
+Before:
+```css 
+fieldset {
+    display: grid;
+    padding: 2.5rem 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+```
+
+After: 
+```css
+fieldset {
+    display: grid;
+    padding: 2.5rem 1.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}

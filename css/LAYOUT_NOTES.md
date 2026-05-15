@@ -175,3 +175,8 @@ button, nav[aria-label="Form navigation"] a{
     line-height: inherit
 }
 ```
+
+## Task3 - Learning Hub
+1. ### Flexbox and CSS grid layout
+The page uses a combination of flexbox and grid layout. On mobile screens the content elements inside the body are simply stacked on top of each other, while on larger screens (min-width: 1024px), the body has `display: grid` with `grid-template-columns: 2fr 1fr`. This means that the main element takes up two thirds of the body container's width and the aside takes up the remaining one third. 
+

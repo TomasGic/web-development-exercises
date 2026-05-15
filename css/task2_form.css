@@ -131,7 +131,7 @@ input[type="number"],
 input[type="url"],
 select, textarea {
     padding: 0.8rem;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-border);
     border-radius: 6px;
     width: 100%;
 }
@@ -155,7 +155,8 @@ button, nav[aria-label="Form navigation"] a{
     border: none;
     font-size: inherit;
     text-decoration: none;
-    text-align: center
+    text-align: center;
+    line-height: inherit;
 }
 
 
@@ -202,10 +203,6 @@ summary {
     cursor: pointer;
     font-weight: bold;
     background-color: var(--color-bg-form)
-}
-
-details[open] summary {
-    border-bottom: 1px solid var(--border-color);
 }
 
 details h3 {

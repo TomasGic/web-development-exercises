@@ -178,5 +178,70 @@ button, nav[aria-label="Form navigation"] a{
 
 ## Task3 - Learning Hub
 1. ### Flexbox and CSS grid layout
-The page uses a combination of flexbox and grid layout. On mobile screens the content elements inside the body are simply stacked on top of each other, while on larger screens (min-width: 1024px), the body has `display: grid` with `grid-template-columns: 2fr 1fr`. This means that the main element takes up two thirds of the body container's width and the aside takes up the remaining one third. 
+The page uses a combination of flexbox and grid layout. On mobile screens the content elements inside the body are simply stacked on top of each other, while on larger screens (min-width: 1024px), the body has `display: grid` with `grid-template-columns: 2fr 1fr`. This means that the main element takes up two thirds of the body container's width and the aside takes up the remaining one third. Since the page actually has two aside elements, we wrap them in a div with a class of side content so they both remain in the same grid column. 
 
+2. ### Additional component styling
+* The timeline section has a reversed ordered list (`<ol>`) with a left border to represent the vertical timeline. I replaced the ugly default bullet points with a custom circular marks before each `<li>` element. For this I used the `::before` pseudo-element and styled it in the css file as follows: 
+```css
+#timeline li::before {
+  content: '';
+  position: absolute;
+  left: -7px; 
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-accent); 
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+```
+
+* The anchor tags in the "Resources" and the "About" section are styled without an underline, but in the hover state, the underline is brought back to signal to the user that the element is a link. 
+Additionally, the anchor tags in these two sections and in both navigation menu's (header and footer menu) use the transition property to add a subtle animation effect on mouse hover. 
+
+```css
+#resources a, #about a {
+    text-decoration: none;
+    color: var(--color-accent);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+#resources a:hover, #about a:hover {
+    text-decoration: underline;
+    color: #7dd3fc
+}
+```
+
+* On mobile and tablet size screens the main navigation menu turns into a hamburger menu. For this I added an input and label elements inside the `<nav>` in the html code. 
+
+```html
+<nav aria-label="Main navigation">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+```
+
+The navigation menu has `display: none` on mobile and tablet size screens and becomes visible only when user clicks the input element with id="menu-toggle". Because the input element is a checkbox we can check its state in the css using a pseudo-class `:checked`. If the checked condition is met we change the display property on the `ul` element to flex and the navigation menu appears.
+```css
+#menu-toggle:checked ~ ul {
+    display: flex;
+    flex-direction: column
+}
+```
+
+### 3. Accessibility & Interaction
+To enhance experience for keyboard-only users and ensure high accessibility standards in general, I added custom focus styles for input fields that fit more the overal colour palette of the page.
+
+```css
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px
+}
+```
+Furthermore, the input and textarea elements also have `:user-invalid` pseudo-class which add an additional red border and a warning icon if the user input is invalid. It's important to note that this only happens after the user has already interacted with the field. We could have also used `:invalid` pseudo-class, but this would be a much worse UX experience for the user, because all the required input fields would turn red upon page reload. 
+
+4. ### Issues encountred during development

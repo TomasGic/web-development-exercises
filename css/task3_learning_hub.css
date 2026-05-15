@@ -182,7 +182,7 @@ th, td {
   list-style: none;
   padding: 0;
   position: relative;
-  border-left: 2px solid #334155; /* The vertical line */
+  border-left: 2px solid #334155; 
   margin-left: 1rem
 }
 

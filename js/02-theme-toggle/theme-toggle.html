@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle</title>
+    <link rel="stylesheet" href="theme-toggle.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <div class="main-heading">
+            <h1>My Web Development Learning Hub</h1>
+            <p>A personal dashboard tracking my journey from Ruby to full-stack development.</p>
+        </div>
+        
+        <nav aria-label="Main navigation">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="schedule">Weekly schedule</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#reflections">Reflections</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+        <article>
+            <!-- ==================== Section 1: About ==================== -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>My programming journey began in <time datetime="2020-04">April 2020</time> when the whole world shut down due to the covid-19 pandemic. I started working from home and had suddenly a lot more time on my hands, so I wanted to use it in a productive manner. In my professional role as a content editor, I was exposed to many repetitive, tedious tasks that I wanted to automate, but I didn't have the skillset to do it. I started learning Python and soon stumbled upon <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> and Javascript. I started to apply my new knowledge of these tools in my job and gradually I became the technical automation expert in our content department.</p>
+
+                <p>By <time datetime="2022-06">June 2021</time> I fully or partially automated more than 30 workflows that were previously carried out manually and saved our content department more than 1000 hours of work per year.</p>
+
+                <p>In <time datetime="2025-11">November 2025</time> my company announced a round of layoffs and offered my team an opportunity to leave voluntarily. I thought this was a good opporunity to fully transition into software development. In <time datetime="2026-01">January 2026</time> I started a mentoring program with a goal to become a full-stack software developer specialising in Ruby and Ruby on Rails. I decided to make this website as a learning project but also to document my mentoring journey. You can find more of my projects on my <a href="https://github.com/TomasGic" target="_blank" rel="noopener noreferrer">Github page</a>.</p>
+            </section>
+
+            <!-- ==================== Section : Goals ==================== -->
+            <section id="goals">
+                <h2>Learning goals</h2>
+                <h3>Short-term goals (next 3 months)</h3>
+                <dl>
+                    <dt>Master the web fundamentals (HTML, CSS, Javascript)</dt>
+                    <dd>
+                        <p>Deadline: <time datetime="2026-05-30">May 30, 2026</time></p>
+                        <p>Status: In progress</p>
+                        <p>Metric: Build and deploy 3 responsive websites from scratch using HTML, CSS and JS.</p>
+                        <p>
+                            <label for="web-fundamentals-meter">Progress:</label>
+                            <meter id="web-fundamentals-meter" min="0" max="100" value="35">35%</meter>
+                        </p>
+                    </dd>
+
+                    <dt>Master Ruby on Rails fundamentals</dt>
+                    <dd>
+                        <p>Deadline: <time datetime="2026-07-31">July 31, 2026</time></p>
+                        <p>Status: Not started</p>
+                        <p>Metric: Build and deploy a basic journalling <abbr title="Create Read Update Delete">CRUD</abbr>app.</p>
+                        <p>
+                            <label for="rails-fundamentals-meter">Progress:</label>
+                            <meter id="rails-fundamentals-meter" min="0" max="100" value="0">0%</meter>
+                        </p>
+                    </dd>
+
+                    <dt>Master design patterns in Ruby</dt>
+                    <dd>
+                        <p>Deadline: <time datetime="2026-05-08">May 08, 2026</time></p>
+                        <p>Status: In progress</p>
+                        <p>Metric: Complete all week 6 tasks related to design patterns."></p>
+                        <p>
+                            <label for="design-patterns-meter">Progress:</label>
+                            <meter id="design-patterns-meter" min="0" max="100" value="67">67%</meter>
+                        </p>
+                    </dd>
+
+                    <dt>Master Data Structures and Algorithms</dt>
+                    <dd>
+                        <p>Deadline: <time datetime="2026-08-31">August 31, 2026</time></p>
+                        <p>Status: In progress</p>
+                        <p>Metric: Complete all exercises from the book <cite>A Common-Sense Guide to Data Structures and Algorithms</cite> by Jay Wengrow.></p>
+                        <p>
+                            <label for="dsa-meter">Progress:</label>
+                            <meter id="dsa-meter" min="0" max="100" value="10">10%</meter>
+                        </p>
+                    </dd>
+                </dl>
+
+                <h3>Long-term goals (1 year)</h3>
+                <dl>
+                    <dt>Developer portfolio completion</dt>
+                    <dd>Build 3 solid full-stack projects and upload them on github.
+                    <div class="progress">
+                        <label for="progress-portfolio">Progress</label>
+                        <progress id="progress-portfolio" max="100" value="10"></progress>
+                    </div>
+                    </dd>
+                    
+                    <dt>Master data structures and algorithms</dt>
+                    <dd>Complete all exercises from the book <cite>A Common-Sense Guide to Data Structures and Algorithms</cite> by Jay Wengrow.
+                    <div class="progress">
+                        <label for="progress-algorithms">Progress</label>
+                        <progress id="progress-algorithms" value="10" max="100">10%</progress>
+                    </div>
+                    </dd>
+                    
+                    <dt>Contribute to open-source projects</dt>
+                    <dd>Have at least 3 merged pull-requests in ruby-related gems.
+                    <div class="progress">
+                        <label for="progress-open-source">Progress</label>
+                        <progress id="progress-open-source" value="0" max="100">0%</progress>
+                    </div>
+                    </dd>
+
+                </dl>
+            </section>
+
+            <!-- ==================== Section 3: Timeline ==================== -->
+            <section id="timeline">
+                <h2>Progress Timeline</h2>
+                <ol reversed>
+                    <li>
+                        <time datetime="2026-01-05">January 5th, 2026</time>
+                        <strong>Ruby basics</strong>Wrote my first Ruby script.
+                    </li>
+                    <li>
+                        <time datetime="2026-01-12">January 12th, 2026</time>
+                        <strong>Ruby <abbr title="Test Driven Development">TDD</abbr></strong>Wrote my first Ruby program using TDD principles.
+                    </li>
+                    <li>
+                        <time datetime="2026-01-19">19th January, 2026</time>
+                        <strong>Git and version control</strong>Incorporated git and version control into my coding workflow.
+                    </li>
+                    <li>
+                        <time datetime="2026-01-27">Janaury 27th, 2026</time>
+                        <strong>Time complexity of algorithms</strong>For the first time I analyzed my Ruby program in terms of its time complexity using Big O Notation.
+                    </li>
+                    <li>
+                        <time datetime="2026-02-02">February 2nd, 2026</time>
+                        <strong>Design patterns in Ruby</strong>Wrote my first program in Ruby while consciously applying design patterns.
+                    </li>
+                    <li>
+                        <time datetime="2026-04-23">April 23rd, 2026</time>
+                        <strong>Writing code by heart</strong>Wrote my first Ruby program without referencing documentation or the help of AI. 
+                    </li>
+                </ol>
+            </section>
+
+            <!-- ==================== Section 4: Skills Matrix =================== -->
+             <section id="skills">
+                <h2>Skills & Technologies</h2>
+                <div class="table-container">
+                    <table>
+                        <caption>Current technology proficiency matrix</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Technology</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">Started</th>
+                                <th scope="col">Weekly Hours</th>
+                                <th scope="col">Goal by <time datetime="2026-12-31">December 31, 2026</time></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Ruby</th>
+                                <td>Language</td>
+                                <td><meter min="0" max="5" value="3" aria-label="Level: 3 out of 5">3</meter></td>
+                                <td><time datetime="2026-01-05">January 5th, 2026</time></td>
+                                <td>15</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Python</th>
+                                <td>Language</td>
+                                <td><meter min="0" max="5" value="4" aria-label="Level: 4 out of 5">4</meter></td>
+                                <td><time datetime="2020-06">June 2020</time></td>
+                                <td>5</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Javascript</th>
+                                <td>Language</td>
+                                <td><meter min="0" max="5" value="2" aria-label="Level: 2 out of 5">2</meter></td>
+                                <td><time datetime="2020-08">August 2020</time></td>
+                                <td>5</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">HTML</th>
+                                <td>Language</td>
+                                <td><meter min="0" max=5 value="3" aria-label="Level: 3 out of 5">3</meter></td>
+                                <td><time datetime="2020-06">June 2020</time></td>
+                                <td>5</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CSS</th>
+                                <td>Language</td>
+                                <td><meter min="0" max=5 value="3" aria-label="Level: 3 out of 5">3</meter></td>
+                                <td><time datetime="2020-06">June 2020</time></td>
+                                <td>5</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">RSpec</th>
+                                <td>Framework</td>
+                                <td><meter min="0" max="5" value="3" aria-label="Level: 3 out of 5">3</meter></td>
+                                <td><time datetime="2026-01-27">January 27, 2026</time></td>
+                                <td>10</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Git</th>
+                                <td>Tools/Version control</td>
+                                <td><meter min="0" max="5" value="3" aria-label="Level: 3 out of 5">3</meter></td>
+                                <td><time datetime="2026-01-05">January 5, 2026</time></td>
+                                <td>1</td>
+                                <td>Expert level (5)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">AWS</th>
+                                <td>Platform/Infrastructure</td>
+                                <td><meter min="0" max="5" value="1" aria-label="Level: 1 out of 5">1</meter></td>
+                                <td><time datetime="2022-03">March 2022</time></td>
+                                <td>1</td>
+                                <td>Advanced (4)</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row" colspan="2">Averages/Totals</th>
+                                <td>Avg: 2.6/5</td>
+                                <td>—</td>
+                                <td>Total: 47h</td>
+                                <td>—</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <h3>Skill categories</h3>
+                <dl>
+                    <dt>Languages</dt>
+                    <dd>Ruby, JavaScript, HTML, CSS</dd>
+                    <dt>Frameworks</dt>
+                    <dd>RSpec</dd>
+                    <dt>Tools/Version Control</dt>
+                    <dd>Git</dd>
+                    <dt>Platform/Infrastructure</dt>
+                    <dd>AWS</dd>
+                </dl>
+             </section>
+             
+            <!-- ==================== Section 5: Weekly Schedule ================== -->
+            <section id="schedule">
+                <h2>Weekly Study Schedule</h2>
+                <div class="table-container">
+                    <table>
+                        <caption>Typical Weekly Study Plan</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Day</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Topic</th>
+                                <th scope="col">Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Monday</th>
+                                <td><time datetime="10:00">10:00</time></td>
+                                <td>Design Patterns (Ruby, Python)</td>
+                                <td>4 Hours</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tuesday</th>
+                                <td><time datetime="10:00">10:00</time></td>
+                                <td><abbr title="Hypertext Markup Language">HTML</abbr> + <abbr title="Cascading Style Sheets">CSS</abbr></td>
+                                <td>4 hours</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Wednesday</th>
+                                <td><time datetime="10:00">10:00</time></td>
+                                <td>Ruby fundamentals</td>
+                                <td>4 hours</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Thursday</th>
+                                <td><time datetime="10:00">10:00</time></td>
+                                <td>Javascript</td>
+                                <td>4 hours</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Friday</th>
+                                <td><time datetime="10:00">10:00</time></td>
+                                <td>Data structures and algorithms</td>
+                                <td>4 hours</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Saturday</th>
+                                <td><time datetime="10:00">10:00</time></td>
+                                <td>Test Driven Development with RSpec</td>
+                                <td>4 hours</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row" colspan="3">Total Weekly Hours</th>
+                                <td>24 hours</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ==================== Section 6: Resources ==================== -->
+            <section id="resources">
+                <h2>Recommended resources</h2>
+                <h3>Documentation</h3>
+                <ul>
+                    <li><a href="https://ruby-doc.org/" target="_blank" rel="noopener noreferrer">Ruby-Doc</a>: The official API documentation for the Ruby language.</li>
+                    <li><a href="https://rspec.info/documentation/" target="_blank" rel="noopener noreferrer">Rspec-Doc</a>: Comprehensive guides for the popular Ruby testing framework.</li>
+                    <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>: Essential for HTML, CSS, and JS reference.</li>
+                    <li><a href="https://refactoring.guru/design-patterns/ruby" target="_blank" rel="noopener noreferrer">Design Patterns in Ruby</a>: Comprehensive guide to design patterns in Ruby.</li>
+                </ul>
+
+                <h3>Books</h3>
+                <ul>
+                    <li><cite>Design Patterns in Ruby</cite> by Russ Olsen (2007) - So far the best book on design patterns in general that I have found, comprehensive with easy explanations and practical real-world code examples.</li>
+
+                    <li><cite>A Common-Sense Guide to Data Structures and Algorithms</cite> by Jay Wengrow (2020) - One of the best books on data structures and algorithms out there. Contains easy, no-nonsense explanations to complex concepts, every chapter has a handful of exercises along with their solutions.</li>
+
+                    <li><cite>Clean Code: A Handbook of Agile Software Craftsmanship</cite> by Robert C. Martin (2009) - This book is a classic in the field of software engineering. Even though it contains code examples in Java, the concepts are applicable to any programming language. I believe it is a must-read for any software developer who is serious about writing clean, professional code.</li>
+                </ul>
+
+                <h3>Courses & Tutorials</h3>
+                <dl>
+                    <dt><a href="https://udemy.com/course/learn-to-code-with-ruby-lang/" target="_blank" rel="noopener noreferrer">Learn To Code with Ruby</a></dt>
+                    <dd>Highest rated Ruby programming course on Udemy. Rating: 4.8/5</dd>
+
+                    <dt><a href="https://www.udemy.com/course/testing-ruby-with-rspec/" target="_blank" rel="noopener noreferrer">Testing Ruby with RSpec</a></dt>
+                    <dd>A solid Udemy course on test-driven development using RSpec. Some of the code examples were a bit unrealistic, but overall it is a well-structured course worth the price. Rating: 4.4/5</dd>
+
+                    <dt><a href="https://www.udemy.com/course/python-oop-object-oriented-programming-from-beginner-to-pro" target="_blank" rel="noopener noreferrer">OOP in Python</a></dt>
+                    <dd>This course focuses on <abbr title="Object Oriented Programming">OOP</abbr> in Python, but it is suitable for anyone who wants to learn the best OOP practices regardles of what programming language they use. One of the reasons why this course stands out for me is the extremely pleasant-sounding voice of the instructor, which makes it easier to stay engaged. Rating: 4.7/5 </dd>
+                </dl>
+
+                <h3>Tools</h3>
+                <div class="table-container">
+                    <table>
+                        <caption>Development tools I use</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Tool</th>
+                                <th scope="col">Purpose</th>
+                                <th scope="col">Free/Paid</th>
+                                <th scope="col">Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">VS Code</th>
+                                <td>Code editor</td>
+                                <td>Free</td>
+                                <td><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Link to official VS Code website</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Asdf</th>
+                                <td>Command line tool for managing multiple programming language runtime versions</td>
+                                <td>Free</td>
+                                <td><a href="https://asdf-vm.com/" target="_blank" rel="noopener noreferrer">Link to official asdf website</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Chrome DevTools</th>
+                                <td>Debugging, analyzing network activity, inspecting the DOM</td>
+                                <td>Free</td>
+                                <td><a href="https://developer.chrome.com/docs/devtools?hl=uk" target="_blank" rel="noopener noreferrer">Link to developer tools website</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Figma</th>
+                                <td>Website design</td>
+                                <td>Free</td>
+                                <td><a href="https://figma.com/" target="_blank" rel="noopener noreferrer">Link to official Figma website</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ubuntu</th>
+                                <td>Operating system for Linux</td>
+                                <td>Free</td>
+                                <td><a href="https://ubuntu.com/" target="_blank" rel="noopener noreferrer">Link to official Ubuntu website</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ==================== Section 7: Reflections ==================== -->
+             <section id="reflections">
+                <h2>Reflections & Notes</h2>
+
+                <article>
+                    <h3>What I've learned so far</h3>
+                    <p>When I started the mentorhsip I already had some knowledge of programming but I wasn't programming consistently. The most important benefit of the mentorship was the move from occasionaly writing automation scripts to writing OOP programs that simulated real domain systems almost <em>every day</em>. With consistency my progress has skyrocketed.</p>
+                    <p>I have become more confident in writing code from scratch without the need to reference documentation or AI models. I have learnt to apply the correct design patterns and I understood how Ruby modules and classes interact with each other.</p>
+                </article>
+
+                <article>
+                    <h3>Biggest Challenges</h3>
+                    <ol>
+                        <li>
+                            <dl>
+                                <dt>Eye fatique from spending more time in front of the screen than previously</dt>
+                                <dd>I overcame this challenge by taking more frequent breaks and taking supplements for eye health.</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>Back and neck pain from prolonged sitting and typing</dt>
+                                <dd>I overcame this challenge by making my desk setup more ergonomic (getting a smaller keyboard, remapping frequently used keys on the keyboard to better suit hand placement, buying a standing desk to alternate between sitting and standing).</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><strong>Occasionally having thoughts of self-doubt</strong></dt>
+                                <dd>It is natural to occasionally doubt one's abilities, but it's important for these thoughts to just be short-lived and not lower your overal self-confidence. When I get a thought like this I remind myself that I'm still only at the beginning of the journey and that it takes time to become really good at something.</dd>
+                            </dl>
+                        </li>
+                    </ol>
+                </article>
+
+                <figure>
+                    <p>The following is one of my favourite quotes whenever I feel stuck or want to give up.</p>
+                    <blockquote cite="https://www.brainyquote.com/quotes/nelson_mandela_378967">
+                        <p>It always seems impossible until it's done.</p>
+                    </blockquote>
+                    <figcaption class="quote-caption">
+                        &mdash; Nelson Mandela, via <cite>BrainyQuote</cite>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <figcaption class="code-caption">A code snippet that I'm proud of:</figcaption>
+                    <pre>
+                        <code>
+parser = OptionParser.new do |opts|
+    opts.banner = "Usage: random_people [options]"
+    
+    opts.on("--count N", Integer, "Number of users to fetch") do |n|
+        if n &lt= 0
+        raise OptionParser::InvalidArgument, "Count must be a positive number!"
+        elsif n > MAX_NUM_USERS
+        raise OptionParser::InvalidArgument, "Can only fetch max #{MAX_NUM_USERS} users."
+        else
+        options[:count] = n
+        end
+    end
+
+    opts.on("--format F", "Output format (table, json)") do |f|
+        options[:format] = f.downcase
+    end
+
+    opts.on("--sort S", "Field to sort by (name, age)") do |s|
+        options[:sort] = s.downcase
+    end
+
+    opts.on("--country C", "Filter by country name") do |c|
+        options[:country] = c.upcase
+    end
+    end
+    parser.parse!(args)
+    
+    if args.any?
+    raise OptionParser::InvalidArgument, "Unrecognized arguments: #{args.join(", ")}. Did you forget --?"
+    end
+    options
+end    
+                        </code>
+                    </pre>
+                    <p>The reason why I particularly like this block of code is because of how elegantly it handles the parsing of command line arguments entered by the user when running the program. For example, if user types "ruby random_people --count 5" in the terminal (random_people is the name of the program), Ruby stores '--count' and '5' in a global array ARGV. The parser object then iterates through the array and tries to match each element with the argument stored in its registry(the argument that should be parsed are defined by the developer). As soon as it finds the match, it removes the element from the array, meaning that any elements left in the array are arguments not recognised by our program. </p>
+                </figure>
+            </section>
+
+             <!-- ==================== Section 8: Contact Form ==================== -->
+            <section id="contact">
+                <h2>Get in touch</h2>
+                <form action="#contact" method="POST">
+                    <fieldset>
+                        <legend>Your Information</legend>
+                        
+                        <div class="input-wrapper">
+                            <label for="name">Full name (required)</label>
+                            <input type="text" id="name" name="name" minlength="2" required>
+                            <span class="error-msg">This field is required</span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="email">Email (required)</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-msg">This field is required</span>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="website">Website (optional)</label>
+                            <input type="url" id="website" name="website">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Your Message</legend>
+                        <div class="input-wrapper">
+                            <label for="subject">Subject</label>
+                            <select name="subject" id="subject" required>
+                                <option value="" selected disabled>Select a subject...</option>
+                                <option value="mentoring">Mentoring</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="question">Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <p>Priority:</p>
+                            <p>
+                                <input type="radio" id="low" name="priority" value="low" required>
+                                <label for="low">Low</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="normal" name="priority" value="normal">
+                                <label for="normal">Normal</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="high" name="priority" value="high">
+                                <label for="high">High</label>
+                            </p>
+                        </div>
+
+                    
+                        <div class="full-width input-wrapper">
+                            <label for="message">Your message (required):</label>
+                            <textarea name="message" id="message" minlength="20" maxlength="2000" rows="6" aria-describedby="message-limit" required></textarea>
+                            <span class="error-msg">This field is required</span>
+                            <small id="message-limit">Your message must be between 20 and 2000 characters.</small>
+                        </div>
+                        
+
+                        <p>
+                            <label for="reference-file">Attach reference:</label>
+                            <input type="file" id="reference-file" name="reference_file" accept=".pdf,.doc,.docx,.txt" aria-describedby="file-help">
+                            <small id="file-help" style="color: #666;">
+                                Accepted formats: PDF, DOC, TXT. Max file size: 2MB.
+                            </small>
+                        </p>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferences</legend>
+                        <div>
+                            <p>Response format:</p>
+                            
+                            <p>
+                                <input type="radio" id="response-email" name="response-format" value="email">
+                                <label for="response-email">Email</label>
+                            </p>
+                            
+                            
+                            <p>
+                                <input type="radio" id="videocall" name="response-format" value="videocall">
+                                <label for="videocall">Videocall</label>
+                            </p>
+                            
+                            
+                            <p>
+                                <input type="radio" id="either" name="response-format" value="either">
+                                <label for="either">Either</label>
+                            </p>
+                            
+                        </div>
+
+                        <div class="subscribe-policy-wrapper">
+                            <p>
+                                <input type="checkbox" id="updates" name="subscribe" value="yes">
+                                <label for="updates">I'd like to receive your weekly learning updates</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" id="privacy-policy" name="privacy_policy" value="accepted" required>
+                                <label for="privacy-policy">I agree to the privacy policy</label>
+                            </p>
+                        </div>
+                    </fieldset>
+
+                    <div class="btn-container">
+                        <button type="submit">Send Message</button>
+                        <button type="reset">Clear Form</button>
+                    </div>
+                </form>
+            </section>
+        </article>
+    </main>
+
+    <div class="side-content">
+        <aside id="quick-stats">
+            <h2>Quick Stats</h2>
+            <dl>
+                <dt>Weeks learning:</dt>
+                <dd><time datetime="P56D">8 weeks</time></dd>
+                <dt>Technologies explored</dt>
+                <dd>Ruby, RSpec, HTML, CSS, Javascript</dd>
+                <dt>Projects completed</dt>
+                <dd>8</dd>
+                <dt>Current Focus</dt>
+                <dd>HTML and Semantic Structure</dd>
+            </dl>
+        </aside>
+        <aside id="currently-reading">
+            <h2>Currently Reading</h2>
+            <figure>
+                <img src="../images/clean_architecture.jpg" alt="Front cover of the book Clean Architecture by Robert C. Martin" width="150">
+                <figcaption>
+                    <strong>Clean Architecture</strong><br>
+                    by Robert C. Martin
+                    <p>Practical Software Architecture Solutions from the Legendary Robert C. Martin (“Uncle Bob”).</p>
+                </figcaption>
+            </figure>
+        </aside>
+    </div>
+
+    <footer>
+        <nav aria-label="Footer navigation">
+            <ul>
+                <li><a href="https://github.com/TomasGic" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/tomas-gic-ba0b9874" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="mailto:tomas@example.com">Email Me</a></li>
+            </ul>
+        </nav>
+        <small>&copy; <time datetime="2026">2026</time> Tomas Gic. All rights reserved.</small>
+    </footer>
+    <script src="theme-toggle.js"></script>
+</body>
+</html>

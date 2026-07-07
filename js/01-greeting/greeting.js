@@ -1,11 +1,12 @@
 const greetButton = document.querySelector("#greet-btn")
 const clearButton = document.querySelector("#clear-btn")
 const greetingOutput = document.querySelector("#greeting-output")
+const inputField = document.querySelector("#name")
+
 
 function greet() {
-    const inputField = document.querySelector("#name")
     const name = inputField.value.trim()
-    const greetingText = `Hello, ${name}. Welcome!`
+    const greetingText = `Hello, ${name}. Welcome!` 
     
     if (name) {
         greetingOutput.textContent = greetingText
@@ -14,7 +15,6 @@ function greet() {
     } else {
         return
     }
-    
 }
 
 function clear() {
@@ -24,3 +24,6 @@ function clear() {
 
 greetButton.addEventListener("click", greet)
 clearButton.addEventListener("click", clear)
+inputField.addEventListener("keydown", (event) =>{
+    if (event.key === "Enter") { greet() }
+})

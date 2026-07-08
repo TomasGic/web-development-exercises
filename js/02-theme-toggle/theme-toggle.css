@@ -18,6 +18,21 @@
     --color-accent: #1d4ed8; 
 }
 
+.dark-mode {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-text: #b9bec8;
+  --color-text-heading: #f1f5f9;
+  --color-text-subheading: #c5ced7;
+  --color-bg-input: #334155;
+  --color-bg-deep: #1E1E2E;
+  --color-bg-card: #1e293b;
+  --color-bg-alt: #c4d0e8;
+  --color-border: #e5e7eb;
+  --color-border-dark: #334155;
+  --color-accent: #38bdf8;
+}
+
 #theme-btn {    
     background-color: var(--color-bg-card);
     width: 40px;
@@ -58,6 +73,16 @@
 #theme-btn .icon-dark {
     right: 4px
 }
+
+.dark-mode #theme-btn {
+    background-color: #e5e7eb
+}
+
+.dark-mode #theme-btn::before {
+    left: 22px;
+    border: 1px solid var(--color-border)
+}
+
 
 body {
     margin: 0;

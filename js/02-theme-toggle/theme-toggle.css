@@ -100,6 +100,10 @@
     color: var(--color-bg-deep)
 }
 
+.dark-mode .counter-container button {
+    color: var(--color-text)
+}
+
 #click-counter {
     margin: 0
 }
@@ -509,7 +513,6 @@ button {
 }
 
 button[type="submit"] {
-    /* color: var(--color-bg-text); */
     background-color: #4d4d5c;
     color: #f0f0f0;
     border: 1px solid var(--color-text-heading);

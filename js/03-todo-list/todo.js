@@ -49,6 +49,8 @@ function clearCompleted() {
 
 function updateclearCompletedButton() {
     const completedTasks = document.querySelectorAll(".task-text.task-done")
+
+    // if there are completed tasks in the list we want to display the 'clear completed' button, otherwise we want to keep it hidden'
     if (completedTasks.length > 0) {
         clearCompletedButton.classList.remove("hidden")
     } else {

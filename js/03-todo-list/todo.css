@@ -105,3 +105,14 @@ button {
     background-color: #e76161;
 }
 
+#clear-completed-btn {
+    padding: 0.8rem 1.6rem;
+    background-color: #e76161;
+    font-weight: 500;
+    font-size: 1rem
+}
+
+.hidden {
+    display: none
+}
+

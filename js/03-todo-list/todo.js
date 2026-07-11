@@ -1,7 +1,7 @@
 const taskInput = document.querySelector("#task-input")
 const taskList = document.querySelector("#task-list")
 const addButton = document.querySelector("#add-btn")
-
+const clearCompletedButton = document.querySelector("#clear-completed-btn")
 
 function addTask() {
     const task = taskInput.value.trim()
@@ -27,14 +27,37 @@ function completeTask(button) {
     const listItem = button.parentElement
     const taskText = listItem.querySelector(".task-text")
     taskText.classList.add("task-done")
+    updateclearCompletedButton()
 }
 
 function removeTask(button) {
     const listItem = button.parentElement
     listItem.remove()
+    updateclearCompletedButton()
+}
+
+function clearCompleted() {
+    // we select all the span elements that have the class .task-done applied, 
+    // then we find their parent element (list item) and remove it from the DOM
+    const completedTasks = document.querySelectorAll(".task-text.task-done")
+    completedTasks.forEach(taskText => {
+        const listItem = taskText.parentElement
+        listItem.remove()
+    })
+    updateclearCompletedButton() 
+}
+
+function updateclearCompletedButton() {
+    const completedTasks = document.querySelectorAll(".task-text.task-done")
+    if (completedTasks.length > 0) {
+        clearCompletedButton.classList.remove("hidden")
+    } else {
+        clearCompletedButton.classList.add("hidden")
+    }
 }
 
 addButton.addEventListener("click", addTask)
+clearCompletedButton.addEventListener("click", clearCompleted)
 taskInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") { addTask() }
 })

@@ -55,6 +55,11 @@ body {
     text-transform: capitalize;
 }
 
+.task-done {
+    text-decoration: line-through;
+    color: #5a687b
+}
+
 button {
     cursor: pointer;
     border-radius: 4px;

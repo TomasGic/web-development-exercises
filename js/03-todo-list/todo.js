@@ -29,6 +29,11 @@ function completeTask(button) {
     taskText.classList.add("task-done")
 }
 
+function removeTask(button) {
+    const listItem = button.parentElement
+    listItem.remove()
+}
+
 addButton.addEventListener("click", addTask)
 taskInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") { addTask() }
@@ -40,4 +45,9 @@ taskList.addEventListener("click", (event) => {
     if (clickedElement.classList.contains("done-btn")) {
         completeTask(clickedElement)
     }
+
+    if (clickedElement.classList.contains("remove-btn")) {
+        removeTask(clickedElement)
+    }
 })
+

@@ -63,20 +63,35 @@ button {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    background-color: var(--input-bg);
+    border-radius: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0
 }
 
 #task-input {
     flex-grow: 1;
     border: none;
     outline: none;
-    background-color: var(--input-bg);
+    background: transparent;
     padding: 0.6rem 1.2rem;
-    border-radius: 40px
 }
+
+#task-input:focus::placeholder {
+    opacity: 0
+}
+
+li {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #b5b2b2
+}
+
 
 #add-btn {
     background-color: var(--primary-light);
-    color: #ffffff
+    color: #ffffff;
+    border-radius: 40px;
+    padding: 0.5rem 1.5rem
 }
 
 #done-btn {

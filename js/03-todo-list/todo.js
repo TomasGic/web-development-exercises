@@ -3,6 +3,7 @@ const taskList = document.querySelector("#task-list")
 const addButton = document.querySelector("#add-btn")
 const clearCompletedButton = document.querySelector("#clear-completed-btn")
 
+
 function addTask() {
     const task = taskInput.value.trim()
 
@@ -21,6 +22,8 @@ function addTask() {
     } else {
         return
     }
+
+    updateTaskCounter()
 }
 
 function completeTask(button) {
@@ -28,12 +31,14 @@ function completeTask(button) {
     const taskText = listItem.querySelector(".task-text")
     taskText.classList.add("task-done")
     updateclearCompletedButton()
+    updateTaskCounter()
 }
 
 function removeTask(button) {
     const listItem = button.parentElement
     listItem.remove()
     updateclearCompletedButton()
+    updateTaskCounter()
 }
 
 function clearCompleted() {
@@ -45,6 +50,7 @@ function clearCompleted() {
         listItem.remove()
     })
     updateclearCompletedButton() 
+    updateTaskCounter()
 }
 
 function updateclearCompletedButton() {
@@ -56,6 +62,23 @@ function updateclearCompletedButton() {
     } else {
         clearCompletedButton.classList.add("hidden")
     }
+}
+
+function updateTaskCounter() {
+    const hasListItems = document.querySelectorAll("li").length > 0
+    const taskCounter = document.querySelector("#task-counter")
+
+    if (hasListItems) {
+        const numOfRemainingTasks = document.querySelectorAll(".task-text:not(.task-done)").length
+        if (numOfRemainingTasks > 0) {
+            taskCounter.textContent = (numOfRemainingTasks > 1) ? `${numOfRemainingTasks} tasks still to do` : `${numOfRemainingTasks} task still to do`
+        } else {
+        taskCounter.textContent = "No more tasks to do"
+        }
+    } else {
+        taskCounter.textContent = "You don't have any tasks."
+    }
+    
 }
 
 addButton.addEventListener("click", addTask)

@@ -48,7 +48,7 @@ function clearCompleted() {
     // then we find their parent element (list item) and remove it from the DOM
     const completedTasks = document.querySelectorAll(".task-text.task-done")
     completedTasks.forEach(taskText => {
-        const listItem = taskText.parentElement.parentElement
+        const listItem = taskText.parentElement
         listItem.remove()
     })
     updateclearCompletedButton() 

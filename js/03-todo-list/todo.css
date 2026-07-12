@@ -44,12 +44,20 @@ body {
     margin-left: 0;
     padding: 0.5rem 1.5rem;
     display: flex;
+    flex-direction: column;
     gap: 0.5rem;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--input-bg);
     border-radius: 40px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
     /* border: 1px solid #b5b2b2 */
+}
+
+@media (min-width: 768px) {
+    #task-list li {
+        flex-direction: row
+    }
 }
 
 .task-text {
@@ -119,4 +127,3 @@ button {
 .hidden {
     display: none
 }
-

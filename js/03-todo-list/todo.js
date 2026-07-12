@@ -11,8 +11,10 @@ function addTask() {
         const listItem = document.createElement("li")
         listItem.innerHTML = `
             <span class="task-text"></span>
-            <button class="done-btn">Done</button>
-            <button class="remove-btn">Remove</button>
+            <div class="btn-wrapper">
+                <button class="done-btn">Done</button>
+                <button class="remove-btn">Remove</button>
+            </div>
         `
 
         listItem.querySelector(".task-text").textContent = task
@@ -27,7 +29,7 @@ function addTask() {
 }
 
 function completeTask(button) {
-    const listItem = button.parentElement
+    const listItem = button.parentElement.parentElement
     const taskText = listItem.querySelector(".task-text")
     taskText.classList.add("task-done")
     updateclearCompletedButton()
@@ -35,7 +37,7 @@ function completeTask(button) {
 }
 
 function removeTask(button) {
-    const listItem = button.parentElement
+    const listItem = button.parentElement.parentElement
     listItem.remove()
     updateclearCompletedButton()
     updateTaskCounter()
@@ -46,7 +48,7 @@ function clearCompleted() {
     // then we find their parent element (list item) and remove it from the DOM
     const completedTasks = document.querySelectorAll(".task-text.task-done")
     completedTasks.forEach(taskText => {
-        const listItem = taskText.parentElement
+        const listItem = taskText.parentElement.parentElement
         listItem.remove()
     })
     updateclearCompletedButton() 

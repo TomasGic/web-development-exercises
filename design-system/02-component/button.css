@@ -1,1 +1,79 @@
 @import url(../01-tokens/tokens.css);
+
+body {
+    font-family: var(--font-family-base);
+}
+
+h1 {
+    text-align: center
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: var(--spacing-8)
+}
+
+.btn-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+}
+
+.btn {
+    font: inherit;
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    outline: none;
+    line-height: var(--line-height-normal)
+}
+
+.btn--primary {
+    background-color: var(--color-primary-700);
+    color: var(--color-neutral-50)
+}
+
+.btn--secondary {
+    background-color: var(--color-primary-500);
+    color: var(--color-neutral-50)
+}
+
+.btn--destructive {
+    background-color: var(--color-error-700);
+    color: var(--color-neutral-50)
+}
+
+.btn--lg {
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-4) var(--spacing-8)
+}
+
+.btn--md {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-3) var(--spacing-6)
+}
+
+.btn--sm {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-1) var(--spacing-3)
+}
+
+.btn:disabled {
+    opacity: 0.5
+}
+
+.btn--primary:disabled {
+    background-color: var(--color-primary-600);
+}
+
+.btn--secondary:disabled {
+    background-color: var(--color-primary-300);
+}
+
+.btn--destructive:disabled {
+    background-color: var(--color-error-500);
+}

@@ -3,7 +3,9 @@
     /* Colors */
     --color-primary-50: #f7f8ff;
     --color-primary-100: #c2cafd;
+    --color-primary-300: #91a5f6;
     --color-primary-500: #767ff1;
+    --color-primary-600: #435095;
     --color-primary-700: #2e316a;
 
     --color-neutral-0:   #FFFFFF;
@@ -11,8 +13,8 @@
     --color-neutral-600: #4B5563;
     --color-neutral-900: #111827;
 
-    --color-error-500:   #EF4444;
-    --color-warning-700:   #B91C1C;
+    --color-error-500:   #ae4767;
+    --color-error-700:   #9b1f4f;
 
     /* Typography */
     --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;

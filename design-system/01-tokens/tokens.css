@@ -3,21 +3,16 @@
     /* Colors */
     --color-primary-50: #f7f8ff;
     --color-primary-100: #c2cafd;
-    --color-primary-200: #97a2f8;
     --color-primary-500: #767ff1;
-    --color-primary-600: #595fc1;
     --color-primary-700: #2e316a;
 
     --color-neutral-0:   #FFFFFF;
     --color-neutral-50:  #F9FAFB;
-    --color-neutral-100: #F3F4F6;
-    --color-neutral-200: #E5E7EB;
-    --color-neutral-400: #9CA3AF;
     --color-neutral-600: #4B5563;
     --color-neutral-900: #111827;
 
     --color-error-500:   #EF4444;
-    --color-error-700:   #B91C1C;
+    --color-warning-700:   #B91C1C;
 
     /* Typography */
     --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;

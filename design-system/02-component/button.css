@@ -32,6 +32,15 @@ body {
     line-height: var(--line-height-normal)
 }
 
+.btn:focus {
+    outline: none
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px
+}
+
 .btn--primary {
     background-color: var(--color-primary-700);
     color: var(--color-neutral-50)
@@ -53,6 +62,10 @@ body {
 .btn--destructive {
     background-color: var(--color-error-700);
     color: var(--color-neutral-50)
+}
+
+.btn--destructive:focus-visible {
+    outline: 2px solid var(--color-error-700);
 }
 
 .btn--destructive:hover {

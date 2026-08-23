@@ -3,10 +3,6 @@ const variantSelect = document.querySelector('#variant-select')
 const sizeSelect = document.querySelector('#size-select')
 const disabledToggle = document.querySelector('#disabled-toggle')
 
-disabledToggle.addEventListener('change', (event) => {
-    
-})
-
 function updateButtonPreview() {
     const variant = variantSelect.value 
     const size = sizeSelect.value

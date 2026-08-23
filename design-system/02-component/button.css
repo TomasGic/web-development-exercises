@@ -37,14 +37,26 @@ body {
     color: var(--color-neutral-50)
 }
 
+.btn--primary:hover {
+    background-color: var(--color-primary-900)
+}
+
 .btn--secondary {
     background-color: var(--color-primary-500);
     color: var(--color-neutral-50)
 }
 
+.btn--secondary:hover {
+    background-color: var(--color-primary-600);
+}
+
 .btn--destructive {
     background-color: var(--color-error-700);
     color: var(--color-neutral-50)
+}
+
+.btn--destructive:hover {
+    background-color: var(--color-error-900);
 }
 
 .btn--lg {

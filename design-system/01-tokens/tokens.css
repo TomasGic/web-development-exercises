@@ -1,12 +1,13 @@
 /* Token system */
 :root {
     /* Colors */
-    --color-primary-50: #f7f8ff;
+    --color-primary-50:  #f7f8ff;
     --color-primary-100: #c2cafd;
     --color-primary-300: #91a5f6;
     --color-primary-500: #767ff1;
-    --color-primary-600: #435095;
+    --color-primary-600: #666ed2;
     --color-primary-700: #2e316a;
+    --color-primary-900: #202850;
 
     --color-neutral-0:   #FFFFFF;
     --color-neutral-50:  #F9FAFB;
@@ -15,6 +16,7 @@
 
     --color-error-500:   #ae4767;
     --color-error-700:   #9b1f4f;
+    --color-error-900:   #7c173e;
 
     /* Typography */
     --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;

@@ -4,7 +4,7 @@ body {
     font-family: var(--font-family-base);
 }
 
-h1 {
+.align-center {
     text-align: center
 }
 
@@ -76,4 +76,46 @@ h1 {
 
 .btn--destructive:disabled {
     background-color: var(--color-error-500);
+}
+
+#preview {
+    margin-top: var(--spacing-12) 
+}
+
+.preview-btn-container {
+    min-height: 180px;
+    width: 100%;
+    background-color: var(--color-primary-50);
+    position: relative
+}
+
+#preview-btn {  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.preview-controls {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: var(--spacing-8);
+    padding: var(--spacing-4) var(--spacing-8)
+}
+
+.preview-controls select {
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-2) var(--spacing-4);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-sm);
+}
+
+@media (min-width: 1024px) {
+    .preview-controls {
+        flex-direction: row;
+        gap: 0
+    }
 }

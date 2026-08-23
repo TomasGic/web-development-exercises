@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../01-tokens/tokens.css">
 </head>
 <body>
-    <h1>Button Variants</h1>
+    <h1 class="align-center">Button Variants</h1>
     <div class="btn-grid">
         <div class="btn-column">
             <h2>Primary variant</h2>
@@ -32,5 +32,37 @@
             <button class="btn btn--destructive btn--sm" disabled>Disabled</button>
         </div>
     </div>
+
+    <section id="preview">
+        <h2 class="align-center">Live Component Preview</h2>
+        <div class="preview-btn-container align-center">
+            <button id="preview-btn" class="btn btn--primary btn--md">Click me</button>
+        </div>
+        <div class="preview-controls">
+            <div class="select-group">
+                <label for="variant-select">Variant</label>
+                <select name="variants" id="variant-select">
+                    <option value="">Choose a variant:</option>
+                    <option value="primary">Primary</option>
+                    <option value="secondray">Secondary</option>
+                    <option value="destructive">Destructive</option>
+                </select>
+            </div>
+            <div class="select-group">
+                <label for="size-select">Size</label>
+                <select name="sizes" id="size-select">
+                    <option value="">Choose a size:</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+
+            <div class="radio-group">
+                <label for="disabled-btn">Disabled</label>
+                <input type="radio" id="disabled-btn" name="disabled" value="disabled">
+            </div>
+        </div>
+    </section>
 </body>
 </html>

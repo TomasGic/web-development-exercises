@@ -1,0 +1,125 @@
+@import url(../01-tokens/tokens.css);
+@import url(../02-component/button.css);
+
+*, *::before, *::after {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-base);
+    background-color: var(--color-neutral-50);
+    color: var(--color-primary-900)
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-1) var(--spacing-2);
+    background-color: var(--color-neutral-0);
+    box-shadow: var(--shadow-sm);
+}
+
+nav[aria-label="Main navigation"] ul {
+    display: flex;
+    gap: var(--spacing-12);
+    padding: var(--spacing-1) var(--spacing-2)
+}
+
+nav[aria-label="Main navigation"] ul li {
+    list-style: none;
+}
+
+nav[aria-label="Main navigation"] ul li a, .logo {
+    text-decoration: none;
+    color: var(--color-primary-700)
+}
+
+nav[aria-label="Main navigation"] ul li a:hover {
+    color: var(--color-primary-600)
+}
+
+.logo {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+}
+
+#menu-btn {
+    display: none
+}
+
+#hero {
+    padding: var(--spacing-12) var(--spacing-4)
+}
+
+.hero-text {
+    text-align: center;
+    padding: var(--spacing-4) var(--spacing-8)
+}
+
+.hero-text a {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: var(--spacing-2)
+}
+
+.filter-row {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-12);
+    margin-bottom: var(--spacing-8)
+}
+
+
+.img-container {
+    height: 400px;
+    overflow: hidden
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-grid {
+    margin-top: var(--spacing-8);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--spacing-6);
+}
+
+.product-card {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background-color: var(--color-primary-100);
+    box-shadow: var(--shadow-md)
+}
+
+.category-label {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-1) var(--spacing-3);
+    background-color: var(--color-primary-500);
+    border-radius: var(--radius-md);
+    color: var(--color-neutral-50)
+}
+
+.product-details {
+    padding: var(--spacing-6) var(--spacing-8)
+}
+
+.card-price {
+    font-weight: var(--font-weight-bold)
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+

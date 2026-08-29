@@ -19,6 +19,9 @@ header {
     padding: var(--spacing-3) var(--spacing-6);
     background-color: var(--color-neutral-0);
     box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 10
 }
 
 nav[aria-label="Main navigation"] ul {
@@ -65,10 +68,6 @@ nav[aria-label="Main navigation"] ul li {
         width: var(--spacing-4);
         background-color: var(--color-primary-900);
         transition: transform 0.3s ease-in-out;
-    }
-
-    header {
-        position: relative
     }
 
     nav[aria-label="Main navigation"] ul {

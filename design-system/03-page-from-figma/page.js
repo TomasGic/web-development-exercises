@@ -52,6 +52,7 @@ filterButtons.forEach(button => {
 
 toggleMainMenuButton.addEventListener('click', () => {
     const isOpen = mainMenu.classList.toggle('is-open')
+    toggleMainMenuButton.classList.toggle('is-open')
     toggleMainMenuButton.setAttribute('aria-expanded', isOpen)
 })
 

@@ -31,12 +31,12 @@ nav[aria-label="Main navigation"] ul li {
     list-style: none;
 }
 
-nav[aria-label="Main navigation"] ul li a, .logo {
+.nav-link, .logo {
     text-decoration: none;
     color: var(--color-primary-700)
 }
 
-nav[aria-label="Main navigation"] ul li a:hover {
+.nav-link:hover {
     color: var(--color-primary-600)
 }
 
@@ -125,7 +125,7 @@ nav[aria-label="Main navigation"] ul li a:hover {
     padding: var(--spacing-4) var(--spacing-6)
 }
 
-.main-footer {
+.page-footer {
     background-color: var(--color-neutral-0);
     padding: var(--spacing-4) var(--spacing-8);
 }

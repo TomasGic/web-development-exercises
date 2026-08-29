@@ -137,6 +137,10 @@ nav[aria-label="Main navigation"] ul li a:hover {
     gap: var(--spacing-4);
 }
 
+.hidden {
+    display: none
+}
+
 
 
 

@@ -105,6 +105,10 @@ nav[aria-label="Main navigation"] ul li {
     #menu-btn.is-open .menu-bar:nth-child(3) {
         transform: translateY(calc(-1 * var(--spacing-1))) rotate(-45deg)
     }
+
+    .footer-container {
+        flex-direction: column;
+    }
 }
 
 #hero {

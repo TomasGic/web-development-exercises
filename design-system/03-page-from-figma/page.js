@@ -1,5 +1,8 @@
 const cards = document.querySelectorAll('.product-card')
 const filterButtons = document.querySelectorAll('.filter-btn')
+const mainMenu = document.querySelector('nav[aria-label="Main navigation"] ul')
+console.log(mainMenu)
+const toggleMainMenuButton = document.querySelector('#menu-btn')
 
 function hideAllCards() {
     cards.forEach(card => {
@@ -45,5 +48,10 @@ filterButtons.forEach(button => {
         styleActiveButton(clickedButton)
         
     })
+})
+
+toggleMainMenuButton.addEventListener('click', () => {
+    const isOpen = mainMenu.classList.toggle('is-open')
+    toggleMainMenuButton.setAttribute('aria-expanded', isOpen)
 })
 

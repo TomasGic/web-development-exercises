@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-1) var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-6);
     background-color: var(--color-neutral-0);
     box-shadow: var(--shadow-sm);
 }
@@ -24,7 +24,7 @@ header {
 nav[aria-label="Main navigation"] ul {
     display: flex;
     gap: var(--spacing-12);
-    padding: var(--spacing-1) var(--spacing-2)
+    /* padding: var(--spacing-1) var(--spacing-2) */
 }
 
 nav[aria-label="Main navigation"] ul li {
@@ -47,7 +47,52 @@ nav[aria-label="Main navigation"] ul li {
 }
 
 #menu-btn {
-    display: none
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-1);
+        background: none;
+        border: none;
+        cursor: pointer
+    }
+
+    .menu-bar {
+        height: var(--spacing-0);
+        width: var(--spacing-4);
+        background-color: var(--color-primary-900);
+    }
+
+    header {
+        position: relative
+    }
+
+    nav[aria-label="Main navigation"] ul {
+        display: none;
+    }
+
+    nav[aria-label="Main navigation"] .is-open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-4);
+        margin: 0;
+        padding: 0;
+        box-shadow: var(--shadow-md);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--color-neutral-0);
+    }
+
+    nav[aria-label="Main navigation"] .is-open li {
+        width: 100%;
+        padding: var(--spacing-2) var(--spacing-4);
+        border-bottom: 1px var(--color-primary-100) dotted;
+    }
 }
 
 #hero {

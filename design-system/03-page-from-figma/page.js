@@ -14,13 +14,18 @@ function showAllCards() {
 }
 
 function filterCardsByCategory(category) {
-    hideAllCards()
-    cards.forEach(card => {
-        const cardCategory = card.dataset.category
-        if (category === cardCategory) {
-            card.classList.remove('hidden')
-        }
-    })
+    if (category === 'all') {
+        showAllCards()
+    } else {
+        hideAllCards()
+        cards.forEach(card => {
+            const cardCategory = card.dataset.category
+            if (category === cardCategory) {
+                card.classList.remove('hidden')
+            }
+        })
+    }
+    
 }
 
 function styleActiveButton(button) {
@@ -36,13 +41,9 @@ filterButtons.forEach(button => {
     button.addEventListener('click', (event) => {
         const clickedButton = event.target
         const selectedCategory = button.dataset.filter
-        if (selectedCategory === 'all') {
-            showAllCards()
-            styleActiveButton(clickedButton)
-            return
-        }
         filterCardsByCategory(selectedCategory)
         styleActiveButton(clickedButton)
+        
     })
 })
 

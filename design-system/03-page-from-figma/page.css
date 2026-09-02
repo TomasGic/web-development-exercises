@@ -179,11 +179,13 @@ nav[aria-label="Main navigation"] ul li {
 }
 
 .product-name {
-    font-size: var(--font-size-lg)
+    font-size: var(--font-size-lg);
+    margin: var(--spacing-8) 0 var(--spacing-2)
 }
 
 .product-desc {
-    line-height: var(--line-height-normal)
+    line-height: var(--line-height-normal);
+    margin: var(--spacing-4) 0
 }
 
 .card-price {

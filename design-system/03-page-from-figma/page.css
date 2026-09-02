@@ -38,12 +38,16 @@ nav[aria-label="Main navigation"] ul li {
     color: var(--color-primary-700)
 }
 
+.nav-link {
+    font-size: var(--font-size-lg)
+}
+
 .nav-link:hover {
     color: var(--color-primary-600)
 }
 
 .logo {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
 }

@@ -53,7 +53,7 @@ nav[aria-label="Main navigation"] ul li {
 .logo {
     font-size: clamp(var(--font-size-xl), 2vw + 1rem, var(--font-size-3xl));
     font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
+    color: var(--color-primary-700)
 }
 
 #menu-btn {
@@ -61,12 +61,14 @@ nav[aria-label="Main navigation"] ul li {
 }
 
 .hero-heading {
-    /* font-size: var(--font-size-4xl) */
-    font-size: clamp(var(--font-size-2xl), 4vw + 1rem, var(--font-size-5xl))
+    font-size: clamp(var(--font-size-2xl), 4vw + 1rem, var(--font-size-5xl));
+    font-weight: var(--font-weight-bold)
 }
 
 .hero-subheading {
-    font-size: clamp(var(--font-size-xl), 2vw + 1rem, var(--font-size-3xl))
+    font-size: clamp(var(--font-size-xl), 1.5vw + 1rem, var(--font-size-3xl));
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-normal)
 }
 
 #hero {

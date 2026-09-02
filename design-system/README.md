@@ -4,7 +4,7 @@ The goal of this project was to create a small design system and use it to build
 
 In `02-component/` we showcase a button component in 3 variants (primary, secondary, destructive) and 3 sizes (small, medium, large), built entirely on top of the token set defined in `tokens.css`. 
 
-The third folder `03-page-from-figma` contains the files for a responsive products page built from a Figma design mock-up ([Link](https://www.figma.com/design/RE3j6EI3Mz2rA86oIHgWxR/Product-Page?node-id=0-1&p=f&t=r8u3XpmFrzBSnAqD-0)). The page has been built using semantic HTML, CSS which only uses the tokens and components defined in the other two folders, and Vanilla Javascript. 
+The third folder `03-page-from-figma` contains the files for a responsive products page built from a Figma design mock-up ([View the mock-up here](https://www.figma.com/design/RE3j6EI3Mz2rA86oIHgWxR/Product-Page?node-id=0-1&p=f&t=r8u3XpmFrzBSnAqD-0)). The page has been built using semantic HTML, CSS which only uses the tokens and components defined in the other two folders, and Vanilla Javascript. 
 
 ## What Are Design Tokens? 
 Desgin tokens are small, reusable design decisions that make up a design system's visual style. They store visual design attributes for colors, font-sizes, spacing scale, border-radius and box-shadows. When we want to style the components of the page, such as buttons, we simply reference the token name in the css file using custom properties. 

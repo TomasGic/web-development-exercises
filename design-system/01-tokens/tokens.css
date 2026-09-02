@@ -9,9 +9,9 @@
     --color-primary-700: #2e316a;
     --color-primary-900: #202850;
 
-    --color-neutral-0:   #FFFFFF;
-    --color-neutral-50:  #F9FAFB;
-    --color-neutral-600: #4B5563;
+    --color-neutral-0:   #ffffff;
+    --color-neutral-50:  #f9fafb;
+    --color-neutral-600: #4b5563;
     --color-neutral-900: #111827;
 
     --color-error-500:   #ae4767;
@@ -28,6 +28,7 @@
     --font-size-2xl:  1.5rem;    /* 24px */
     --font-size-3xl:  2rem;      /* 32px */
     --font-size-4xl:  3rem;      /* 48px */
+    --font-size-5xl:  4rem;      /* 64px */
 
     --font-weight-normal:   400;
     --font-weight-medium:   500;

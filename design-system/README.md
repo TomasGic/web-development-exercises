@@ -4,7 +4,7 @@ The goal of this project was to create a small design system and use it to build
 
 In `02-component/` we showcase a button component in 3 variants (primary, secondary, destructive) and 3 sizes (small, medium, large), built entirely on top of the token set defined in `tokens.css`. 
 
-The third folder `03-page-from-figma` contains the files for a responsive products page built from a Figma design mock-up. The page has been built using semantic HTML, CSS which only uses the tokens and components defined in the other two folders, and Vanilla Javascript. 
+The third folder `03-page-from-figma` contains the files for a responsive products page built from a Figma design mock-up ([Link](https://www.figma.com/design/RE3j6EI3Mz2rA86oIHgWxR/Product-Page?node-id=0-1&p=f&t=r8u3XpmFrzBSnAqD-0)). The page has been built using semantic HTML, CSS which only uses the tokens and components defined in the other two folders, and Vanilla Javascript. 
 
 ## What Are Design Tokens? 
 Desgin tokens are small, reusable design decisions that make up a design system's visual style. They store visual design attributes for colors, font-sizes, spacing scale, border-radius and box-shadows. When we want to style the components of the page, such as buttons, we simply reference the token name in the css file using custom properties. 
@@ -39,3 +39,5 @@ Token set for this design system is defined in `01-tokens/tokens.css` under the 
 As mentioned above I first designed the products page in Figma and then built it using HTML, CSS and Javascript. Even though the specs provided by my mentor only specified to design the page at 1440px screen width, I decided to also create a mobile version design with a screen width of 393px. In the mobile design I decreased the font-size of the headings in the hero section from 48px to 32px for h1 and from 24px to 18px for h2. I originally set the smaller font-size to the exact same value from the Figma mock-up via a media query, but then I learned about `vw` measurement units and `clamp` css function. When using `vw` units for font-size, the font-size will change relative to the viewport width without having to define it at specific screen sizes via media query. The `clamp` function can then be used to define a minimum and maximum threshold within which the font-size has to stay. 
 
 This means that the actual font-size value calculated by the clamp function at a 393px-wide viewport will deviate slightly from the Figma mock-up, but I believe this is a better approach since it allows for a much more fluid scaling of the headings between screen sizes. 
+
+[Link to the Figma mock-up](https://www.figma.com/design/your-file-id-here)

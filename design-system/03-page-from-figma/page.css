@@ -110,6 +110,10 @@ nav[aria-label="Main navigation"] ul li {
     }
 }
 
+.hero-heading {
+    font-size: var(--font-size-4xl)
+}
+
 #hero {
     padding: var(--spacing-12) var(--spacing-4)
 }

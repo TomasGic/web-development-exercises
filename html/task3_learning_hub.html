@@ -659,6 +659,16 @@ end
         </nav>
         <small>&copy; <time datetime="2026">2026</time> Tomas Gic. All rights reserved.</small>
     </footer>
-    
+    <script>
+        const mainMenu = document.querySelector('nav[aria-label="Main navigation"] ul')
+        console.log(mainMenu)
+        const toggleMainMenuButton = document.querySelector('#menu-btn')
+
+        toggleMainMenuButton.addEventListener('click', () => {
+            const isOpen = mainMenu.classList.toggle('is-open')
+            toggleMainMenuButton.classList.toggle('is-open')
+            toggleMainMenuButton.setAttribute('aria-expanded', isOpen)
+        })
+    </script>
 </body>
 </html>

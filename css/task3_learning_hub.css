@@ -402,11 +402,12 @@ textarea:user-invalid + .error-msg {
 #privacy-policy-details {
     padding: 0.75rem 1rem;
     background-color: var(--color-bg-deep);
-    border-radius: 6px
+    border-radius: 6px;
 }
 
 #privacy-policy-details summary {
-    color: var(--color-text-heading)
+    color: var(--color-text-heading);
+    cursor: pointer;
 }
 
 #privacy-policy-details summary::marker {

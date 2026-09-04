@@ -3,8 +3,6 @@ const taskList = document.querySelector("#task-list")
 const addButton = document.querySelector("#add-btn")
 const clearCompletedButton = document.querySelector("#clear-completed-btn")
 
-
-
 function addTask() {
     const task = taskInput.value.trim()
 
@@ -43,14 +41,14 @@ function completeTask(button) {
     taskText.classList.toggle("task-done")
     button.classList.toggle("task-done")
     updateTaskDoneButton(button)
-    updateclearCompletedButton()
+    updateClearCompletedButton()
     updateTaskCounter()
 }
 
 function removeTask(button) {
     const listItem = button.parentElement.parentElement
     listItem.remove()
-    updateclearCompletedButton()
+    updateClearCompletedButton()
     updateTaskCounter()
 }
 
@@ -62,11 +60,11 @@ function clearCompleted() {
         const listItem = taskText.parentElement
         listItem.remove()
     })
-    updateclearCompletedButton() 
+    updateClearCompletedButton() 
     updateTaskCounter()
 }
 
-function updateclearCompletedButton() {
+function updateClearCompletedButton() {
     const completedTasks = document.querySelectorAll(".task-text.task-done")
 
     // if there are completed tasks in the list we want to display the 'clear completed' button, otherwise we want to keep it hidden'

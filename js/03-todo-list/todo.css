@@ -71,6 +71,11 @@ body {
     color: #5a687b
 }
 
+.done-btn.task-done {
+    text-decoration: none;
+    color: #000
+}
+
 button {
     cursor: pointer;
     border-radius: 4px;

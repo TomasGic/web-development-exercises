@@ -4,6 +4,7 @@ const addButton = document.querySelector("#add-btn")
 const clearCompletedButton = document.querySelector("#clear-completed-btn")
 
 
+
 function addTask() {
     const task = taskInput.value.trim()
 
@@ -28,10 +29,20 @@ function addTask() {
     updateTaskCounter()
 }
 
+function updateTaskDoneButton(button) {
+    if (button.classList.contains("task-done")) {
+        button.textContent = "Undo"
+    } else {
+        button.textContent = "Done"
+    }
+}
+
 function completeTask(button) {
     const listItem = button.parentElement.parentElement
     const taskText = listItem.querySelector(".task-text")
-    taskText.classList.add("task-done")
+    taskText.classList.toggle("task-done")
+    button.classList.toggle("task-done")
+    updateTaskDoneButton(button)
     updateclearCompletedButton()
     updateTaskCounter()
 }

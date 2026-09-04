@@ -38,7 +38,7 @@ function updateTaskDoneButton(button) {
 }
 
 function completeTask(button) {
-    const listItem = button.parentElement.parentElement
+    const listItem = button.closest('li')
     const taskText = listItem.querySelector(".task-text")
     taskText.classList.toggle("task-done")
     button.classList.toggle("task-done")

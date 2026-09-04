@@ -112,3 +112,5 @@ taskList.addEventListener("click", (event) => {
     }
 })
 
+updateTaskCounter()
+

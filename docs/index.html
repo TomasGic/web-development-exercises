@@ -70,5 +70,41 @@
             </article>
         </div>
     </section>
+
+    <section id="process">
+        <h2>My deployment workflow</h2>
+        <ol>
+            <li>Start clean from an up-to-date main branch</li>
+            <ul>
+                <li>cd web development exercises</li>
+                <li>git status</li>
+                <li>git switch main</li>
+                <li>git pull</li>
+            </ul>
+            <li>Create a new workspace branch, for example week-08-public-artifact</li>
+            <ul>
+                <li>git switch -c feat/projects-section</li>
+            </ul>
+            <li>Commit small changes locally</li>
+            <ul>
+                <li>git status</li>
+                <li>git add docs/index.html</li>
+                <li>git commit -m "feat(pages): add portfolio homepage markup</li>
+            </ul>
+            <li>Publish the working branch to Github</li>
+            <ul>
+                <li>git push origin week-08-public-artifact</li>
+            </ul>
+            <li>Create a pull request on Github, review the changes and merge workspace branch into main. The merge triggers the deployment</li>
+        </ol>
+    </section>
+
+    <section id="notes">
+
+    </section>
+
+    <footer>
+
+    </footer>
 </body>
 </html>

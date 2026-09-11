@@ -109,17 +109,23 @@
     <section id="notes">
         <h2>Key lessons learnt from the deployment process</h2>
 
-        <ol>
-            <li>The main branch is production</li>
-            <p>It might feel tempting to push code changes directly to the main branch, but this is risky, because pushing changes directly to main will automatically update the live site and might potentially break it. When adding a new feature to the website, it is important to adopt the workflow outlined in the section above. This ensures that any new changes are made in isolation and do not touch the main branch.</p>
+        <dl class="lessons-list">
+            <div class="lesson-wrapper">
+                <dt>The main branch is production</dt>
+                <dd>It might feel tempting to push code changes directly to the main branch, but this is risky, because pushing changes directly to main will automatically update the live site and might potentially break it. When adding a new feature to the website, it is important to adopt the workflow outlined in the section above. This ensures that any new changes are made in isolation and do not touch the main branch.</dd>
+            </div>
 
-            <li>Absolute vs relative paths</li>
-            <p>When referencing filepaths in the codebase, it is important to use relative paths instead of absolute paths. By relative, I mean relative to the file being edited. No path should ever start with "/". </p>
+            <div class="lesson-wrapper">
+                <dt>Absolute vs relative paths</dt>
+                <dd>When referencing filepaths in the codebase, it is important to use relative paths instead of absolute paths. By relative, I mean relative to the file being edited. No path should ever start with "/". </dd>
+            </div>
 
-            <li>Git isn't just a tool for backing up code</li>
-            <p>Since I started working with Git and Github more regularly as part of my web development workflow, I realised the importance of separating features into distinct commits with clear and meaningful commit messages.I believe this is a skill that requires a lot of attention and serious practice. A clear commit history makes it much easier to debug and revert changes if something breaks and servers as an audit trail for other developers who are working with the same repository.</p>
+            <div class="lesson-wrapper">
+                <dt>Git isn't just a tool for backing up code</dt>
+                <dd>Since I started working with Git and Github more regularly as part of my web development workflow, I realised the importance of separating features into distinct commits with clear and meaningful commit messages.I believe this is a skill that requires a lot of attention and serious practice. A clear commit history makes it much easier to debug and revert changes if something breaks and servers as an audit trail for other developers who are working with the same repository.</dd>
+            </div>
 
-        </ol>
+        </dl>
     </section>
 
     <footer>

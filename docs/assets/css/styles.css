@@ -101,6 +101,10 @@ h3 {
     cursor: pointer
 }
 
+.project-card:hover {
+    transform: translateY(-0.5rem)
+}
+
 .project-card dl {
     margin-bottom: 1rem
 }
@@ -129,5 +133,65 @@ h3 {
     font-weight: 600;
     text-align: center;
     border-radius: var(--radius-md);
+}
+
+.project-link:hover {
+    background-color: var(--ruby-dark)
+}
+
+#process ol {
+    list-style: none;
+    counter-reset: workflow-step-counter;
+    border-radius: var(--radius-md);
+}
+
+#process ol > li {
+    counter-increment: workflow-step-counter;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    padding: 1.25rem;
+    font-weight: 600;
+}
+
+#process ol > li:last-child {
+    border-radius: var(--radius-md);
+}
+
+#process ol > li::before {
+    content: counter(workflow-step-counter);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: var(--ruby-light);
+    color: var(--ruby-primary);
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+#process ul {
+    list-style: none;
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #1a1a1a;
+    color: var(--ruby-light)
+}
+
+#process ul li {
+  font-weight: normal;
+  line-height: 1.5;
+  display: flex;
+  gap: 0.5rem
+}
+
+#process ul li::before {
+    content: "$ ";
+    color: var(--ruby-accent);
+    font-weight: 700
 }
 

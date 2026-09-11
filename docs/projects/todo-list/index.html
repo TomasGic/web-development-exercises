@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Todo App</h2>
+        <div class="app-container">
+            <div class="input-wrapper">
+                <input type="text" id="task-input" placeholder="Write your task, e.g. clean apartment">
+                <button id="add-btn">Add</button>
+            </div>
+            <ul id="task-list">
+                <!-- <li>
+                    <span class="task-text">Task 1</span>
+                    <div class="btn-wrapper">
+                        <button class="done-btn">Done</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </li>
+                <li>
+                    <span class="task-text">Task 2</span>
+                    <div class="btn-wrapper">
+                        <button class="done-btn">Done</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </li> -->
+            </ul>
+
+            <button id="clear-completed-btn" class="hidden">Clear completed</button>
+            <p id="task-counter"></p>
+        </div>
+    </div>
+    <script src="js/todo.js" aria-live="polite"></script>
+</body>
+</html>

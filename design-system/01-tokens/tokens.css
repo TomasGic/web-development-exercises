@@ -18,6 +18,12 @@
     --color-error-700:   #9b1f4f;
     --color-error-900:   #7c173e;
 
+    --color-success-500: #3b875e;
+    --color-success-700: #2d6849;
+
+    --color-warning-500: #c9822b;
+    --color-warning-700: #9e6019;
+
     /* Typography */
     --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-size-xs:   0.75rem;   /* 12px */
@@ -40,7 +46,6 @@
     --line-height-relaxed: 1.75;
 
     /* Spacing */
-    --spacing-0:  0.125rem;
     --spacing-1:  0.25rem;  /* 4px */
     --spacing-2:  0.5rem;   /* 8px */
     --spacing-3:  0.75rem;  /* 12px */
@@ -50,6 +55,8 @@
     --spacing-8:  2rem;     /* 32px */
     --spacing-10: 2.5rem;   /* 40px */
     --spacing-12: 3rem;     /* 48px */
+
+    --border-thickness: 0.125rem;   /* 2px — hamburger bars, emphasis underlines */
 
     /* Border radius */
     --radius-sm:   0.25rem;  /* 4px */

@@ -15,4 +15,7 @@ tokenCards.forEach(card => {
     const spaceBar = card.querySelector('.spacing-bar')
     if (spaceBar) spaceBar.style.width = `var(${varName})`
 
+    const fontSample = card.querySelector('.font-sample')
+    if (fontSample) fontSample.style.fontSize = `var(${varName})`
+
 })

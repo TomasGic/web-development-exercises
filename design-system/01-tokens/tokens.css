@@ -18,6 +18,12 @@
     --color-error-700:   #9b1f4f;
     --color-error-900:   #7c173e;
 
+    --color-success-500: #3b875e;
+    --color-success-700: #2d6849;
+
+    --color-warning-500: #c9822b;
+    --color-warning-700: #9e6019;
+
     /* Typography */
     --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-size-xs:   0.75rem;   /* 12px */

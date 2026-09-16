@@ -184,7 +184,7 @@ nav[aria-label="Main navigation"] ul li {
     }
 
     .menu-bar {
-        height: var(--spacing-0);
+        height: var(--border-thickness);
         width: var(--spacing-4);
         background-color: var(--color-primary-900);
         transition: transform 0.3s ease-in-out;

@@ -14,6 +14,8 @@ function updateButtonPreview() {
     else {
         previewButton.removeAttribute('disabled')
     }
+
+    console.log(`Button preview updated: variant=${variant}, size=${size}`)
 }
 
 variantSelect.addEventListener('change', (event) => {

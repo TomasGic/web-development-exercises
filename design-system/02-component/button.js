@@ -7,23 +7,29 @@ function updateButtonPreview() {
     const variant = variantSelect.value 
     const size = sizeSelect.value
 
-    previewButton.className = (`btn btn--${variant} btn--${size}`)
+    const currentClasses = Array.from(previewButton.classList)
+
+    currentClasses.forEach(cls => {
+        if (cls.startsWith('btn--')) {
+            previewButton.classList.remove(cls)
+        }
+    })
+
+    if (variant) previewButton.classList.add(`btn--${variant}`)
+    if (size) previewButton.classList.add(`btn--${size}`)
+    
     if (disabledToggle.checked) {
         previewButton.setAttribute('disabled', '')
     }
     else {
         previewButton.removeAttribute('disabled')
     }
+
+    console.log(`Button preview updated: variant=${variant}, size=${size}`)
 }
 
-variantSelect.addEventListener('change', (event) => {
-    updateButtonPreview()
-})
-sizeSelect.addEventListener('change', (event) => {
-    updateButtonPreview()
-})
+const previewControls = [variantSelect, sizeSelect, disabledToggle]
 
-disabledToggle.addEventListener('change', (event) => {
-    updateButtonPreview()
+previewControls.forEach(controlElement => {
+    controlElement.addEventListener('change', updateButtonPreview)
 })
-

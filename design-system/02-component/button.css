@@ -51,12 +51,13 @@ body {
 }
 
 .btn--secondary {
-    background-color: var(--color-primary-500);
-    color: var(--color-neutral-50)
+    background-color: transparent;
+    border-color: var(--color-primary-700);
+    color: var(--color-primary-700)
 }
 
 .btn--secondary:hover {
-    background-color: var(--color-primary-600);
+    background-color: var(--color-primary-50);
 }
 
 .btn--destructive {
@@ -97,7 +98,7 @@ body {
 }
 
 .btn--secondary:disabled {
-    background-color: var(--color-primary-300);
+    background-color: transparent;
 }
 
 .btn--destructive:disabled {

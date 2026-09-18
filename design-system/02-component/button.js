@@ -31,7 +31,5 @@ function updateButtonPreview() {
 const previewControls = [variantSelect, sizeSelect, disabledToggle]
 
 previewControls.forEach(controlElement => {
-    controlElement.addEventListener('change', (event) => {
-        updateButtonPreview()
-    })
+    controlElement.addEventListener('change', updateButtonPreview)
 })

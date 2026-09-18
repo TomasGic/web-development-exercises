@@ -7,7 +7,17 @@ function updateButtonPreview() {
     const variant = variantSelect.value 
     const size = sizeSelect.value
 
-    previewButton.className = (`btn btn--${variant} btn--${size}`)
+    const currentClasses = Array.from(previewButton.classList)
+
+    currentClasses.forEach(cls => {
+        if (cls.startsWith('btn--')) {
+            previewButton.classList.remove(cls)
+        }
+    })
+
+    if (variant) previewButton.classList.add(`btn--${variant}`)
+    if (size) previewButton.classList.add(`btn--${size}`)
+    
     if (disabledToggle.checked) {
         previewButton.setAttribute('disabled', '')
     }

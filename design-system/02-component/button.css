@@ -36,12 +36,7 @@ body {
     cursor: pointer;
     border-radius: var(--radius-md);
     border: 1px solid transparent;
-    outline: none;
     line-height: var(--line-height-normal)
-}
-
-.btn:focus {
-    outline: none
 }
 
 .btn:focus-visible {

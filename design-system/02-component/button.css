@@ -117,17 +117,10 @@ body {
 }
 
 .preview-btn-container {
+    display: grid;
+    place-items: center;
     min-height: 180px;
-    width: 100%;
     background-color: var(--color-primary-50);
-    position: relative
-}
-
-#preview-btn {  
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .preview-controls {

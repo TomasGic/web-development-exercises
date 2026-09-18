@@ -1,3 +1,11 @@
+/*
+ * Button Component
+ * Usage: <button class="btn btn--[variant] btn--[size]" type="button">Label</button>
+ * Variants: primary | secondary | destructive
+ * Sizes: sm | md | lg
+ * States: default | :hover | :focus-visible | :disabled
+ */
+
 @import url(../01-tokens/tokens.css);
 
 body {

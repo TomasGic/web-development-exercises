@@ -36,7 +36,7 @@ function styleActiveButton(activeBtn) {
         const isActive = filterBtn === activeBtn
 
         filterBtn.classList.toggle('btn--primary', isActive)
-        filterBtn.classList.toggle('btn--primary', !isActive)
+        filterBtn.classList.toggle('btn--secondary', !isActive)
         filterBtn.setAttribute('aria-pressed', isActive);
     })
 }

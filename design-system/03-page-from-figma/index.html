@@ -27,12 +27,13 @@
         <section id="hero">
             <div class="hero-text">
                 <h1 class="hero-heading">Our Products</h1>
-                <h2 class="hero-subheading">New autumn 2026 collection has arrived</h2>
+                <p class="hero-subheading">New autumn 2026 collection has arrived</p>
                 <a href="#products" class="btn btn--primary btn--lg">Explore</a>
             </div>
         </section>
 
-        <section id="products">
+        <section id="products" aria-labelledby="products-heading">
+            <h2 id="products-heading "class="visually-hidden">Product catalogue</h2>
             <div class="filter-row">
                 <button data-filter="all" class="btn btn--primary btn--sm  filter-btn">All</button>
                 <button data-filter="apparel" class="btn btn--secondary btn--sm filter-btn">Apparel</button>

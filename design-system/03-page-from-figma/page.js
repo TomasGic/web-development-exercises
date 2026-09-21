@@ -41,12 +41,11 @@ function styleActiveButton(activeBtn) {
     })
 }
 
-filterButtons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        const clickedButton = event.target
-        const selectedCategory = button.dataset.filter
+filterButtons.forEach(filterBtn => {
+    filterBtn.addEventListener('click', () => {
+        const selectedCategory = filterBtn.dataset.filter
         filterCardsByCategory(selectedCategory)
-        styleActiveButton(clickedButton)
+        styleActiveButton(filterBtn)
         
     })
 })

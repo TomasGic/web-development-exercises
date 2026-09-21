@@ -31,13 +31,14 @@ function filterCardsByCategory(category) {
     
 }
 
-function styleActiveButton(button) {
-    filterButtons.forEach(button => {
-        button.classList.remove('btn--primary')
-        button.classList.add('btn--secondary')
+function styleActiveButton(activeBtn) {
+    filterButtons.forEach(filterBtn => {
+        const isActive = filterBtn === activeBtn
+
+        filterBtn.classList.toggle('btn--primary', isActive)
+        filterBtn.classList.toggle('btn--primary', !isActive)
+        filterBtn.setAttribute('aria-pressed', isActive);
     })
-    button.classList.add('btn--primary')
-    button.classList.remove('btn--secondary')
 }
 
 filterButtons.forEach(button => {

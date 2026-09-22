@@ -1,7 +1,6 @@
 const cards = document.querySelectorAll('.product-card')
 const filterButtons = document.querySelectorAll('.filter-btn')
 const mainMenu = document.querySelector('nav[aria-label="Main navigation"] ul')
-console.log(mainMenu)
 const toggleMainMenuButton = document.querySelector('#menu-btn')
 
 function hideAllCards() {

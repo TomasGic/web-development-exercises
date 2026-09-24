@@ -36,6 +36,13 @@ toggleMainMenuButton.addEventListener('click', () => {
     toggleMainMenuButton.setAttribute('aria-expanded', isOpen)
 })
 
+// Closing the main menu when a nav link is clicked
+mainMenu.addEventListener('click', (event) => {
+    if (!event.target.closest('a')) return;
+    mainMenu.classList.remove('is-open')
+    toggleMainMenuButton.classList.remove('is-open')
+    toggleMainMenuButton.setAttribute('aria-expanded', 'false')
+})
 
 // In order to dynamically set the scroll-margin-top property(which should equal to the height of the header element) in the css file, we use ResizeObserver API to observe changes in the header element's size. If the header's height changes for example due to changes in header's padding, the observer triggers the callback function, relalculates the height of the header and the custom property --header-height will update automatically inside :root. 
 const observer = new ResizeObserver((entries) => {

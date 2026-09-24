@@ -44,6 +44,19 @@ mainMenu.addEventListener('click', (event) => {
     toggleMainMenuButton.setAttribute('aria-expanded', 'false')
 })
 
+
+// Defining mobile breakpoint object (matches the existing mobile media query in the css file)
+const mobileMediaQuery = window.matchMedia('(max-width: 768px')
+
+// Attaching event listener of type 'change' to the mobileMediaQuery object - when viewport width no longer meets the media query condition, the 'aria-expanded' attribute on the hamburger menu toggle button is set to false. 
+mobileMediaQuery.addEventListener('change', (event) => {
+    if (!event.matches) {
+        toggleMainMenuButton.setAttribute('aria-expanded', 'false')
+        toggleMainMenuButton.classList.remove('is-open')
+        mainMenu.classList.remove('is-open')
+    }
+})
+
 // In order to dynamically set the scroll-margin-top property(which should equal to the height of the header element) in the css file, we use ResizeObserver API to observe changes in the header element's size. If the header's height changes for example due to changes in header's padding, the observer triggers the callback function, relalculates the height of the header and the custom property --header-height will update automatically inside :root. 
 const observer = new ResizeObserver((entries) => {
     entries.forEach(entry => {

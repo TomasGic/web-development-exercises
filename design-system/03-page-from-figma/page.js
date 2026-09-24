@@ -3,31 +3,11 @@ const filterButtons = document.querySelectorAll('.filter-btn')
 const mainMenu = document.querySelector('nav[aria-label="Main navigation"] ul')
 const toggleMainMenuButton = document.querySelector('#menu-btn')
 
-function hideAllCards() {
-    cards.forEach(card => {
-        card.classList.add('hidden')
-    })
-}
-
-function showAllCards() {
-    cards.forEach(card => {
-        card.classList.remove('hidden')
-    })
-}
-
 function filterCardsByCategory(category) {
-    if (category === 'all') {
-        showAllCards()
-    } else {
-        hideAllCards()
-        cards.forEach(card => {
-            const cardCategory = card.dataset.category
-            if (category === cardCategory) {
-                card.classList.remove('hidden')
-            }
-        })
-    }
-    
+    cards.forEach(card => {
+        const matches = category === 'all' || card.dataset.category === category
+        card.classList.toggle('hidden', !matches)
+    })
 }
 
 function styleActiveButton(activeBtn) {

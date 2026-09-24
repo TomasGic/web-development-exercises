@@ -106,7 +106,7 @@ nav[aria-label="Main navigation"] ul li {
 
 
 .img-container {
-    height: 400px;
+    aspect-ratio: 3/3;
     overflow: hidden
 }
 

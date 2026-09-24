@@ -221,7 +221,7 @@ nav[aria-label="Main navigation"] ul li {
     nav[aria-label="Main navigation"] ul.is-open li {
         width: 100%;
         padding: var(--spacing-2) var(--spacing-4);
-        border-bottom: 1px var(--color-primary-100) dotted;
+        border-bottom: 1px dotted var(--color-primary-100);
     }
 
     #menu-btn.is-open .menu-bar:nth-child(1) {

@@ -246,6 +246,13 @@ legend {
     gap: var(--spacing-1)
 }
 
+.btn-container {
+    display: flex;
+    gap: var(--spacing-4);
+    justify-content: center;
+    margin-top: var(--spacing-6)
+}
+
 .page-footer {
     background-color: var(--color-neutral-0);
     padding: var(--spacing-4) var(--spacing-8);

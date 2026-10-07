@@ -70,6 +70,8 @@ nav[aria-label="Main navigation"] ul li {
     display: none;
 }
 
+/* Hero section */
+
 .hero-heading {
     font-size: clamp(var(--font-size-2xl), 4vw + 1rem, var(--font-size-5xl));
     font-weight: var(--font-weight-bold)
@@ -106,6 +108,8 @@ nav[aria-label="Main navigation"] ul li {
     clip-path: inset(50%);
     white-space: nowrap
 }
+
+/* Products section */
 
 .filter-row {
     display: flex;
@@ -250,8 +254,11 @@ legend {
     display: flex;
     gap: var(--spacing-4);
     justify-content: center;
-    margin-top: var(--spacing-6)
+    margin: var(--spacing-6) auto 0;
+    max-width: 350px
 }
+
+/* Page Footer */
 
 .page-footer {
     background-color: var(--color-neutral-0);
@@ -324,6 +331,10 @@ legend {
     }
 
     .footer-container {
+        flex-direction: column;
+    }
+
+    .btn-container {
         flex-direction: column;
     }
 }

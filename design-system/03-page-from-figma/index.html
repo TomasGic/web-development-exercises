@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
+    <title>CottonMania: Products Page</title>
     <link rel="stylesheet" href="page.css">
 </head>
 <body>
     <header>
-        <a href="../03-page-from-figma/" class="logo">CottonMania</a>
+        <a href="index.html" class="logo">CottonMania</a>
 
         <nav aria-label="Main navigation">
             <ul>
@@ -24,15 +24,24 @@
         </button>
     </header>
     <main>
+        <!-- About the Project section -->
+        <section id="about">
+            <div class="about-container">
+                <h2 class="about-heading">About This Project</h2>
+                <p>The goal of this project was to create a small but functional design system using custom properties (css tokens) for typography, color palettes, spacing scales and responsive components. The design system was then used to build a fully responsive page which showcases products of a fictitious clothing brand 'CottonMania'.</p>
+            </div>
+        </section>
+
         <section id="hero">
             <div class="hero-text">
                 <h1 class="hero-heading">Our Products</h1>
-                <h2 class="hero-subheading">New autumn 2026 collection has arrived</h2>
+                <p class="hero-subheading">New autumn 2026 collection has arrived</p>
                 <a href="#products" class="btn btn--primary btn--lg">Explore</a>
             </div>
         </section>
 
-        <section id="products">
+        <section id="products" aria-labelledby="products-heading">
+            <h2 id="products-heading "class="visually-hidden">Product catalogue</h2>
             <div class="filter-row">
                 <button data-filter="all" class="btn btn--primary btn--sm  filter-btn">All</button>
                 <button data-filter="apparel" class="btn btn--secondary btn--sm filter-btn">Apparel</button>
@@ -43,7 +52,7 @@
                 <!-- Product card -->
                 <article class="product-card" data-category="apparel">
                     <div class="img-container">
-                        <img src="images/t-shirt.jpg" alt="">
+                        <img src="images/t-shirt.webp" alt="Classic pink cotton T-Shirt, front view" width="800", height="1200" loading="lazy">
                     </div>
                     
                     <div class="product-details">
@@ -54,13 +63,13 @@
                     </div>
                     <footer class="card-footer">
                         <span class="card-price">$35</span>
-                        <button type="button" class="btn btn--primary btn-sm">Add to card</button>
+                        <button type="button" class="btn btn--primary btn--sm">Add to cart</button>
                     </footer>
                 </article>
 
                 <article class="product-card" data-category="apparel">
                     <div class="img-container">
-                        <img src="images/hoodie.jpg" alt="">
+                        <img src="images/hoodie.webp" alt="Classic beige cotton hoodie, front view" width="800" height="1200" loading="lazy">
                     </div>
                     
                     <div class="product-details">
@@ -71,14 +80,14 @@
                     </div>
                     <footer class="card-footer">
                         <span class="card-price">$65</span>
-                        <button type="button" class="btn btn--primary btn-sm">Add to card</button>
+                        <button type="button" class="btn btn--primary btn--sm">Add to cart</button>
                     </footer>
                 </article>
 
                 
                 <article class="product-card" data-category="apparel">
                     <div class="img-container">
-                        <img src="images/tank_top.jpg" alt="">
+                        <img src="images/tank_top.webp" alt="Classic black cotton tank top, front view" width="800" height="1200" loading="lazy">
                     </div>
                     
                     <div class="product-details">
@@ -88,13 +97,13 @@
                     </div>
                     <footer class="card-footer">
                         <span class="card-price">$15</span>
-                        <button type="button" class="btn btn--primary btn-sm">Add to card</button>
+                        <button type="button" class="btn btn--primary btn--sm">Add to cart</button>
                     </footer>
                 </article>
 
                 <article class="product-card" data-category="footwear">
                     <div class="img-container">
-                        <img src="images/lifestyle_sneakers.jpg" alt="">
+                        <img src="images/lifestyle_sneakers.webp" alt="Pair of lifestyle sneakers in white with beige, pink and light brown patterns" width="800" height="1200" loading="lazy">
                     </div>
                     
                     <div class="product-details">
@@ -105,13 +114,13 @@
                     </div>
                     <footer class="card-footer">
                         <span class="card-price">$85</span>
-                        <button type="button" class="btn btn--primary btn-sm">Add to card</button>
+                        <button type="button" class="btn btn--primary btn--sm">Add to cart</button>
                     </footer>
                 </article>
 
                 <article class="product-card" data-category="footwear">
                     <div class="img-container">
-                        <img src="images/canvas_sneakers.jpg" alt="">
+                        <img src="images/canvas_sneakers.webp" alt="Pair of white high-top canvas sneakers with an embroidered red heart pattern" width="800" height="1200" loading="lazy">
                     </div>
                     
                     <div class="product-details">
@@ -122,13 +131,13 @@
                     </div>
                     <footer class="card-footer">
                         <span class="card-price">$55</span>
-                        <button type="button" class="btn btn--primary btn-sm">Add to card</button>
+                        <button type="button" class="btn btn--primary btn--sm">Add to cart</button>
                     </footer>
                 </article>
 
                 <article class="product-card" data-category="footwear">
                     <div class="img-container">
-                        <img src="images/trail_running_shoes.jpg" alt="">
+                        <img src="images/trail_running_shoes.webp" alt="Pair of white-blue trail running shoes against a stone rock backdrop" width="800" height="1200" loading="lazy">
                     </div>
                     
                     <div class="product-details">
@@ -138,11 +147,81 @@
                     </div>
                     <footer class="card-footer">
                         <span class="card-price">$105</span>
-                        <button type="button" class="btn btn--primary btn-sm">Add to card</button>
+                        <button type="button" class="btn btn--primary btn--sm">Add to cart</button>
                     </footer>
                 </article>
             </div>
         </section>
+
+        <!-- Contact section -->
+         <section id="contact">
+            <div class="form-container">
+                <h2 class="contact-heading">Get in Touch</h2>
+
+                <form action="#" method="POST">
+                    <fieldset>
+                        <legend>Your Information</legend>
+                        <div class="label-input-wrapper">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+
+                        <div class="label-input-wrapper">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+
+                        <div class="label-input-wrapper">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your.name@example.com" required>
+                        </div>
+
+                        <div class="label-input-wrapper">
+                            <label for="phone">Phone (optional)</label>
+                            <input type="tel" id="phone" name="phone" pattern="\+[1-9]\d{1,14}" placeholder="+31666666666">
+                        </div>
+
+                        <div class="label-input-wrapper">
+                            <label for="country">Country (optional)</label>
+                            <input type="text" id="country" name="country">
+                        </div>
+
+                        <div class="label-input-wrapper">
+                            <label for="city">City (optional)</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Your Message</legend>
+
+                        <div class="label-input-wrapper">
+                            <label for="subject">Subject</label>
+                            <select name="subject" id="subject" required>
+                                <option value="" selected disabled>Select a subject...</option>
+                                <option value="mentoring">Mentoring</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="question">Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="label-input-wrapper span-2">
+                            <label for="message">Your message (required)</label>
+                            <textarea name="message" id="message" minlength="20" maxlength="2000" rows="6" aria-describedby="message-limit" required></textarea>
+                            <small id="message-limit">Your message must be between 20 and 2000 characters long</small>
+                        </div>
+                    </fieldset>
+
+                    <div class="btn-container">
+                        <button type="submit" class="btn btn--primary btn--md">Submit</button>
+                        <button type="reset" class="btn btn--secondary btn--md">Clear Data</button>
+                    </div>
+                </form>
+            </div>
+         </section>
+    
     </main>
     <footer class="page-footer">
         <div class="footer-container">
@@ -151,6 +230,6 @@
             </a>
         </div>
     </footer>
-    <script src="page.js"></script>
+    <script src="page.js" defer></script>
 </body>
 </html>
